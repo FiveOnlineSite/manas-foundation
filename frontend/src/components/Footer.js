@@ -8,21 +8,30 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-6 mb-lg-0 mb-3">
             <NavLink class="navbar-brand" to="/">
-              <img src="/images/logomymanas 2.png" />
+              <img src="/images/logomymanas 2.png" alt="logo" />
             </NavLink>
           </div>
           <div className="col-lg-6 d-flex justify-content-lg-end justify-content-start ">
             <div className="social-media">
               <NavLink class="navbar-item" to="/">
-                <img src="/images/icons/ic_baseline-facebook.png" />
+                <img
+                  src="/images/icons/ic_baseline-facebook.png"
+                  alt="social"
+                />
               </NavLink>
 
               <NavLink class="navbar-item" to="/">
-                <img src="/images/icons/ph_instagram-logo-fill.png" />
+                <img
+                  src="/images/icons/ph_instagram-logo-fill.png"
+                  alt="social"
+                />
               </NavLink>
 
               <NavLink class="navbar-item" to="/">
-                <img src="/images/icons/entypo-social_linkedin-with-circle.png" />
+                <img
+                  src="/images/icons/entypo-social_linkedin-with-circle.png"
+                  alt="social"
+                />
               </NavLink>
             </div>
           </div>
