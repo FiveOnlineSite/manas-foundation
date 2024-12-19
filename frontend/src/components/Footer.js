@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -6,23 +7,23 @@ const Footer = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-6 mb-lg-0 mb-3">
-            <a class="navbar-brand" href="#">
+            <NavLink class="navbar-brand" to="/">
               <img src="/images/logomymanas 2.png" />
-            </a>
+            </NavLink>
           </div>
           <div className="col-lg-6 d-flex justify-content-lg-end justify-content-start ">
             <div className="social-media">
-              <a class="navbar-item" href="#">
+              <NavLink class="navbar-item" to="/">
                 <img src="/images/icons/ic_baseline-facebook.png" />
-              </a>
+              </NavLink>
 
-              <a class="navbar-item" href="#">
+              <NavLink class="navbar-item" to="/">
                 <img src="/images/icons/ph_instagram-logo-fill.png" />
-              </a>
+              </NavLink>
 
-              <a class="navbar-item" href="#">
+              <NavLink class="navbar-item" to="/">
                 <img src="/images/icons/entypo-social_linkedin-with-circle.png" />
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>
