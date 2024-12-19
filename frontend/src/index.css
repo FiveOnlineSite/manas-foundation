@@ -48,7 +48,7 @@ nav.desktop-navbar {
   margin-top: 2px;
 }
 
-nav .navbar-nav .nav-item .nav-link,
+nav .navbar-nav .nav-item a,
 .navbar-nav .dropdown-menu .dropdown-item {
   font-family: "Museo-Sans";
   font-size: 18px;
@@ -58,6 +58,7 @@ nav .navbar-nav .nav-item .nav-link,
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
 .custom-btn {
@@ -67,7 +68,7 @@ nav .navbar-nav .nav-item .nav-link,
   text-transform: uppercase;
 }
 
-.custom-btn .nav-item .nav-link {
+.custom-btn .nav-item a {
   font-size: 13px;
   line-height: 15.6px;
 }
@@ -320,6 +321,11 @@ nav .navbar-nav .nav-item .nav-link,
 .bridging-text .bridge-btn {
   padding: 10px 30px;
   margin: 40px 0;
+}
+
+.bridging-text .bridge-btn a {
+  color: var(--black-font);
+  text-decoration: none;
 }
 /* FOOTER */
 .footer {
