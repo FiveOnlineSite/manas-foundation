@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import SlickSlider from "../components/SlickSlider";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   const homeBanner = [
@@ -75,10 +76,11 @@ const Home = () => {
                 indirect assistance in education, for children seeking quality
                 teaching and personal growth.
               </p>
-
-              <button className="custom-btn white-btn">
-                <li className="nav-link">Donate</li>
-              </button>
+              <NavLink to="/">
+                <button className="custom-btn white-btn">
+                  <li className="nav-link">Donate</li>
+                </button>
+              </NavLink>
             </div>
 
             <div className="right-img-div">
@@ -257,9 +259,9 @@ const Home = () => {
                     </p>
 
                     <button className="custom-btn bridge-btn">
-                      <a class="nav-link" href="#">
+                      <NavLink class="nav-link" to="/">
                         Know More
-                      </a>
+                      </NavLink>
                     </button>
                   </div>
                 </div>

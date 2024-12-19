@@ -6,9 +6,9 @@ const Header = () => {
     <div>
       <nav class="navbar navbar-expand-lg desktop-navbar">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="/images/logomymanas 1.png" />
-          </a>
+          <NavLink class="navbar-brand" to="/">
+            <img src="/images/logomymanas 1.png" alt="logo" />
+          </NavLink>
           <button
             class="navbar-toggler"
             type="button"
@@ -26,56 +26,56 @@ const Header = () => {
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">
+                <NavLink class="nav-link" aria-current="page" to="/">
                   About Us
-                </a>
+                </NavLink>
               </li>
 
               <li class="nav-item dropdown">
-                <a
+                <NavLink
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  to="/"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Education
-                </a>
+                </NavLink>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <NavLink class="dropdown-item" to="/">
                       Action
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <NavLink class="dropdown-item" to="/">
                       Another action
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <NavLink class="dropdown-item" to="/">
                       Something else here
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <NavLink class="nav-link" to="/">
                   News & Events
-                </a>
+                </NavLink>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <NavLink class="nav-link" to="/">
                   Contact Us
-                </a>
+                </NavLink>
               </li>
               <button className="custom-btn">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <NavLink class="nav-link" to="/">
                     Donate
-                  </a>
+                  </NavLink>
                 </li>
               </button>
             </ul>
@@ -92,7 +92,7 @@ const Header = () => {
             data-aos-duration="1500"
             title="logo"
           >
-            <img src="/images/logomymanas 1.png" />
+            <img src="/images/logomymanas 1.png" alt="logo" />
           </NavLink>
           <button
             className="navbar-toggler"
@@ -120,7 +120,7 @@ const Header = () => {
                 data-aos-duration="1500"
                 title="logo"
               >
-                <img src="/images/logomymanas 1.png" />
+                <img src="/images/logomymanas 1.png" alt="logo" />
               </NavLink>
               <button
                 type="button"
@@ -132,56 +132,56 @@ const Header = () => {
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">
+                  <NavLink class="nav-link" aria-current="page" to="/">
                     About Us
-                  </a>
+                  </NavLink>
                 </li>
 
                 <li class="nav-item dropdown">
-                  <a
+                  <NavLink
                     class="nav-link dropdown-toggle"
-                    href="#"
+                    to="/"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
                     Education
-                  </a>
+                  </NavLink>
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <NavLink class="dropdown-item" to="/">
                         Action
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <NavLink class="dropdown-item" to="/">
                         Another action
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <NavLink class="dropdown-item" to="/">
                         Something else here
-                      </a>
+                      </NavLink>
                     </li>
                   </ul>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <NavLink class="nav-link" to="/">
                     News & Events
-                  </a>
+                  </NavLink>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <NavLink class="nav-link" to="/">
                     Contact Us
-                  </a>
+                  </NavLink>
                 </li>
                 <button className="custom-btn">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <NavLink class="nav-link" to="/">
                       Donate
-                    </a>
+                    </NavLink>
                   </li>
                 </button>
               </ul>
