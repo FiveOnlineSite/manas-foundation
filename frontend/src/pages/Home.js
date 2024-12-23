@@ -69,7 +69,13 @@ const Home = () => {
               />
             </div>
             <div className="banner-text">
-              <h1 className="banner-title">A Promising future begins here!</h1>
+              <h1
+                className="banner-title wow"
+                data-aos="fade-right" // Fade in as you scroll
+                data-aos-duration="1500"
+              >
+                A Promising future begins here!
+              </h1>
 
               <p className="paragraph">
                 We promote equality and curiosity mindsets through direct and
@@ -611,7 +617,7 @@ const Home = () => {
           <div className="container">
             <div className="col-lg-12">
               <div className="row">
-                <div className="col-lg-5">
+                <div className="col-lg-5 order-lg-1 order-2">
                   <div className="news-events-text">
                     <h6 className="section-subtitle">NEWS & EVENTS</h6>
 
@@ -625,48 +631,54 @@ const Home = () => {
                     </div>
 
                     <div className="events-div">
-                      <div className="single-event d-flex">
-                        <img src="/images/icons/Group 8179.png" alt="arrow" />
-                        <div className="ps-3">
-                          <div className="event-single-div d-flex">
-                            <h6>NEWS</h6>
-                            <span>.</span>
-                            <h6>Apr 21, 2020</h6>
+                      <NavLink class="nav-link" to="/">
+                        <div className="single-event d-flex">
+                          <img src="/images/icons/Group 8179.png" alt="arrow" />
+                          <div className="ps-3">
+                            <div className="event-single-div d-flex">
+                              <h6>NEWS</h6>
+                              <span>.</span>
+                              <h6>Apr 21, 2020</h6>
+                            </div>
+
+                            <h5>From help to hope: our aid in Eutopia</h5>
                           </div>
-
-                          <h5>From help to hope: our aid in Eutopia</h5>
                         </div>
-                      </div>
+                      </NavLink>
 
-                      <div className="single-event d-flex">
-                        <img src="/images/icons/Group 8179.png" alt="arrow" />
-                        <div className="ps-3">
-                          <div className="event-single-div d-flex">
-                            <h6>EVENT</h6>
-                            <span>.</span>
-                            <h6>Apr 21, 2020</h6>
+                      <NavLink class="nav-link" to="/">
+                        <div className="single-event d-flex">
+                          <img src="/images/icons/Group 8179.png" alt="arrow" />
+                          <div className="ps-3">
+                            <div className="event-single-div d-flex">
+                              <h6>EVENT</h6>
+                              <span>.</span>
+                              <h6>Apr 21, 2020</h6>
+                            </div>
+
+                            <h5>Solutions to avoid global climate change</h5>
                           </div>
-
-                          <h5>Solutions to avoid global climate change</h5>
                         </div>
-                      </div>
+                      </NavLink>
 
-                      <div className="single-event d-flex">
-                        <img src="/images/icons/Group 8179.png" alt="arrow" />
-                        <div className="ps-3">
-                          <div className="event-single-div d-flex">
-                            <h6>NEWS</h6>
-                            <span>.</span>
-                            <h6>Apr 21, 2020</h6>
+                      <NavLink class="nav-link" to="/">
+                        <div className="single-event d-flex">
+                          <img src="/images/icons/Group 8179.png" alt="arrow" />
+                          <div className="ps-3">
+                            <div className="event-single-div d-flex">
+                              <h6>NEWS</h6>
+                              <span>.</span>
+                              <h6>Apr 21, 2020</h6>
+                            </div>
+
+                            <h5>Maldives announces coastal cleanup </h5>
                           </div>
-
-                          <h5>Maldives announces coastal cleanup </h5>
                         </div>
-                      </div>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-7">
+                <div className="col-lg-7 order-lg-2 order-1">
                   <div className="news-img">
                     <img
                       src="/images/banner/image-18-copyright.png"
@@ -693,6 +705,12 @@ const Home = () => {
                           <h6>0 Comments</h6>
                         </div>
                       </div>
+
+                      <button className="custom-btn bridge-btn read-btn mt-3 mb-0">
+                        <NavLink class="nav-link" to="/">
+                          LEARN MORE
+                        </NavLink>
+                      </button>
                     </div>
                   </div>
                 </div>
