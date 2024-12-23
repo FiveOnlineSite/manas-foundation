@@ -611,8 +611,212 @@ const Home = () => {
           <div className="container">
             <div className="col-lg-12">
               <div className="row">
-                <div className="col-lg-6"></div>
-                <div className="col-lg-6"></div>
+                <div className="col-lg-5">
+                  <div className="news-events-text">
+                    <h6 className="section-subtitle">NEWS & EVENTS</h6>
+
+                    <div className="d-flex justify-content-between w-100">
+                      <h2 className="section-title">Editor’s Pick</h2>
+                      <div className="d-flex align-items-start">
+                        <img src="/images/icons/Group 8189.png" alt="arrow" />
+                      </div>
+                    </div>
+
+                    <div className="events-div">
+                      <div className="single-event d-flex">
+                        <img src="/images/icons/Group 8179.png" alt="arrow" />
+                        <div className="ps-3">
+                          <div className="event-single-div d-flex">
+                            <h6>NEWS</h6>
+                            <span>.</span>
+                            <h6>Apr 21, 2020</h6>
+                          </div>
+
+                          <h5>From help to hope: our aid in Eutopia</h5>
+                        </div>
+                      </div>
+
+                      <div className="single-event d-flex">
+                        <img src="/images/icons/Group 8179.png" alt="arrow" />
+                        <div className="ps-3">
+                          <div className="event-single-div d-flex">
+                            <h6>EVENT</h6>
+                            <span>.</span>
+                            <h6>Apr 21, 2020</h6>
+                          </div>
+
+                          <h5>Solutions to avoid global climate change</h5>
+                        </div>
+                      </div>
+
+                      <div className="single-event d-flex">
+                        <img src="/images/icons/Group 8179.png" alt="arrow" />
+                        <div className="ps-3">
+                          <div className="event-single-div d-flex">
+                            <h6>NEWS</h6>
+                            <span>.</span>
+                            <h6>Apr 21, 2020</h6>
+                          </div>
+
+                          <h5>Maldives announces coastal cleanup </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-7">
+                  <div className="news-img">
+                    <img
+                      src="/images/banner/image-18-copyright.png"
+                      alt="banner"
+                      className="w-100"
+                    />
+                    <div className="hope-div">
+                      <h2>Hope after horror in Congo: Idir’s story</h2>
+
+                      <p>
+                        Lorem ipsum dolor sit amet. Et deserunt quod id voluptas
+                        fugiat sed alias odit. Qui deleniti voluptas qui
+                        perferendis saepe ut autem pariatur et veritatis illo
+                        qui quis recusandae.
+                      </p>
+
+                      <div className="news-time-div">
+                        <span></span>
+                        <div className="news-time">
+                          <h6>Event</h6>
+                          <span>.</span>
+                          <h6>Apr 21, 2020</h6>
+                          <span>.</span>
+                          <h6>0 Comments</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="get-started">
+          <div className="container">
+            <div className="col-lg-12">
+              <div className="row align-items-center">
+                <div className="col-lg-7 order-lg-1 order-2">
+                  <h6 className="section-subtitle">GET STARTED</h6>
+
+                  <h2 className="section-title w-55">
+                    Reach out! We’d love to talk to you.
+                  </h2>
+
+                  <div className="get-started-form">
+                    <form>
+                      <div className="row">
+                        <div className="col-lg-6">
+                          <div class="mb-4">
+                            <label for="full-name" class="form-label">
+                              Full Name
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="full-name"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="col-lg-6">
+                          <div class="mb-4">
+                            <label for="phone-number" class="form-label">
+                              Phone Number
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="phone-number"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div className="col-lg-6">
+                          <div class="mb-4">
+                            <label for="email-address" class="form-label">
+                              Email Address
+                            </label>
+                            <input
+                              type="email"
+                              class="form-control"
+                              id="email-address"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="col-lg-6">
+                          <div class="mb-4">
+                            <label for="email-address" class="form-label">
+                              Inquiry Type
+                            </label>
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>Select Inquiry Type</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div className="col-lg-12">
+                          <div class="mb-4">
+                            <label for="message" class="form-label">
+                              Message
+                            </label>
+                            <textarea
+                              rows="2"
+                              class="form-control"
+                              id="message"
+                            ></textarea>
+                          </div>
+                        </div>
+
+                        <div className="col-lg-12">
+                          <div className="mb-4">
+                            <button className="custom-btn bridge-btn">
+                              <NavLink class="nav-link" to="/">
+                                LEAVE US A MESSAGE
+                              </NavLink>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div className="col-lg-5 order-lg-2 order-1">
+                  <div className="bridging-img">
+                    <img
+                      src="/images/banner/Vector 6.png"
+                      alt="vector-6"
+                      className="bridging-img1"
+                    />
+                    <div className="bridging-img2">
+                      <img
+                        src="/images/banner/two-students-studying-together-online-with-laptop-park.png"
+                        alt="briding-img"
+                      />
+                    </div>
+
+                    <img
+                      src="/images/banner/Vector 7.png"
+                      alt="vector-7"
+                      className="bridging-img3"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
