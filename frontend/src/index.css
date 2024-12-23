@@ -84,6 +84,10 @@ nav .navbar-nav .nav-item a,
   justify-content: left;
 }
 
+.offcanvas {
+  width: 70%;
+}
+
 .navbar-toggler {
   border: none;
 }
