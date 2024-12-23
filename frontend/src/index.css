@@ -670,8 +670,9 @@ nav .navbar-nav .nav-item a,
     padding: 20px 15px !important;
   }
 
-  .custom-btn {
+  .mobile-navbar .custom-btn {
     margin: 20px 0;
+    width: 40%;
   }
 
   .custom-btn a {
