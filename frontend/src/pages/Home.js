@@ -617,9 +617,11 @@ const Home = () => {
 
                     <div className="d-flex justify-content-between w-100">
                       <h2 className="section-title">Editor’s Pick</h2>
-                      <div className="d-flex align-items-start">
-                        <img src="/images/icons/Group 8189.png" alt="arrow" />
-                      </div>
+                      <NavLink to="/">
+                        <div className="d-flex align-items-start">
+                          <img src="/images/icons/Group 8189.png" alt="arrow" />
+                        </div>
+                      </NavLink>
                     </div>
 
                     <div className="events-div">
