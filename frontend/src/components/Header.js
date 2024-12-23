@@ -4,13 +4,13 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg desktop-navbar">
-        <div class="container-fluid">
-          <NavLink class="navbar-brand" to="/">
+      <nav className="navbar navbar-expand-lg desktop-navbar">
+        <div className="container-fluid">
+          <NavLink className="navbar-brand" to="/">
             <img src="/images/logomymanas 1.png" alt="logo" />
           </NavLink>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavDropdown"
@@ -18,22 +18,22 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            class="collapse d-flex justify-content-end"
+            className="collapse d-flex justify-content-end"
             id="navbarNavDropdown"
           >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <NavLink class="nav-link" aria-current="page" to="/">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="/">
                   About Us
                 </NavLink>
               </li>
 
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <NavLink
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   to="/"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -41,39 +41,39 @@ const Header = () => {
                 >
                   Education
                 </NavLink>
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu">
                   <li>
-                    <NavLink class="dropdown-item" to="/">
+                    <NavLink className="dropdown-item" to="/">
                       Action
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink class="dropdown-item" to="/">
+                    <NavLink className="dropdown-item" to="/">
                       Another action
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink class="dropdown-item" to="/">
+                    <NavLink className="dropdown-item" to="/">
                       Something else here
                     </NavLink>
                   </li>
                 </ul>
               </li>
 
-              <li class="nav-item">
-                <NavLink class="nav-link" to="/">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/">
                   News & Events
                 </NavLink>
               </li>
 
-              <li class="nav-item">
-                <NavLink class="nav-link" to="/">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/">
                   Contact Us
                 </NavLink>
               </li>
               <button className="custom-btn">
-                <li class="nav-item">
-                  <NavLink class="nav-link" to="/">
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/">
                     Donate
                   </NavLink>
                 </li>
@@ -131,15 +131,15 @@ const Header = () => {
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <NavLink class="nav-link" aria-current="page" to="/">
+                <li className="nav-item">
+                  <NavLink className="nav-link" aria-current="page" to="/">
                     About Us
                   </NavLink>
                 </li>
 
-                <li class="nav-item dropdown">
+                <li className="nav-item dropdown">
                   <NavLink
-                    class="nav-link dropdown-toggle"
+                    className="nav-link dropdown-toggle"
                     to="/"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -147,39 +147,39 @@ const Header = () => {
                   >
                     Education
                   </NavLink>
-                  <ul class="dropdown-menu">
+                  <ul className="dropdown-menu">
                     <li>
-                      <NavLink class="dropdown-item" to="/">
+                      <NavLink className="dropdown-item" to="/">
                         Action
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink class="dropdown-item" to="/">
+                      <NavLink className="dropdown-item" to="/">
                         Another action
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink class="dropdown-item" to="/">
+                      <NavLink className="dropdown-item" to="/">
                         Something else here
                       </NavLink>
                     </li>
                   </ul>
                 </li>
 
-                <li class="nav-item">
-                  <NavLink class="nav-link" to="/">
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/">
                     News & Events
                   </NavLink>
                 </li>
 
-                <li class="nav-item">
-                  <NavLink class="nav-link" to="/">
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/">
                     Contact Us
                   </NavLink>
                 </li>
                 <button className="custom-btn">
-                  <li class="nav-item">
-                    <NavLink class="nav-link" to="/">
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/">
                       Donate
                     </NavLink>
                   </li>
