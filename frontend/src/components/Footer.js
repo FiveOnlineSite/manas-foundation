@@ -6,12 +6,12 @@ const Footer = () => {
     <div className="footer">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-6 mb-lg-0 mb-3">
+          <div className="col-lg-6 mb-lg-0 mb-3 col-6">
             <NavLink class="navbar-brand" to="/">
               <img src="/images/logomymanas 2.png" alt="logo" />
             </NavLink>
           </div>
-          <div className="col-lg-6 d-flex justify-content-lg-end justify-content-start ">
+          <div className="col-lg-6 d-flex justify-content-end col-6">
             <div className="social-media">
               <NavLink class="navbar-item" to="/">
                 <img
