@@ -383,6 +383,7 @@ nav .navbar-nav .nav-item a,
 
   .bridging-img .bridging-img2 {
     padding-left: 5%;
+    width: 100%;
   }
 
   .bridging-img .bridging-img3 {
@@ -391,6 +392,7 @@ nav .navbar-nav .nav-item a,
 
   .bridging-img .bridging-img1 {
     right: 0;
+    top: -20px;
   }
 
   .bridging-img {

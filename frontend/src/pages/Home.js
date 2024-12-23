@@ -270,7 +270,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className=""></section>
+        <section className="half-img-section"></section>
       </Layout>
     </div>
   );
