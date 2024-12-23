@@ -696,7 +696,7 @@ nav .navbar-nav .nav-item a,
     width: 100%;
   }
 
-  .banner .container-fluid .banner-text h1 {
+  .banner .container-fluid .banner-text .banner-title {
     font-size: 60px;
     line-height: 70px;
   }
