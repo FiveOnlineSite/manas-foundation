@@ -71,20 +71,28 @@ const Home = () => {
             <div className="banner-text">
               <h1
                 className="banner-title wow"
-                data-aos="fade-right" // Fade in as you scroll
+                data-aos="fade-up" // Fade in as you scroll
                 data-aos-duration="1500"
               >
                 A Promising future begins here!
               </h1>
 
-              <p className="paragraph">
+              <p
+                className="paragraph wow"
+                data-aos="fade-up" // Fade in as you scroll
+                data-aos-duration="1500"
+              >
                 We promote equality and curiosity mindsets through direct and
                 indirect assistance in education, for children seeking quality
                 teaching and personal growth.
               </p>
               <NavLink to="/">
-                <button className="custom-btn white-btn">
-                  <li className="nav-link">Donate</li>
+                <button
+                  className="custom-btn white-btn wow"
+                  data-aos="fade-zoom-in" // Fade in as you scroll
+                  data-aos-duration="1500"
+                >
+                  <li className="nav-link ">Donate</li>
                 </button>
               </NavLink>
             </div>
@@ -109,7 +117,11 @@ const Home = () => {
             <div className="col-lg-12">
               <div className="row">
                 <div className="col-lg-7">
-                  <div className="core-strategies-div">
+                  <div
+                    className="core-strategies-div wow"
+                    data-aos="fade-right" // Fade in as you scroll
+                    data-aos-duration="1500"
+                  >
                     <h6 className="section-subtitle">
                       What Makes Us Exceptional
                     </h6>
@@ -205,7 +217,11 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-5">
+                <div
+                  className="col-lg-5 wow"
+                  data-aos="fade-left" // Fade in as you scroll
+                  data-aos-duration="1500"
+                >
                   <div className="core-strategies-img">
                     <img
                       src="/images/school-children-dressed-uniform-have-fun-play-schoolyard.png"
@@ -220,7 +236,11 @@ const Home = () => {
 
         <section className="home-slider">
           <div className="row">
-            <div className="home-slick-slider">
+            <div
+              className="home-slick-slider wow"
+              data-aos="fade-up" // Fade in as you scroll
+              data-aos-duration="1500"
+            >
               <SlickSlider settings={homeBannerSettings} items={homeBanner} />
             </div>
           </div>
@@ -230,7 +250,11 @@ const Home = () => {
           <div className="container">
             <div className="col-lg-12">
               <div className="row">
-                <div className="col-lg-6">
+                <div
+                  className="col-lg-6"
+                  data-aos="fade-right" // Fade in as you scroll
+                  data-aos-duration="1500"
+                >
                   <div className="bridging-img">
                     <img
                       src="/images/banner/Vector 6.png"
@@ -251,7 +275,11 @@ const Home = () => {
                     />
                   </div>
                 </div>
-                <div className="col-lg-6">
+                <div
+                  className="col-lg-6 wow"
+                  data-aos="fade-left" // Fade in as you scroll
+                  data-aos-duration="1500"
+                >
                   <div className="bridging-text">
                     <h6 className="section-subtitle">Empowering Education</h6>
 
@@ -281,7 +309,11 @@ const Home = () => {
         <section className="half-img-section">
           <div className="container">
             <div className="half-img-text">
-              <h2 className="section-title text-center">
+              <h2
+                className="section-title text-center wow"
+                data-aos="zoom-in" // Fade in as you scroll
+                data-aos-duration="1500"
+              >
                 Bringing new opportunities to the underdogs since 2019
               </h2>
 
@@ -296,7 +328,7 @@ const Home = () => {
 
         <section className="support-section">
           <div className="container">
-            <div className="support-text-div">
+            <div className="support-text-div" data-aos="fade-left">
               <h2>Your support is meaningful.</h2>
               <div className="support-para">
                 <p className="paragraph bridge-para p-0">
@@ -349,7 +381,11 @@ const Home = () => {
                               <p>Volunteer</p>
                             </div>
                           </div>
-                          <div className="testimonial-img col-lg-5 order-lg-2 order-1">
+                          <div
+                            className="testimonial-img col-lg-5 order-lg-2 order-1 wow"
+                            data-aos="zoom-in"
+                            data-aos-duration="1500"
+                          >
                             <img
                               src="/images/testimonials/testi-1-copyright-120x120.png"
                               alt="member"
@@ -617,7 +653,11 @@ const Home = () => {
           <div className="container">
             <div className="col-lg-12">
               <div className="row">
-                <div className="col-lg-5 order-lg-1 order-2">
+                <div
+                  className="col-lg-5 order-lg-1 order-2 wow"
+                  data-aos="fade-right"
+                  data-aos-duration="1500"
+                >
                   <div className="news-events-text">
                     <h6 className="section-subtitle">NEWS & EVENTS</h6>
 
@@ -678,7 +718,11 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-7 order-lg-2 order-1">
+                <div
+                  className="col-lg-7 order-lg-2 order-1 wow"
+                  data-aos="fade-left"
+                  data-aos-duration="1500"
+                >
                   <div className="news-img">
                     <img
                       src="/images/banner/image-18-copyright.png"
@@ -721,7 +765,11 @@ const Home = () => {
 
         <section className="get-started">
           <div className="container">
-            <div className="col-lg-12">
+            <div
+              className="col-lg-12 wow"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
               <div className="row align-items-center">
                 <div className="col-lg-7 order-lg-1 order-2">
                   <h6 className="section-subtitle">GET STARTED</h6>
