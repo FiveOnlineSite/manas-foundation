@@ -44,18 +44,36 @@ const Header = () => {
                 <ul className="dropdown-menu">
                   <li>
                     <NavLink className="dropdown-item" to="/">
-                      Action
+                      Our Scope
                     </NavLink>
                   </li>
                   <li>
                     <NavLink className="dropdown-item" to="/">
-                      Another action
+                      Scholarships
                     </NavLink>
                   </li>
-                  <li>
-                    <NavLink className="dropdown-item" to="/">
-                      Something else here
+                  <li className="nav-item dropdown institute-dropdown">
+                    <NavLink
+                      className="nav-link dropdown-toggle"
+                      to="/"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Institutions
                     </NavLink>
+                    <ul className="dropdown-menu1">
+                      <li>
+                        <NavLink className="dropdown-item" to="/">
+                          Institution 1
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink className="dropdown-item" to="/">
+                          Institution 2
+                        </NavLink>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -138,32 +156,96 @@ const Header = () => {
                 </li>
 
                 <li className="nav-item dropdown">
-                  <NavLink
-                    className="nav-link dropdown-toggle"
-                    to="/"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Education
-                  </NavLink>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <NavLink className="dropdown-item" to="/">
-                        Action
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink className="dropdown-item" to="/">
-                        Another action
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink className="dropdown-item" to="/">
-                        Something else here
-                      </NavLink>
-                    </li>
-                  </ul>
+                  <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          className="nav-link accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#education"
+                          aria-expanded="true"
+                          aria-controls="education"
+                        >
+                          Education
+                        </button>
+                      </h2>
+                      <div
+                        id="education"
+                        class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          <ul>
+                            <li className="nav-item">
+                              <NavLink
+                                className="nav-link"
+                                aria-current="page"
+                                to="/"
+                              >
+                                Our Scope
+                              </NavLink>
+                            </li>
+                            <li className="nav-item">
+                              <NavLink
+                                className="nav-link"
+                                aria-current="page"
+                                to="/"
+                              >
+                                Scholarships
+                              </NavLink>
+                            </li>
+                            <div className="accordion" id="instituteAccordion">
+                              <div className="accordion-item">
+                                <h2
+                                  className="accordion-header"
+                                  id="headingOne"
+                                >
+                                  <button
+                                    className="accordion-button nav-link"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#institutes"
+                                    aria-expanded="false"
+                                    aria-controls="institutes"
+                                  >
+                                    Institutions
+                                  </button>
+                                </h2>
+                                <div
+                                  id="institutes"
+                                  className="accordion-collapse"
+                                  aria-labelledby="headingOne"
+                                  data-bs-parent="#instituteAccordion"
+                                >
+                                  <div className="accordion-body">
+                                    <ul>
+                                      <li>
+                                        <NavLink
+                                          className="dropdown-item"
+                                          to="/"
+                                        >
+                                          Institution 1
+                                        </NavLink>
+                                      </li>
+                                      <li>
+                                        <NavLink
+                                          className="dropdown-item"
+                                          to="/"
+                                        >
+                                          Institution 2
+                                        </NavLink>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>
 
                 <li className="nav-item">
@@ -177,6 +259,7 @@ const Header = () => {
                     Contact Us
                   </NavLink>
                 </li>
+
                 <button className="custom-btn">
                   <li className="nav-item">
                     <NavLink className="nav-link" to="/">
