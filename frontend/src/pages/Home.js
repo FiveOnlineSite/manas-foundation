@@ -834,11 +834,10 @@ const Home = () => {
                             <label for="email-address" class="form-label">
                               Inquiry Type
                             </label>
-                            <select
-                              class="form-select"
-                              aria-label="Default select example"
-                            >
-                              <option selected>Select Inquiry Type</option>
+                            <select class="form-select">
+                              <option selected disabled>
+                                Select Inquiry Type
+                              </option>
                               <option value="School Construction">
                                 School Construction
                               </option>

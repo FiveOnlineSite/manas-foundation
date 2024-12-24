@@ -52,18 +52,34 @@ nav.desktop-navbar {
   margin-top: 2px;
 }
 
+.dropdown.institute-dropdown .dropdown-toggle::after {
+  content: url("../public/images/icons/dropdown-icon.png");
+  transform: rotate(270deg); /* Use 180deg instead of 270deg */
+  border: none;
+  margin-left: 10px;
+}
+
 nav .navbar-nav .nav-item a,
-.navbar-nav .dropdown-menu .dropdown-item {
+.navbar-nav .dropdown-menu .dropdown-item,
+.nav-link.accordion-button {
   font-family: "Museo-Sans";
   font-size: 18px;
   font-weight: 400;
-  color: var(--black-font);
+  color: var(--black-font) !important;
   padding: 10px 25px !important;
   display: flex;
   align-items: center;
   justify-content: start;
   text-decoration: none;
   background-color: transparent;
+}
+
+.nav-link.accordion-button:not(.collapsed)::after {
+  background-image: url("../public/images/icons/dropdown-icon.png");
+  transform: rotate(180deg);
+}
+.nav-link.accordion-button::after {
+  background-image: url("../public/images/icons/dropdown-icon.png");
 }
 
 .custom-btn {
@@ -78,16 +94,44 @@ nav .navbar-nav .nav-item a,
   line-height: 15.6px;
 }
 
-.navbar-nav .dropdown-menu {
+/* Default styles for both dropdowns (Education and Institutions) */
+.navbar-nav .dropdown-menu,
+.navbar-nav .dropdown-menu1 {
+  display: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  list-style: none;
+  padding-left: 0;
 }
 
-.navbar-nav .dropdown-menu .dropdown-item {
+/* Show Education dropdown when hovering over Education */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Show Institutions dropdown when hovering over Institutions */
+.navbar-nav .institute-dropdown:hover .dropdown-menu1 {
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--white-font);
+  border-radius: 5px;
+}
+
+/* Optional: Styling for dropdown items */
+.navbar-nav .dropdown-menu .dropdown-item,
+.navbar-nav .dropdown-menu1 .dropdown-item {
   justify-content: left;
+  list-style: none;
 }
 
 .offcanvas {
   max-width: 100%;
+}
+
+.offcanvas-body .accordion-body {
+  padding: 0;
 }
 
 .navbar-toggler {
@@ -137,8 +181,9 @@ nav .navbar-nav .nav-item a,
   padding: 15px 50px;
   text-transform: uppercase;
   margin-top: 20px;
-  transition: color 0.5s ease, background-color 0.2s ease;
   color: var(--black-font);
+  transition: color 0.5s ease, background-color 0.5s ease;
+
   border: 1px solid transparent;
 }
 
@@ -266,6 +311,10 @@ nav .navbar-nav .nav-item a,
   line-height: 25px;
   text-align: left;
   color: var(--black-font);
+}
+
+.accordion-body ul {
+  list-style: none;
 }
 
 .home-slider {
@@ -722,13 +771,16 @@ nav .navbar-nav .nav-item a,
 }
 
 .get-started-form .form-select {
-  padding: 0;
-  padding-bottom: 12px;
+  padding-bottom: 6px;
 }
 
 .get-started-form .form-control:focus,
 .get-started-form .form-select {
   box-shadow: none;
+}
+
+.get-started-form .form-select option {
+  font-size: 18px;
 }
 
 /* FOOTER */
@@ -776,7 +828,8 @@ nav .navbar-nav .nav-item a,
   }
 
   nav .navbar-nav .nav-item a,
-  .navbar-nav .dropdown-menu .dropdown-item {
+  .navbar-nav .dropdown-menu .dropdown-item,
+  .nav-link.accordion-button {
     justify-content: start;
     padding: 20px 15px !important;
   }
