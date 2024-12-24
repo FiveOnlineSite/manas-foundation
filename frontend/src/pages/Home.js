@@ -87,11 +87,7 @@ const Home = () => {
                 teaching and personal growth.
               </p>
               <NavLink to="/">
-                <button
-                  className="custom-btn white-btn wow"
-                  data-aos="fade-zoom-in" // Fade in as you scroll
-                  data-aos-duration="1500"
-                >
+                <button className="custom-btn white-btn wow">
                   <li className="nav-link ">Donate</li>
                 </button>
               </NavLink>
@@ -387,7 +383,7 @@ const Home = () => {
                             data-aos-duration="1500"
                           >
                             <img
-                              src="/images/testimonials/testi-1-copyright-120x120.png"
+                              src="/images/testimonials/testi-1.png"
                               alt="member"
                             />
                           </div>
@@ -424,13 +420,13 @@ const Home = () => {
                             </p>
 
                             <div className="testimonial-name ">
-                              <h6>Eric Francis</h6>
+                              <h6>Liam Patel</h6>
                               <p>Volunteer</p>
                             </div>
                           </div>
                           <div className="testimonial-img col-lg-5 order-lg-2 order-1">
                             <img
-                              src="/images/testimonials/testi-2-copyright-120x120.png"
+                              src="/images/testimonials/testi-2.png"
                               alt="member"
                             />
                           </div>
@@ -467,13 +463,13 @@ const Home = () => {
                             </p>
 
                             <div className="testimonial-name ">
-                              <h6>Eric Francis</h6>
+                              <h6>Sophia Carter</h6>
                               <p>Volunteer</p>
                             </div>
                           </div>
                           <div className="testimonial-img col-lg-5 order-lg-2 order-1">
                             <img
-                              src="/images/testimonials/testi-3-copyright-120x120.png"
+                              src="/images/testimonials/testi-3.png"
                               alt="member"
                             />
                           </div>
@@ -510,13 +506,13 @@ const Home = () => {
                             </p>
 
                             <div className="testimonial-name ">
-                              <h6>Eric Francis</h6>
+                              <h6>Ethan Chen</h6>
                               <p>Volunteer</p>
                             </div>
                           </div>
                           <div className="testimonial-img col-lg-5 order-lg-2 order-1">
                             <img
-                              src="/images/testimonials/testi-2-copyright-120x120.png"
+                              src="/images/testimonials/testi-2.png"
                               alt="member"
                             />
                           </div>
@@ -553,13 +549,13 @@ const Home = () => {
                             </p>
 
                             <div className="testimonial-name ">
-                              <h6>Eric Francis</h6>
+                              <h6>Amar Johnson</h6>
                               <p>Volunteer</p>
                             </div>
                           </div>
                           <div className="testimonial-img col-lg-5 order-lg-2 order-1">
                             <img
-                              src="/images/testimonials/testi-2-copyright-120x120.png"
+                              src="/images/testimonials/testi-1.png"
                               alt="member"
                             />
                           </div>
@@ -580,7 +576,7 @@ const Home = () => {
                         aria-controls="member1"
                       >
                         <img
-                          src="/images/testimonials/testi-1-copyright-120x120.png"
+                          src="/images/testimonials/testi-1.png"
                           alt="member"
                         />
                       </a>
@@ -594,7 +590,7 @@ const Home = () => {
                         aria-controls="member2"
                       >
                         <img
-                          src="/images/testimonials/testi-2-copyright-120x120.png"
+                          src="/images/testimonials/testi-2.png"
                           alt="member"
                         />
                       </a>
@@ -608,7 +604,7 @@ const Home = () => {
                         aria-controls="member3"
                       >
                         <img
-                          src="/images/testimonials/testi-3-copyright-120x120.png"
+                          src="/images/testimonials/testi-3.png"
                           alt="member"
                         />
                       </a>
@@ -622,7 +618,7 @@ const Home = () => {
                         aria-controls="member4"
                       >
                         <img
-                          src="/images/testimonials/testi-2-copyright-120x120.png"
+                          src="/images/testimonials/testi-2.png"
                           alt="member"
                         />
                       </a>
@@ -637,7 +633,7 @@ const Home = () => {
                         aria-controls="member5"
                       >
                         <img
-                          src="/images/testimonials/testi-2-copyright-120x120.png"
+                          src="/images/testimonials/testi-1.png"
                           alt="member"
                         />
                       </a>
@@ -663,7 +659,7 @@ const Home = () => {
 
                     <div className="d-flex justify-content-between w-100">
                       <h2 className="section-title">Editor’s Pick</h2>
-                      <NavLink to="/">
+                      <NavLink to="/" onClick={() => window.scrollTo(0, 0)}>
                         <div className="d-flex align-items-start">
                           <img src="/images/icons/Group 8189.png" alt="arrow" />
                         </div>
@@ -671,7 +667,11 @@ const Home = () => {
                     </div>
 
                     <div className="events-div">
-                      <NavLink class="nav-link" to="/">
+                      <NavLink
+                        class="nav-link"
+                        to="/"
+                        onClick={() => window.scrollTo(0, 0)}
+                      >
                         <div className="single-event d-flex">
                           <img src="/images/icons/Group 8179.png" alt="arrow" />
                           <div className="ps-3">
@@ -686,7 +686,11 @@ const Home = () => {
                         </div>
                       </NavLink>
 
-                      <NavLink class="nav-link" to="/">
+                      <NavLink
+                        class="nav-link"
+                        to="/"
+                        onClick={() => window.scrollTo(0, 0)}
+                      >
                         <div className="single-event d-flex">
                           <img src="/images/icons/Group 8179.png" alt="arrow" />
                           <div className="ps-3">
@@ -701,7 +705,11 @@ const Home = () => {
                         </div>
                       </NavLink>
 
-                      <NavLink class="nav-link" to="/">
+                      <NavLink
+                        class="nav-link"
+                        to="/"
+                        onClick={() => window.scrollTo(0, 0)}
+                      >
                         <div className="single-event d-flex">
                           <img src="/images/icons/Group 8179.png" alt="arrow" />
                           <div className="ps-3">
@@ -831,9 +839,27 @@ const Home = () => {
                               aria-label="Default select example"
                             >
                               <option selected>Select Inquiry Type</option>
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
+                              <option value="School Construction">
+                                School Construction
+                              </option>
+                              <option value="School Renovation/Repair">
+                                School Renovation/Repair
+                              </option>
+                              <option value="School Supplies/Equipment">
+                                School Supplies/Equipment
+                              </option>
+                              <option value="Teacher Training/Support">
+                                Teacher Training/Support
+                              </option>
+                              <option value="Scholarship/Financial Aid">
+                                Scholarship/Financial Aid
+                              </option>
+                              <option value="Volunteer Opportunities">
+                                Volunteer Opportunities
+                              </option>
+                              <option value="General Inquiry">
+                                General Inquiry
+                              </option>
                             </select>
                           </div>
                         </div>

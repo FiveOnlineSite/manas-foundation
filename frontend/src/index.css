@@ -137,7 +137,7 @@ nav .navbar-nav .nav-item a,
   padding: 15px 50px;
   text-transform: uppercase;
   margin-top: 20px;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: color 0.5s ease, background-color 0.2s ease;
   color: var(--black-font);
   border: 1px solid transparent;
 }
@@ -285,20 +285,44 @@ nav .navbar-nav .nav-item a,
   position: relative;
 }
 
-.modal-video {
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 90vh;
-  margin: 30px 0;
+  height: 100%;
+  z-index: 1050; /* Ensure it's on top of other elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.modal-backdrop .modal-content {
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.863);
+  z-index: 1040;
+}
+
+.modal-video {
+  width: 90%;
+  height: 80vh;
+  z-index: 111;
   position: relative;
+}
+
+.modal-header {
+  padding: 20px;
+  border-bottom: none;
 }
 
 .modal-header button {
   position: absolute;
-  left: 100%;
-  top: 1%;
+  left: 95%;
+  top: 2%;
   padding: 10px;
   background-color: transparent;
   box-shadow: none;
@@ -310,13 +334,10 @@ nav .navbar-nav .nav-item a,
   font-size: 26px;
 }
 
-.modal-header button {
-  right: 0%;
-  left: 98%;
-}
-
 .modal-body {
   margin: 20px 0;
+  position: relative;
+  width: 100%;
 }
 
 .video-thumbnail-container .play-icon-overlay {
@@ -344,7 +365,7 @@ nav .navbar-nav .nav-item a,
 .bridging-img .bridging-img2 {
   position: relative;
   padding-left: 10%;
-  z-index: 11;
+  z-index: 1;
   width: 80%;
 }
 
@@ -663,6 +684,7 @@ nav .navbar-nav .nav-item a,
 .event-single-div span {
   padding: 0 8px;
   padding-bottom: 10px;
+  color: var(--black-font);
 }
 
 .single-event h5 {
