@@ -87,7 +87,7 @@ nav .navbar-nav .nav-item a,
 }
 
 .offcanvas {
-  width: 70%;
+  max-width: 80%;
 }
 
 .navbar-toggler {
