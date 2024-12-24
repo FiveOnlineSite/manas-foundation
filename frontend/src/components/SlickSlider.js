@@ -1,29 +1,85 @@
 import React, { useState, useRef, useEffect } from "react";
 import Slider from "react-slick";
+import { createPortal } from "react-dom";
 
 const SlickSlider = ({ items, settings }) => {
-  const [selectedVideo, setSelectedVideo] = useState(null); // Track the video for the modal
+  const [selectedVideo, setSelectedVideo] = useState(null);
   const videoRef = useRef(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = (video) => {
-    console.log("Opening modal for video:", video);
-    setSelectedVideo(video); // Set the selected video
-    setIsModalOpen(true); // Open the modal
+    setSelectedVideo(video);
+    setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    setSelectedVideo(null); // Clear the selected video
-    setIsModalOpen(false); // Close the modal
+    setSelectedVideo(null);
+    setIsModalOpen(false);
   };
 
   useEffect(() => {
-    console.log("Modal state changed:", isModalOpen);
     if (isModalOpen && selectedVideo && videoRef.current) {
       videoRef.current.play();
       videoRef.current.muted = false;
     }
   }, [isModalOpen, selectedVideo]);
+
+  const Modal = () =>
+    isModalOpen &&
+    createPortal(
+      <div
+        className="modal fade show"
+        tabIndex="-1"
+        role="dialog"
+        style={{
+          display: "block",
+          backgroundColor: "rgba(0, 0, 0, 0.8)",
+          zIndex: 1050, // Ensure modal is above other content
+        }}
+        onClick={closeModal}
+      >
+        <div
+          className="modal-dialog modal-xl modal-dialog-centered"
+          role="document"
+        >
+          <div className="modal-content modal-backdrop">
+            <div className="modal-header">
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  closeModal();
+                }}
+              >
+                {" "}
+                <i class="fa-solid fa-circle-xmark"></i>
+              </button>
+            </div>
+            <div className="modal-body text-center">
+              {selectedVideo ? (
+                <video
+                  ref={videoRef}
+                  controls
+                  className="modal-video"
+                  onClick={(e) => e.stopPropagation()}
+                  onCanPlay={() => {
+                    if (videoRef.current) {
+                      videoRef.current.play();
+                    }
+                  }}
+                >
+                  <source src={selectedVideo} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <p>No video selected</p>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>,
+      document.body // Render modal at the root level
+    );
 
   return (
     <>
@@ -50,40 +106,7 @@ const SlickSlider = ({ items, settings }) => {
           </div>
         ))}
       </Slider>
-
-      {/* Modal */}
-      {isModalOpen && (
-        <div className="modal-backdrop">
-          <div className="modal-dialog modal-xl">
-            <div className="modal-content">
-              <div className="modal-header">
-                <button type="button" onClick={closeModal}>
-                  <i class="fa-solid fa-circle-xmark"></i>
-                </button>
-              </div>
-              <div className="modal-body">
-                {selectedVideo ? (
-                  <video
-                    ref={videoRef} // Attach the ref here
-                    controls
-                    className="modal-video"
-                    onCanPlay={() => {
-                      if (videoRef.current) {
-                        videoRef.current.play(); // Ensure the video plays when it is ready
-                      }
-                    }}
-                  >
-                    <source src={selectedVideo} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                ) : (
-                  <p>No video selected</p>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <Modal />
     </>
   );
 };
