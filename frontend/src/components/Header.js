@@ -202,11 +202,11 @@ const Header = () => {
                                   id="headingOne"
                                 >
                                   <button
-                                    className="accordion-button nav-link"
+                                    className="accordion-button nav-link collapsed" // Add "collapsed" class
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#institutes"
-                                    aria-expanded="false"
+                                    aria-expanded="false" // Set to false
                                     aria-controls="institutes"
                                   >
                                     Institutions
@@ -214,7 +214,7 @@ const Header = () => {
                                 </h2>
                                 <div
                                   id="institutes"
-                                  className="accordion-collapse"
+                                  className="accordion-collapse collapse" // Keep only "collapse", remove "show"
                                   aria-labelledby="headingOne"
                                   data-bs-parent="#instituteAccordion"
                                 >
