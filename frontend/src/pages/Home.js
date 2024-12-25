@@ -127,26 +127,26 @@ const Home = () => {
                     </h2>
 
                     <div className="strategies-accordion">
-                      <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header">
+                      <div className="accordion" id="strategiesAccordion">
+                        <div className="accordion-item">
+                          <h2 className="accordion-header">
                             <button
-                              class="accordion-button"
+                              className="accordion-button"
                               type="button"
                               data-bs-toggle="collapse"
-                              data-bs-target="#collapseOne"
+                              data-bs-target="#startegy1"
                               aria-expanded="true"
-                              aria-controls="collapseOne"
+                              aria-controls="startegy1"
                             >
                               Education Elevation
                             </button>
                           </h2>
                           <div
-                            id="collapseOne"
-                            class="accordion-collapse collapse show"
-                            data-bs-parent="#accordionExample"
+                            id="startegy1"
+                            className="accordion-collapse collapse show"
+                            data-bs-parent="#strategiesAccordion"
                           >
-                            <div class="accordion-body">
+                            <div className="accordion-body">
                               <p>
                                 Supporting students with quality education
                                 through scholarship, free of financial
@@ -155,25 +155,25 @@ const Home = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header">
+                        <div className="accordion-item">
+                          <h2 className="accordion-header">
                             <button
-                              class="accordion-button collapsed"
+                              className="accordion-button collapsed"
                               type="button"
                               data-bs-toggle="collapse"
-                              data-bs-target="#collapseTwo"
+                              data-bs-target="#startegy2"
                               aria-expanded="false"
-                              aria-controls="collapseTwo"
+                              aria-controls="startegy2"
                             >
                               Institution Uplift
                             </button>
                           </h2>
                           <div
-                            id="collapseTwo"
-                            class="accordion-collapse collapse"
-                            data-bs-parent="#accordionExample"
+                            id="startegy2"
+                            className="accordion-collapse collapse"
+                            data-bs-parent="#strategiesAccordion"
                           >
-                            <div class="accordion-body">
+                            <div className="accordion-body">
                               <p>
                                 Supporting students with quality education
                                 through scholarship, free of financial
@@ -182,25 +182,25 @@ const Home = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header">
+                        <div className="accordion-item">
+                          <h2 className="accordion-header">
                             <button
-                              class="accordion-button collapsed"
+                              className="accordion-button collapsed"
                               type="button"
                               data-bs-toggle="collapse"
-                              data-bs-target="#collapseThree"
+                              data-bs-target="#startegy3"
                               aria-expanded="false"
-                              aria-controls="collapseThree"
+                              aria-controls="startegy3"
                             >
                               Opportunity Launch
                             </button>
                           </h2>
                           <div
-                            id="collapseThree"
-                            class="accordion-collapse collapse"
-                            data-bs-parent="#accordionExample"
+                            id="startegy3"
+                            className="accordion-collapse collapse"
+                            data-bs-parent="#strategiesAccordion"
                           >
-                            <div class="accordion-body">
+                            <div className="accordion-body">
                               <p>
                                 Supporting students with quality education
                                 through scholarship, free of financial
@@ -291,7 +291,7 @@ const Home = () => {
                     </p>
 
                     <button className="custom-btn bridge-btn">
-                      <NavLink class="nav-link" to="/">
+                      <NavLink className="nav-link" to="/">
                         Know More
                       </NavLink>
                     </button>
@@ -314,7 +314,7 @@ const Home = () => {
               </h2>
 
               <button className="custom-btn bridge-btn read-btn">
-                <NavLink class="nav-link" to="/">
+                <NavLink className="nav-link" to="/">
                   READ OUR NEWSLETTER
                 </NavLink>
               </button>
@@ -565,10 +565,10 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="col-lg-2 testimonial-links order-lg-2 order-1">
-                  <ul class="nav nav-tabs">
-                    <li class="nav-item">
+                  <ul className="nav nav-tabs">
+                    <li className="nav-item">
                       <a
-                        class="nav-link active"
+                        className="nav-link active"
                         aria-current="page"
                         href="#member1"
                         id="member1-tab"
@@ -581,9 +581,9 @@ const Home = () => {
                         />
                       </a>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                       <a
-                        class="nav-link"
+                        className="nav-link"
                         href="#member2"
                         id="member2-tab"
                         data-bs-toggle="tab"
@@ -595,9 +595,9 @@ const Home = () => {
                         />
                       </a>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                       <a
-                        class="nav-link"
+                        className="nav-link"
                         href="#member3"
                         id="member3-tab"
                         data-bs-toggle="tab"
@@ -609,9 +609,9 @@ const Home = () => {
                         />
                       </a>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                       <a
-                        class="nav-link"
+                        className="nav-link"
                         href="#member4"
                         id="member4-tab"
                         data-bs-toggle="tab"
@@ -624,9 +624,9 @@ const Home = () => {
                       </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li className="nav-item">
                       <a
-                        class="nav-link"
+                        className="nav-link"
                         href="#member5"
                         id="member5-tab"
                         data-bs-toggle="tab"
@@ -668,7 +668,7 @@ const Home = () => {
 
                     <div className="events-div">
                       <NavLink
-                        class="nav-link"
+                        className="nav-link"
                         to="/"
                         onClick={() => window.scrollTo(0, 0)}
                       >
@@ -687,7 +687,7 @@ const Home = () => {
                       </NavLink>
 
                       <NavLink
-                        class="nav-link"
+                        className="nav-link"
                         to="/"
                         onClick={() => window.scrollTo(0, 0)}
                       >
@@ -706,7 +706,7 @@ const Home = () => {
                       </NavLink>
 
                       <NavLink
-                        class="nav-link"
+                        className="nav-link"
                         to="/"
                         onClick={() => window.scrollTo(0, 0)}
                       >
@@ -759,7 +759,7 @@ const Home = () => {
                       </div>
 
                       <button className="custom-btn bridge-btn read-btn mt-3 mb-0">
-                        <NavLink class="nav-link" to="/">
+                        <NavLink className="nav-link" to="/">
                           LEARN MORE
                         </NavLink>
                       </button>
@@ -790,26 +790,26 @@ const Home = () => {
                     <form>
                       <div className="row">
                         <div className="col-lg-6">
-                          <div class="mb-4">
-                            <label for="full-name" class="form-label">
+                          <div className="mb-4">
+                            <label for="full-name" className="form-label">
                               Full Name
                             </label>
                             <input
                               type="text"
-                              class="form-control"
+                              className="form-control"
                               id="full-name"
                             />
                           </div>
                         </div>
 
                         <div className="col-lg-6">
-                          <div class="mb-4">
-                            <label for="phone-number" class="form-label">
+                          <div className="mb-4">
+                            <label for="phone-number" className="form-label">
                               Phone Number
                             </label>
                             <input
                               type="text"
-                              class="form-control"
+                              className="form-control"
                               id="phone-number"
                               required
                             />
@@ -817,24 +817,24 @@ const Home = () => {
                         </div>
 
                         <div className="col-lg-6">
-                          <div class="mb-4">
-                            <label for="email-address" class="form-label">
+                          <div className="mb-4">
+                            <label for="email-address" className="form-label">
                               Email Address
                             </label>
                             <input
                               type="email"
-                              class="form-control"
+                              className="form-control"
                               id="email-address"
                             />
                           </div>
                         </div>
 
                         <div className="col-lg-6">
-                          <div class="mb-4">
-                            <label for="email-address" class="form-label">
+                          <div className="mb-4">
+                            <label for="email-address" className="form-label">
                               Inquiry Type
                             </label>
-                            <select class="form-select">
+                            <select className="form-select">
                               <option selected disabled>
                                 Select Inquiry Type
                               </option>
@@ -864,13 +864,13 @@ const Home = () => {
                         </div>
 
                         <div className="col-lg-12">
-                          <div class="mb-4">
-                            <label for="message" class="form-label">
+                          <div className="mb-4">
+                            <label for="message" className="form-label">
                               Message
                             </label>
                             <textarea
                               rows="2"
-                              class="form-control"
+                              className="form-control"
                               id="message"
                             ></textarea>
                           </div>
@@ -879,7 +879,7 @@ const Home = () => {
                         <div className="col-lg-12">
                           <div className="mb-4">
                             <button className="custom-btn bridge-btn">
-                              <NavLink class="nav-link" to="/">
+                              <NavLink className="nav-link" to="/">
                                 LEAVE US A MESSAGE
                               </NavLink>
                             </button>
