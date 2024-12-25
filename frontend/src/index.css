@@ -958,6 +958,10 @@ nav .navbar-nav .nav-item a,
   }
 
   .right-img-div .right-img1 {
-    top: 56%;
+    top: 60%;
+  }
+
+  .right-img-div .right-img2 {
+    bottom: 15%;
   }
 }
