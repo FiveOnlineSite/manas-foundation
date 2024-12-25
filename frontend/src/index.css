@@ -943,3 +943,18 @@ nav .navbar-nav .nav-item a,
     margin-top: 50px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .banner .container-fluid {
+    background-image: url("../public/images/banner/manas\ Mobile\ header.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .banner .container-fluid .left-img-div,
+  .banner .container-fluid .right-img-div {
+    display: none;
+  }
+}
