@@ -210,7 +210,7 @@ nav .navbar-nav .nav-item a,
 .right-img-div .right-img1 {
   position: absolute;
   right: 0;
-  top: 15%;
+  top: 12%;
 }
 
 .right-img-div .right-img2 {
@@ -945,16 +945,19 @@ nav .navbar-nav .nav-item a,
 }
 
 @media screen and (max-width: 500px) {
-  .banner .container-fluid {
-    background-image: url("../public/images/banner/Mobile\ header\ \(2\).png");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    background-color: transparent;
+  .left-img-div .left-img1,
+  .right-img-div .right-img1,
+  .right-img-div .right-img2,
+  .left-img-div .left-img3,
+  .left-img-div .left-img2 {
+    height: 200px;
   }
 
-  .banner .container-fluid .left-img-div,
-  .banner .container-fluid .right-img-div {
-    display: none;
+  .left-img-div .left-img2 {
+    bottom: 12%;
+  }
+
+  .right-img-div .right-img1 {
+    top: 56%;
   }
 }
