@@ -52,7 +52,7 @@ const SlickSlider = ({ items, settings }) => {
                 }}
               >
                 {" "}
-                <i class="fa-solid fa-circle-xmark"></i>
+                <i className="fa-solid fa-circle-xmark"></i>
               </button>
             </div>
             <div className="modal-body text-center">
