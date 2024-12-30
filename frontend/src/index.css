@@ -164,12 +164,13 @@ nav .navbar-nav .nav-item a,
   text-align: center;
 }
 
-.banner .container-fluid .banner-text .banner-title {
+.banner-title {
   font-size: 70px;
   font-weight: 700;
   line-height: 80px;
   color: var(--white-font);
   font-family: "Museo-Bold";
+  text-align: center;
 }
 
 .banner-text .custom-btn.white-btn {
@@ -250,7 +251,6 @@ nav .navbar-nav .nav-item a,
 }
 
 .section-title {
-  text-transform: capitalize;
   font-family: "Museo-Bold";
   font-size: 40px;
   font-weight: 700;
@@ -485,7 +485,7 @@ nav .navbar-nav .nav-item a,
   position: relative;
 }
 
-.support-text-div h2 {
+.extra-big-text {
   font-family: "Museo";
   font-size: 128px;
   font-weight: 700;
@@ -806,6 +806,82 @@ nav .navbar-nav .nav-item a,
   text-align: center;
 }
 
+/* SCOPE */
+
+.about-banner {
+  padding-bottom: 50px;
+}
+
+.about-banner .container-fluid {
+  height: 85vh;
+  width: 90%;
+  border-radius: 75px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-banner .container-fluid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 75px;
+  position: relative;
+}
+
+.about-banner .container-fluid .about-banner-text {
+  position: absolute;
+  top: 4%;
+  width: 60%;
+}
+
+.about-banner-text .banner-subtitle {
+  font-family: "Museo-Sans";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 70px;
+  text-align: center;
+}
+
+.assistance-section,
+.funding-section,
+.enhancing-section,
+.difference-section {
+  padding: 50px 0;
+}
+
+.assistance-section h2 {
+  font-family: "Museo";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+  text-align: center;
+  padding: 0 10%;
+}
+
+.funding-img-div img {
+  width: 443px;
+  height: 606px;
+  object-fit: cover;
+}
+
+.enhancing-img img {
+  width: auto;
+}
+
+.donate-para {
+  position: absolute;
+  bottom: -5%;
+  right: 20%;
+}
+
+.donate-img {
+  position: absolute;
+  top: 10%;
+  right: 0;
+}
+
 @media screen and (max-width: 991px) {
   .mobile-navbar {
     display: block;
@@ -816,7 +892,8 @@ nav .navbar-nav .nav-item a,
     display: none;
   }
 
-  .banner .container-fluid {
+  .banner .container-fluid,
+  .about-banner .container-fluid {
     width: 100%;
     height: 84vh;
     margin-top: 62px;
@@ -850,7 +927,7 @@ nav .navbar-nav .nav-item a,
     width: 100%;
   }
 
-  .banner .container-fluid .banner-text .banner-title {
+  .banner-title {
     font-size: 3rem;
     line-height: 3rem;
   }
@@ -941,6 +1018,34 @@ nav .navbar-nav .nav-item a,
   .modal-video {
     height: 75vh;
     margin-top: 50px;
+  }
+
+  .funding-img-div img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+  }
+
+  .bridge-btn {
+    padding: 0 30px;
+  }
+
+  .enhancing-img img {
+    width: 100%;
+  }
+
+  .assistance-section h2 {
+    padding: 0;
+  }
+
+  .donate-para {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+
+  .donate-img {
+    position: relative;
   }
 }
 
