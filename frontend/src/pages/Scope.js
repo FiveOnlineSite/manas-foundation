@@ -40,7 +40,7 @@ const Scope = () => {
                 Because all children have the right to education
               </h2>
 
-              <div className="funding-img-div text-end pe-lg-0 pe-0">
+              <div className="funding-img-div text-end pe-lg-5 pe-0">
                 <img
                   src="/images/scope/group-young-children-running-playing-park.png"
                   className=" text-end"
