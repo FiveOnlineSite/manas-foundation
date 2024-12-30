@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import AOS from "aos";
 import WOW from "wowjs";
+import Scope from "./pages/Scope";
 
 function App() {
   useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/our-scope" element={<Scope />} />
       </Routes>
     </Router>
   );

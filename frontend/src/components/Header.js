@@ -43,7 +43,7 @@ const Header = () => {
                 </NavLink>
                 <ul className="dropdown-menu">
                   <li>
-                    <NavLink className="dropdown-item" to="/">
+                    <NavLink className="dropdown-item" to="/our-scope">
                       Our Scope
                     </NavLink>
                   </li>
@@ -181,7 +181,7 @@ const Header = () => {
                               <NavLink
                                 className="nav-link"
                                 aria-current="page"
-                                to="/"
+                                to="/our-scope"
                               >
                                 Our Scope
                               </NavLink>
