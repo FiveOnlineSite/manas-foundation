@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import AOS from "aos";
 import WOW from "wowjs";
 import Scope from "./pages/Scope";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/our-scope" element={<Scope />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
     </Router>
   );

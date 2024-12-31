@@ -48,26 +48,28 @@ const Scope = () => {
                 />
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 d-flex flex-column">
               <img
                 src="/images/scope/school-boy-holding-delicious-apple.png"
-                className="w-100"
+                className="w-100 order-2 order-lg-1"
                 alt=""
               />
 
-              <p className="paragraph bridge-para p-0 pt-2">
-                Scholarships are offered in the USA in partnership with
-                Scholarships America so young students can continue having the
-                best education available. The purpose is to design and deliver
-                students scholarship programs that meet their educational needs
-                and long-term professional objectives.
-              </p>
+              <div className="order-lg-2 order-1">
+                <p className="paragraph bridge-para p-0 pt-2 ">
+                  Scholarships are offered in the USA in partnership with
+                  Scholarships America so young students can continue having the
+                  best education available. The purpose is to design and deliver
+                  students scholarship programs that meet their educational
+                  needs and long-term professional objectives.
+                </p>
 
-              <button className="custom-btn bridge-btn">
-                <NavLink className="nav-link" to="/">
-                  Scholarships
-                </NavLink>
-              </button>
+                <button className="custom-btn bridge-btn">
+                  <NavLink className="nav-link" to="/">
+                    Scholarships
+                  </NavLink>
+                </button>
+              </div>
             </div>
           </div>
         </div>
