@@ -11,7 +11,7 @@ const ReachOut = () => {
           data-aos-duration="1500"
         >
           <div className="row align-items-center">
-            <div className="col-lg-7 order-lg-1 order-2">
+            <div className="col-lg-7 order-lg-1 order-2 mt-xl-0 mt-5">
               <h6 className="section-subtitle">GET STARTED</h6>
 
               <h2 className="section-title w-55">

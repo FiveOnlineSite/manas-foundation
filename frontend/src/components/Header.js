@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const [isInstitutionsDropdownOpen, setInstitutionsDropdownOpen] =
+    useState(false);
+
+  const toggleDropdown = () => {
+    setInstitutionsDropdownOpen((prevState) => !prevState);
+  };
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg desktop-navbar">
@@ -52,24 +59,36 @@ const Header = () => {
                       Scholarships
                     </NavLink>
                   </li>
-                  <li className="nav-item dropdown institute-dropdown">
+                  <li
+                    className={`nav-item dropdown institute-dropdown ${
+                      isInstitutionsDropdownOpen ? "show" : ""
+                    }`}
+                    onMouseLeave={() => setInstitutionsDropdownOpen(false)} // Close on mouse leave
+                  >
                     <NavLink
                       className="nav-link dropdown-toggle"
-                      to="/"
+                      to="#"
                       role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
+                      onClick={(e) => {
+                        e.preventDefault(); // Prevent default navigation
+                        toggleDropdown();
+                      }}
+                      aria-expanded={isInstitutionsDropdownOpen}
                     >
                       Institutions
                     </NavLink>
-                    <ul className="dropdown-menu1">
+                    <ul
+                      className={`dropdown-menu1 ${
+                        isInstitutionsDropdownOpen ? "show" : ""
+                      }`}
+                    >
                       <li>
-                        <NavLink className="dropdown-item" to="/">
+                        <NavLink className="dropdown-item" to="/institution-1">
                           Institution 1
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink className="dropdown-item" to="/">
+                        <NavLink className="dropdown-item" to="/institution-2">
                           Institution 2
                         </NavLink>
                       </li>
@@ -150,7 +169,11 @@ const Header = () => {
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li className="nav-item">
-                  <NavLink className="nav-link" aria-current="page" to="/">
+                  <NavLink
+                    className="nav-link"
+                    aria-current="page"
+                    to="/about-us"
+                  >
                     About Us
                   </NavLink>
                 </li>

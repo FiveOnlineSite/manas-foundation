@@ -18,6 +18,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  overflow-y: scroll !important;
   scrollbar-width: thin; /* Thin scrollbar */
   scrollbar-color: var(--dark-voilet-bg);
 }
@@ -104,7 +105,8 @@ nav .navbar-nav .nav-item a,
 }
 
 /* Show Education dropdown when hovering over Education */
-.navbar-nav .dropdown:hover .dropdown-menu {
+.navbar-nav .dropdown:hover .dropdown-menu,
+.navbar-nav .dropdown:focus .dropdown-menu {
   display: block;
 }
 
@@ -162,6 +164,7 @@ nav .navbar-nav .nav-item a,
   position: absolute;
   width: 53%;
   text-align: center;
+  z-index: 1;
 }
 
 .banner-title {
@@ -531,7 +534,7 @@ nav .navbar-nav .nav-item a,
 .testimonial-links ul {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
   border: none;
   border-color: transparent;
   overflow-y: scroll;
@@ -882,6 +885,36 @@ nav .navbar-nav .nav-item a,
   right: 0;
 }
 
+@media screen and (max-width: 1024px) {
+  .donate-img {
+    position: relative;
+  }
+
+  nav .navbar-nav .nav-item a,
+  .navbar-nav .dropdown-menu .dropdown-item,
+  .nav-link.accordion-button {
+    padding: 10px 13px !important;
+  }
+
+  .support-text-div .support-para {
+    position: relative;
+    width: 100%;
+  }
+
+  .testimonials {
+    background-position: 118%;
+  }
+
+  .testimonial-img img {
+    width: 310px;
+    height: 310px;
+  }
+
+  .hope-div {
+    bottom: -60%;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .mobile-navbar {
     display: block;
@@ -917,7 +950,49 @@ nav .navbar-nav .nav-item a,
   }
 
   .custom-btn a {
-    padding: 15px 20px !important;
+    padding: 0px 20px !important;
+  }
+
+  .testimonials {
+    padding: 0;
+    background-image: none;
+  }
+
+  .testimonial-links ul {
+    flex-direction: row;
+    overflow: scroll;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .testimonial-text {
+    padding: 0 12px;
+  }
+
+  .testimonial-img img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .news-events-text {
+    margin-top: 40%;
+  }
+
+  .hope-div {
+    bottom: -30%;
+  }
+
+  .bridging-text {
+    margin-top: 70px;
+  }
+
+  .half-img-text {
+    padding: 7% 11%;
+  }
+
+  .funding-img-div img {
+    width: 100%;
+    border-radius: 75px;
   }
 }
 
@@ -961,32 +1036,6 @@ nav .navbar-nav .nav-item a,
   .support-text-div h2 {
     font-size: 60px;
     line-height: 70px;
-  }
-
-  .testimonials {
-    padding: 0;
-    background-image: none;
-  }
-
-  .support-text-div .support-para {
-    width: 100%;
-    position: relative;
-  }
-
-  .testimonial-links ul {
-    flex-direction: row;
-    overflow: scroll;
-    height: auto;
-    margin-bottom: 30px;
-  }
-
-  .testimonial-text {
-    padding: 0 12px;
-  }
-
-  .testimonial-img img {
-    height: 100%;
-    width: 100%;
   }
 
   .news-img {
@@ -1046,6 +1095,14 @@ nav .navbar-nav .nav-item a,
 
   .donate-img {
     position: relative;
+  }
+
+  .news-events-text {
+    margin-top: 10%;
+  }
+
+  .custom-btn a {
+    padding: 15px 20px !important;
   }
 }
 
