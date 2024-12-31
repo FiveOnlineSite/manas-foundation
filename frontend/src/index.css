@@ -913,6 +913,14 @@ nav .navbar-nav .nav-item a,
   .hope-div {
     bottom: -60%;
   }
+
+  .about-banner .container-fluid .about-banner-text {
+    top: 10%;
+  }
+
+  .banner-title {
+    line-height: 80px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -1004,7 +1012,7 @@ nav .navbar-nav .nav-item a,
 
   .banner-title {
     font-size: 3rem;
-    line-height: 3rem;
+    line-height: 4rem;
   }
 
   .bridging-img .bridging-img2 {
