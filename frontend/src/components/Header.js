@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isInstitutionsDropdownOpen, setInstitutionsDropdownOpen] =
@@ -8,6 +8,12 @@ const Header = () => {
   const toggleDropdown = () => {
     setInstitutionsDropdownOpen((prevState) => !prevState);
   };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top on route change
+  }, [location]); // Dependency on location ensures it runs whenever the route changes
 
   return (
     <div>

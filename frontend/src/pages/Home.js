@@ -760,7 +760,11 @@ const Home = () => {
                       </div>
 
                       <button className="custom-btn bridge-btn read-btn mt-3 mb-0">
-                        <NavLink className="nav-link" to="/">
+                        <NavLink
+                          className="nav-link"
+                          to="/"
+                          onClick={() => window.scrollTo(0, 0)}
+                        >
                           LEARN MORE
                         </NavLink>
                       </button>
