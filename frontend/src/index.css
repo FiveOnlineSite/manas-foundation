@@ -973,7 +973,7 @@ nav .navbar-nav .nav-item a,
     margin-bottom: 30px;
   }
 
-  .testimonial-text {
+  .testimonial-text:first-child {
     padding: 0 12px;
   }
 
