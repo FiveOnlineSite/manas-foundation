@@ -15,7 +15,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 !important;
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: scroll !important;
@@ -172,7 +172,7 @@ nav .navbar-nav .nav-item a,
   font-weight: 700;
   line-height: 80px;
   color: var(--white-font);
-  font-family: "Museo-Bold";
+  font-family: "Museo";
   text-align: center;
 }
 
@@ -187,7 +187,6 @@ nav .navbar-nav .nav-item a,
   margin-top: 20px;
   color: var(--black-font);
   transition: color 0.5s ease, background-color 0.5s ease;
-
   border: 1px solid transparent;
 }
 
@@ -204,6 +203,10 @@ nav .navbar-nav .nav-item a,
   padding: 0 30px;
   margin-top: 20px;
   font-family: "Museo-Sans";
+}
+
+.light-paragraph {
+  font-weight: 300;
 }
 
 .banner .container-fluid .left-img-div,
@@ -249,12 +252,13 @@ nav .navbar-nav .nav-item a,
   text-transform: uppercase;
   font-size: 16px;
   line-height: 26px;
+  font-weight: 400;
   font-family: "Museo-Sans";
   color: var(--black-font);
 }
 
 .section-title {
-  font-family: "Museo-Bold";
+  font-family: "Museo";
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
@@ -268,6 +272,10 @@ nav .navbar-nav .nav-item a,
 
 .core-strategies-img img {
   width: 100%;
+}
+
+.strategies-accordion {
+  width: 70%;
 }
 
 .accordion-item {
@@ -405,7 +413,7 @@ nav .navbar-nav .nav-item a,
 }
 
 .bridging-gap {
-  padding: 70px 0 100px 0;
+  padding: 70px 0 150px 0;
   background-color: var(--light-pink-bg);
   background-image: url("../public/images/Group\ 8121.png");
 }
@@ -460,6 +468,13 @@ nav .navbar-nav .nav-item a,
   width: 100%;
   padding: 30px 0 50px 0;
   height: 100%;
+  position: relative; /* Set to relative for z-index to work */
+  z-index: 2; /* Higher value ensures it's above the next section */
+}
+
+.about-half-img {
+  margin-bottom: -50px;
+  padding: 30px 0 90px 0;
 }
 
 .half-img-text {
@@ -470,6 +485,10 @@ nav .navbar-nav .nav-item a,
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.about-half-img-text {
+  width: 70%;
 }
 
 .read-btn {
@@ -786,6 +805,115 @@ nav .navbar-nav .nav-item a,
   font-size: 18px;
 }
 
+/* ABOUT */
+
+.director {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.director .director-content h6 {
+  font-family: "Museo-Sans";
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+
+.director .director-content {
+  padding-left: 20px;
+}
+
+.director .director-content p {
+  font-family: "Museo-Sans";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.bg-img-row {
+  background-image: url("../public/images/Group 8121.png");
+  padding: 50px 0;
+  position: relative; /* Set to relative for proper layering */
+  z-index: 1; /* Lower value ensures it's below the previous section */
+  margin-bottom: 50px;
+  background-color: var(--light-pink-bg);
+}
+
+.bg-img-row .section-title {
+  width: 80%;
+}
+
+.value-title {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.single-value {
+  padding: 30px 10px;
+}
+
+.white-color {
+  color: var(--white-font);
+}
+
+.value-title h5 {
+  font-family: "Museo";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  text-align: left;
+  color: var(--orange-bg);
+  margin-bottom: 0;
+  padding-left: 10px;
+}
+
+.single-value p {
+  font-family: "Museo-Sans";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: left;
+  color: var(--black-font);
+  padding-top: 20px;
+}
+
+.inspiration-section {
+  margin: 50px 0;
+}
+
+.inspiration-div {
+  background: linear-gradient(274.69deg, #f05a27 0%, #000000 60.87%);
+  padding: 50px 0;
+}
+
+.inspiration-section img {
+  width: 80%;
+}
+
+.inspiration-para p {
+  font-family: "Museo-Sans";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  color: var(--white-font);
+  padding-bottom: 30px;
+}
+
+.shaping-section {
+  padding: 70px 0 150px 0;
+}
+
+.shaping-content .section-title {
+  width: 60%;
+}
+
 /* FOOTER */
 .footer {
   background-color: var(--dark-voilet-bg);
@@ -833,10 +961,19 @@ nav .navbar-nav .nav-item a,
   position: relative;
 }
 
+.about-img {
+  filter: brightness(0.5);
+}
+
 .about-banner .container-fluid .about-banner-text {
   position: absolute;
   top: 4%;
   width: 60%;
+}
+
+.about-banner-text.banner-text {
+  top: 30% !important;
+  width: 50% !important;
 }
 
 .about-banner-text .banner-subtitle {
@@ -850,11 +987,12 @@ nav .navbar-nav .nav-item a,
 .assistance-section,
 .funding-section,
 .enhancing-section,
-.difference-section {
+.difference-section,
+.inspiring-section {
   padding: 50px 0;
 }
 
-.assistance-section h2 {
+.small-title {
   font-family: "Museo";
   font-size: 32px;
   font-weight: 700;
@@ -918,8 +1056,17 @@ nav .navbar-nav .nav-item a,
     top: 10%;
   }
 
+  .about-banner-text.banner-text {
+    top: 15% !important;
+  }
+
   .banner-title {
     line-height: 80px;
+  }
+
+  .shaping-section,
+  .bridging-gap {
+    padding: 50px 0;
   }
 }
 
@@ -1001,6 +1148,14 @@ nav .navbar-nav .nav-item a,
   .funding-img-div img {
     width: 100%;
     border-radius: 75px;
+  }
+
+  .about-half-img-text {
+    width: 100%;
+  }
+
+  .about-half-img {
+    padding: 30px 0 75px 0;
   }
 }
 
@@ -1087,7 +1242,8 @@ nav .navbar-nav .nav-item a,
     padding: 0 30px;
   }
 
-  .enhancing-img img {
+  .enhancing-img img,
+  .inspiration-section img {
     width: 100%;
   }
 
@@ -1111,6 +1267,19 @@ nav .navbar-nav .nav-item a,
 
   .custom-btn a {
     padding: 15px 20px !important;
+  }
+
+  .bg-img-row .section-title,
+  .strategies-accordion {
+    width: 100%;
+  }
+
+  .about-half-img {
+    padding: 0;
+  }
+
+  .bg-img-row {
+    padding: 100px 0 50px 0;
   }
 }
 

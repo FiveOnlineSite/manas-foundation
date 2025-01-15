@@ -39,7 +39,11 @@ const Header = () => {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="/">
+                <NavLink
+                  className="nav-link"
+                  aria-current="page"
+                  to="/about-us"
+                >
                   About Us
                 </NavLink>
               </li>
