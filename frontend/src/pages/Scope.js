@@ -21,10 +21,10 @@ const Scope = () => {
 
       <section className="assistance-section">
         <div className="container">
-          <h2>
+          <h4 className="small-title">
             Assistance in higher education and personal growth to children with
             limited economic opportunities.
-          </h2>
+          </h4>
         </div>
       </section>
 
