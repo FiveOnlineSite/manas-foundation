@@ -1400,6 +1400,11 @@ button.slick-next {
   .achivements-section .section-title {
     width: 100%;
   }
+
+  .pillars-div,
+  .institutions-div {
+    margin: 20px 0 30px 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
