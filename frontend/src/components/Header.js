@@ -65,7 +65,7 @@ const Header = () => {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="dropdown-item" to="/">
+                    <NavLink className="dropdown-item" to="/scholarships">
                       Scholarships
                     </NavLink>
                   </li>
@@ -93,7 +93,7 @@ const Header = () => {
                       }`}
                     >
                       <li>
-                        <NavLink className="dropdown-item" to="/institution-1">
+                        <NavLink className="dropdown-item" to="/institution">
                           Institution 1
                         </NavLink>
                       </li>
@@ -120,7 +120,7 @@ const Header = () => {
               </li>
               <button className="custom-btn">
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/donate">
                     Donate
                   </NavLink>
                 </li>
@@ -223,7 +223,7 @@ const Header = () => {
                               <NavLink
                                 className="nav-link"
                                 aria-current="page"
-                                to="/"
+                                to="/scholarships"
                               >
                                 Scholarships
                               </NavLink>
@@ -256,7 +256,7 @@ const Header = () => {
                                       <li>
                                         <NavLink
                                           className="dropdown-item"
-                                          to="/"
+                                          to="/institution"
                                         >
                                           Institution 1
                                         </NavLink>
@@ -295,7 +295,7 @@ const Header = () => {
 
                 <button className="custom-btn">
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/">
+                    <NavLink className="nav-link" to="/donate">
                       Donate
                     </NavLink>
                   </li>
