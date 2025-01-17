@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import SlickSlider from "../components/SlickSlider";
 import { NavLink } from "react-router-dom";
 import ReachOut from "../components/ReachOut";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   const homeBanner = [
@@ -89,7 +90,7 @@ const Home = () => {
               </p>
               <NavLink to="/">
                 <button className="custom-btn white-btn wow">
-                  <li className="nav-link ">Donate</li>
+                  <li className="nav-link ">Explore</li>
                 </button>
               </NavLink>
             </div>
@@ -105,6 +106,78 @@ const Home = () => {
                 src="/images/banner/portrait-young-girl-student-attending-school.png"
                 alt="right-img"
               />
+            </div>
+          </div>
+        </section>
+
+        <section className="bridging-gap">
+          <div className="container">
+            <div className="col-lg-12">
+              <div className="row">
+                <div
+                  className="col-lg-6"
+                  data-aos="fade-right" // Fade in as you scroll
+                  data-aos-duration="1500"
+                >
+                  <div className="bridging-img">
+                    <img
+                      src="/images/banner/Vector 6.png"
+                      alt="vector-6"
+                      className="bridging-img1"
+                    />
+                    <div className="bridging-img2">
+                      <img
+                        src="/images/banner/two-students-studying-together-online-with-laptop-park.png"
+                        alt="briding-img"
+                      />
+                    </div>
+
+                    <img
+                      src="/images/banner/Vector 7.png"
+                      alt="vector-7"
+                      className="bridging-img3"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="col-lg-6 wow"
+                  data-aos="fade-left" // Fade in as you scroll
+                  data-aos-duration="1500"
+                >
+                  <div className="bridging-text">
+                    <h6 className="section-subtitle">Empowering Education</h6>
+
+                    <h2 className="section-title">
+                      Bridging Gaps with Accessible, Holistic Learning
+                    </h2>
+
+                    <p className="paragraph bridge-para">
+                      Providing education that’s accessible to rural and
+                      low-income communities and opening learning opportunities
+                      that integrate top-tier education with holistic life
+                      skills.
+                    </p>
+
+                    <button className="custom-btn bridge-btn">
+                      <NavLink className="nav-link" to="/">
+                        Know More
+                      </NavLink>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="home-slider">
+          <div className="row">
+            <div
+              className="home-slick-slider wow"
+              data-aos="fade-up" // Fade in as you scroll
+              data-aos-duration="1500"
+            >
+              <SlickSlider settings={homeBannerSettings} items={homeBanner} />
             </div>
           </div>
         </section>
@@ -231,78 +304,6 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="home-slider">
-          <div className="row">
-            <div
-              className="home-slick-slider wow"
-              data-aos="fade-up" // Fade in as you scroll
-              data-aos-duration="1500"
-            >
-              <SlickSlider settings={homeBannerSettings} items={homeBanner} />
-            </div>
-          </div>
-        </section>
-
-        <section className="bridging-gap">
-          <div className="container">
-            <div className="col-lg-12">
-              <div className="row">
-                <div
-                  className="col-lg-6"
-                  data-aos="fade-right" // Fade in as you scroll
-                  data-aos-duration="1500"
-                >
-                  <div className="bridging-img">
-                    <img
-                      src="/images/banner/Vector 6.png"
-                      alt="vector-6"
-                      className="bridging-img1"
-                    />
-                    <div className="bridging-img2">
-                      <img
-                        src="/images/banner/two-students-studying-together-online-with-laptop-park.png"
-                        alt="briding-img"
-                      />
-                    </div>
-
-                    <img
-                      src="/images/banner/Vector 7.png"
-                      alt="vector-7"
-                      className="bridging-img3"
-                    />
-                  </div>
-                </div>
-                <div
-                  className="col-lg-6 wow"
-                  data-aos="fade-left" // Fade in as you scroll
-                  data-aos-duration="1500"
-                >
-                  <div className="bridging-text">
-                    <h6 className="section-subtitle">Empowering Education</h6>
-
-                    <h2 className="section-title">
-                      Bridging Gaps with Accessible, Holistic Learning
-                    </h2>
-
-                    <p className="paragraph bridge-para">
-                      Providing education that’s accessible to rural and
-                      low-income communities and opening learning opportunities
-                      that integrate top-tier education with holistic life
-                      skills.
-                    </p>
-
-                    <button className="custom-btn bridge-btn">
-                      <NavLink className="nav-link" to="/">
-                        Know More
-                      </NavLink>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className="half-img-section">
           <div className="container">
             <div className="half-img-text">
@@ -314,11 +315,11 @@ const Home = () => {
                 Bringing new opportunities to the underdogs since 2019
               </h2>
 
-              <button className="custom-btn bridge-btn read-btn">
+              {/* <button className="custom-btn bridge-btn read-btn">
                 <NavLink className="nav-link" to="/">
                   READ OUR NEWSLETTER
                 </NavLink>
-              </button>
+              </button> */}
             </div>
           </div>
         </section>
@@ -339,312 +340,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="testimonials">
-          <div className="container-fluid">
-            <div className="col-lg-12">
-              <div className="row align-items-center justify-content-center">
-                <div className="col-lg-10 order-lg-1 order-2">
-                  <div className="tab-content">
-                    <div
-                      className="tab-pane fade active show"
-                      id="member1"
-                      role="tabpanel"
-                      aria-labelledby="member1-tab"
-                    >
-                      <div className="col-lg-12">
-                        <div className="row align-items-center justify-content-center">
-                          <div className="testimonial-img1 col-lg-1">
-                            <img
-                              src="/images/testimonials/quote.png"
-                              alt="quote"
-                            />
-                          </div>
-
-                          <div className="testimonial-text col-lg-6 order-lg-1 order-2">
-                            <h2 className="section-title">
-                              Impactful Testimonials
-                            </h2>
-                            <p className="paragraph bridge-para testimonial-para">
-                              Lorem ipsum dolor sit amet. Rem distinctio
-                              corrupti cum earum iusto et veritatis facere ut
-                              tempora sapiente eum assumenda amet. Non deleniti
-                              porro est repudiandae aperiam ut fugit incidunt
-                              sed esse animi id voluptates laboriosam et sequi
-                              modi
-                            </p>
-
-                            <div className="testimonial-name ">
-                              <h6>Eric Francis</h6>
-                              <p>Volunteer</p>
-                            </div>
-                          </div>
-                          <div
-                            className="testimonial-img col-lg-5 order-lg-2 order-1 wow"
-                            data-aos="zoom-in"
-                            data-aos-duration="1500"
-                          >
-                            <img
-                              src="/images/testimonials/testi-1.png"
-                              alt="member"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
-                      className="tab-pane fade"
-                      id="member2"
-                      role="tabpanel"
-                      aria-labelledby="member2-tab"
-                    >
-                      <div className="col-lg-12">
-                        <div className="row align-items-center justify-content-center">
-                          <div className="testimonial-img1 col-lg-1">
-                            <img
-                              src="/images/testimonials/quote.png"
-                              alt="quote"
-                            />
-                          </div>
-
-                          <div className="testimonial-text col-lg-6 order-lg-1 order-2">
-                            <h2 className="section-title">
-                              Impactful Testimonials
-                            </h2>
-                            <p className="paragraph bridge-para testimonial-para">
-                              Lorem ipsum dolor sit amet. Rem distinctio
-                              corrupti cum earum iusto et veritatis facere ut
-                              tempora sapiente eum assumenda amet. Non deleniti
-                              porro est repudiandae aperiam ut fugit incidunt
-                              sed esse animi id voluptates laboriosam et sequi
-                              modi
-                            </p>
-
-                            <div className="testimonial-name ">
-                              <h6>Liam Patel</h6>
-                              <p>Volunteer</p>
-                            </div>
-                          </div>
-                          <div className="testimonial-img col-lg-5 order-lg-2 order-1">
-                            <img
-                              src="/images/testimonials/testi-2.png"
-                              alt="member"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
-                      className="tab-pane fade"
-                      id="member3"
-                      role="tabpanel"
-                      aria-labelledby="member3-tab"
-                    >
-                      <div className="col-lg-12">
-                        <div className="row align-items-center justify-content-center">
-                          <div className="testimonial-img1 col-lg-1">
-                            <img
-                              src="/images/testimonials/quote.png"
-                              alt="quote"
-                            />
-                          </div>
-
-                          <div className="testimonial-text col-lg-6 order-lg-1 order-2">
-                            <h2 className="section-title">
-                              Impactful Testimonials
-                            </h2>
-                            <p className="paragraph bridge-para testimonial-para">
-                              Lorem ipsum dolor sit amet. Rem distinctio
-                              corrupti cum earum iusto et veritatis facere ut
-                              tempora sapiente eum assumenda amet. Non deleniti
-                              porro est repudiandae aperiam ut fugit incidunt
-                              sed esse animi id voluptates laboriosam et sequi
-                              modi
-                            </p>
-
-                            <div className="testimonial-name ">
-                              <h6>Sophia Carter</h6>
-                              <p>Volunteer</p>
-                            </div>
-                          </div>
-                          <div className="testimonial-img col-lg-5 order-lg-2 order-1">
-                            <img
-                              src="/images/testimonials/testi-3.png"
-                              alt="member"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
-                      className="tab-pane fade"
-                      id="member4"
-                      role="tabpanel"
-                      aria-labelledby="member4-tab"
-                    >
-                      <div className="col-lg-12">
-                        <div className="row align-items-center justify-content-center">
-                          <div className="testimonial-img1 col-lg-1">
-                            <img
-                              src="/images/testimonials/quote.png"
-                              alt="quote"
-                            />
-                          </div>
-
-                          <div className="testimonial-text col-lg-6 order-lg-1 order-2">
-                            <h2 className="section-title">
-                              Impactful Testimonials
-                            </h2>
-                            <p className="paragraph bridge-para testimonial-para">
-                              Lorem ipsum dolor sit amet. Rem distinctio
-                              corrupti cum earum iusto et veritatis facere ut
-                              tempora sapiente eum assumenda amet. Non deleniti
-                              porro est repudiandae aperiam ut fugit incidunt
-                              sed esse animi id voluptates laboriosam et sequi
-                              modi
-                            </p>
-
-                            <div className="testimonial-name ">
-                              <h6>Ethan Chen</h6>
-                              <p>Volunteer</p>
-                            </div>
-                          </div>
-                          <div className="testimonial-img col-lg-5 order-lg-2 order-1">
-                            <img
-                              src="/images/testimonials/testi-2.png"
-                              alt="member"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
-                      className="tab-pane fade"
-                      id="member5"
-                      role="tabpanel"
-                      aria-labelledby="member5-tab"
-                    >
-                      <div className="col-lg-12">
-                        <div className="row align-items-center justify-content-center">
-                          <div className="testimonial-img1 col-lg-1">
-                            <img
-                              src="/images/testimonials/quote.png"
-                              alt="quote"
-                            />
-                          </div>
-
-                          <div className="testimonial-text col-lg-6 order-lg-1 order-2">
-                            <h2 className="section-title">
-                              Impactful Testimonials
-                            </h2>
-                            <p className="paragraph bridge-para testimonial-para">
-                              Lorem ipsum dolor sit amet. Rem distinctio
-                              corrupti cum earum iusto et veritatis facere ut
-                              tempora sapiente eum assumenda amet. Non deleniti
-                              porro est repudiandae aperiam ut fugit incidunt
-                              sed esse animi id voluptates laboriosam et sequi
-                              modi
-                            </p>
-
-                            <div className="testimonial-name ">
-                              <h6>Amar Johnson</h6>
-                              <p>Volunteer</p>
-                            </div>
-                          </div>
-                          <div className="testimonial-img col-lg-5 order-lg-2 order-1">
-                            <img
-                              src="/images/testimonials/testi-1.png"
-                              alt="member"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-2 testimonial-links order-lg-2 order-1">
-                  <ul className="nav nav-tabs">
-                    <li className="nav-item">
-                      <a
-                        className="nav-link active"
-                        aria-current="page"
-                        href="#member1"
-                        id="member1-tab"
-                        data-bs-toggle="tab"
-                        aria-controls="member1"
-                      >
-                        <img
-                          src="/images/testimonials/testi-1.png"
-                          alt="member"
-                        />
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
-                        className="nav-link"
-                        href="#member2"
-                        id="member2-tab"
-                        data-bs-toggle="tab"
-                        aria-controls="member2"
-                      >
-                        <img
-                          src="/images/testimonials/testi-2.png"
-                          alt="member"
-                        />
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
-                        className="nav-link"
-                        href="#member3"
-                        id="member3-tab"
-                        data-bs-toggle="tab"
-                        aria-controls="member3"
-                      >
-                        <img
-                          src="/images/testimonials/testi-3.png"
-                          alt="member"
-                        />
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
-                        className="nav-link"
-                        href="#member4"
-                        id="member4-tab"
-                        data-bs-toggle="tab"
-                        aria-controls="member4"
-                      >
-                        <img
-                          src="/images/testimonials/testi-2.png"
-                          alt="member"
-                        />
-                      </a>
-                    </li>
-
-                    <li className="nav-item">
-                      <a
-                        className="nav-link"
-                        href="#member5"
-                        id="member5-tab"
-                        data-bs-toggle="tab"
-                        aria-controls="member5"
-                      >
-                        <img
-                          src="/images/testimonials/testi-1.png"
-                          alt="member"
-                        />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Testimonials />
 
         <section className="news-events">
           <div className="container">

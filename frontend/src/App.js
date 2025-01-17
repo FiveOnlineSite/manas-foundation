@@ -5,6 +5,9 @@ import AOS from "aos";
 import WOW from "wowjs";
 import Scope from "./pages/Scope";
 import AboutUs from "./pages/AboutUs";
+import Scholarship from "./pages/Scholarship";
+import Donate from "./pages/Donate";
+import Institution from "./pages/Institution";
 
 function App() {
   useEffect(() => {
@@ -21,6 +24,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/our-scope" element={<Scope />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/scholarships" element={<Scholarship />} />
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/institution" element={<Institution />} />
       </Routes>
     </Router>
   );
