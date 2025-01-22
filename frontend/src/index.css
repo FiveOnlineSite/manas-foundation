@@ -152,7 +152,8 @@ nav .navbar-nav .nav-item a,
   margin-bottom: 50px;
 }
 
-.banner .container-fluid {
+.banner .container-fluid,
+.contact-banner .container-fluid {
   background-color: var(--dark-voilet-bg);
   position: relative;
   display: flex;
@@ -162,6 +163,11 @@ nav .navbar-nav .nav-item a,
   width: 90%;
   border-radius: 75px;
   padding: 0;
+}
+
+.contact-banner .container-fluid {
+  background-color: transparent;
+  background-image: url("../public/images/banner/full-shot-kids-playing-with-eco-toys-indoors.png");
 }
 
 .banner .container-fluid .banner-text {
@@ -855,6 +861,10 @@ nav .navbar-nav .nav-item a,
   width: 80%;
 }
 
+.history-section .section-title {
+  width: 60%;
+}
+
 .value-title {
   display: flex;
   align-items: center;
@@ -1091,6 +1101,12 @@ button.slick-next {
 
 .pillars-div img {
   width: auto;
+}
+
+/* CONTACT US */
+
+.contact-banner .black-text {
+  color: var(--black-font);
 }
 
 /* FOOTER */

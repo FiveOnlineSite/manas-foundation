@@ -12,15 +12,15 @@ const Home = () => {
     },
     {
       video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
-      video: "/videos/3195394-uhd_3840_2160_25fps.mp4",
+      video: "/videos/215471_tiny.mp4",
     },
     {
       video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
-      video: "/videos/3195394-uhd_3840_2160_25fps.mp4",
+      video: "/videos/89066-613200185_tiny.mp4",
     },
     {
       video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
-      video: "/videos/3195394-uhd_3840_2160_25fps.mp4",
+      video: "/videos/215475_tiny.mp4",
     },
   ];
 
@@ -174,7 +174,7 @@ const Home = () => {
           <div className="row">
             <div
               className="home-slick-slider wow"
-              data-aos="fade-up" // Fade in as you scroll
+              data-aos="zoom-in" // Fade in as you scroll
               data-aos-duration="1500"
             >
               <SlickSlider settings={homeBannerSettings} items={homeBanner} />
