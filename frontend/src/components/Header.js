@@ -98,7 +98,7 @@ const Header = () => {
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink className="dropdown-item" to="/institution-2">
+                        <NavLink className="dropdown-item" to="/academy">
                           Institution 2
                         </NavLink>
                       </li>
@@ -114,7 +114,7 @@ const Header = () => {
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/">
+                <NavLink className="nav-link" to="/contact-us">
                   Contact Us
                 </NavLink>
               </li>

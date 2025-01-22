@@ -24,8 +24,8 @@ const Institution = () => {
                   Bringing new opportunities for youth
                 </h4>
               </div>
-              <div className="col-lg-6 offset-lg-1 offset-0">
-                <p className="paragraph bridge-para light-paragraph">
+              <div className="col-lg-6 offset-lg-1 offset-0 ">
+                <p className="paragraph bridge-para light-paragraph pt-0 mt-0">
                   With your generous donations we are able to help students
                   foster a sense of equality and curiosity that can help them
                   develop their talents, build their self esteem, and set

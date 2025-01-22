@@ -8,6 +8,8 @@ import AboutUs from "./pages/AboutUs";
 import Scholarship from "./pages/Scholarship";
 import Donate from "./pages/Donate";
 import Institution from "./pages/Institution";
+import Academy from "./pages/Academy";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   useEffect(() => {
@@ -27,6 +29,8 @@ function App() {
         <Route path="/scholarships" element={<Scholarship />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/institution" element={<Institution />} />
+        <Route path="/academy" element={<Academy />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </Router>
   );
