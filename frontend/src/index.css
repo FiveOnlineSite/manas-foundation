@@ -165,12 +165,6 @@ nav .navbar-nav .nav-item a,
   padding: 0;
 }
 
-.contact-banner .container-fluid {
-  background-color: transparent;
-  background-image: url("../public/images/banner/Group 8126.png");
-  background-repeat: no-repeat;
-}
-
 .banner .container-fluid .banner-text {
   position: absolute;
   width: 53%;
@@ -1106,8 +1100,30 @@ button.slick-next {
 
 /* CONTACT US */
 
-.contact-banner .black-text {
+.black-text {
   color: var(--black-font);
+}
+
+.contact-links {
+  list-style: none;
+}
+
+.contact-links li {
+  margin: 20px 0;
+}
+
+.about-banner-text.banner-text.contact-banner-text {
+  width: 70% !important;
+  top: 15% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-banner-text.banner-text.contact-banner-text p {
+  width: 80%;
 }
 
 /* FOOTER */
@@ -1557,6 +1573,10 @@ button.slick-next {
 
   .pillars-div img {
     width: 100%;
+  }
+
+  .about-banner-text.banner-text.contact-banner-text {
+    width: 100% !important;
   }
 }
 
