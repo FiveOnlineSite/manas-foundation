@@ -1,0 +1,107 @@
+import React from "react";
+import Layout from "../components/Layout";
+
+const NewsDetail = () => {
+  return (
+    <Layout>
+      <section className="news-detail-banner">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-lg-5 px-0">
+              <img
+                src="/images/banner/copy-space-childrens-reading.png"
+                alt="new-details-banner"
+              />
+            </div>
+
+            <div className="col-lg-7 news-detail-banner-section">
+              <div className="news-detail-content">
+                <div className="news-detail-content-subsection d-flex align-items-baseline">
+                  <h4>NEWS</h4> <span></span> <h6>00.00.00</h6>
+                </div>
+                <h1 className="section-title news-detail-title">
+                  Lorem ipsum dolor sit amet. Sed temporibus quos non voluptas
+                  neque
+                </h1>
+
+                <p className="paragraph bridge-para text-justify">
+                  Lorem ipsum dolor sit amet. In assumenda molestiae sit
+                  molestiae exercitationem quo dolorum dolores. 33 dolores sunt
+                  33 consequatur rerum quo atque natus ut ratione ratione est
+                  minus mollitia 33 dicta voluptatem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="new-detail-para">
+        <div className="container">
+          <p className="paragraph bridge-para text-justify">
+            Lorem ipsum dolor sit amet. In assumenda molestiae sit molestiae
+            exercitationem quo dolorum dolores. 33 dolores sunt 33 consequatur
+            rerum quo atque natus ut ratione ratione est minus mollitia 33 dicta
+            voluptatem.
+          </p>
+
+          <p className="paragraph bridge-para text-justify">
+            Qui ipsum error ut voluptates aliquid ab aperiam voluptate aut fuga
+            dolores qui incidunt dolorem? Eum excepturi eveniet aut sint magni
+            ex optio galisum. Id laudantium dolorem id eveniet temporibus ut
+            velit aspernatur? Est omnis consectetur sit minima rerum et
+            architecto odio et explicabo incidunt Cum libero temporibus id velit
+            beatae sit culpa unde hic aspernatur maiores et enim fugit. Aut
+            sequi illum ex repudiandae atque aut asperiores dolorem et beatae
+            sunt et rerum possimus rem culpa quasi. Hic voluptas deserunt et
+            iste ullam et nisi quia et repellat nisi vel omnis quia.
+          </p>
+
+          <p className="paragraph bridge-para text-justify">
+            Lorem ipsum dolor sit amet. In assumenda molestiae sit molestiae
+            exercitationem quo dolorum dolores. 33 dolores sunt 33 consequatur
+            rerum quo atque natus ut ratione ratione est minus mollitia 33 dicta
+            voluptatem.
+          </p>
+
+          <p className="paragraph bridge-para text-justify">
+            Qui ipsum error ut voluptates aliquid ab aperiam voluptate aut fuga
+            dolores qui incidunt dolorem? Eum excepturi eveniet aut sint magni
+            ex optio galisum. Id laudantium dolorem id eveniet temporibus ut
+            velit aspernatur? Est omnis consectetur sit minima rerum et
+            architecto odio et explicabo incidunt.
+          </p>
+
+          <p className="paragraph bridge-para text-justify">
+            Cum libero temporibus id velit beatae sit culpa unde hic aspernatur
+            maiores et enim fugit. Aut sequi illum ex repudiandae atque aut
+            asperiores dolorem et beatae sunt et rerum possimus rem culpa quasi.
+            Hic voluptas deserunt et iste ullam et nisi quia et repellat nisi
+            vel omnis quia. Lorem ipsum dolor sit amet. In assumenda molestiae
+            sit molestiae exercitationem quo dolorum dolores. 33 dolores sunt 33
+            consequatur rerum quo atque natus ut ratione ratione est minus
+            mollitia 33 dicta voluptatem.
+          </p>
+
+          <p className="paragraph bridge-para text-justify">
+            Qui ipsum error ut voluptates aliquid ab aperiam voluptate aut fuga
+            dolores qui incidunt dolorem? Eum excepturi eveniet aut sint magni
+            ex optio galisum. Id laudantium dolorem id eveniet temporibus ut
+            velit aspernatur? Est omnis consectetur sit minima rerum et
+            architecto odio et explicabo incidunt.
+          </p>
+
+          <p className="paragraph bridge-para text-justify">
+            Cum libero temporibus id velit beatae sit culpa unde hic aspernatur
+            maiores et enim fugit. Aut sequi illum ex repudiandae atque aut
+            asperiores dolorem et beatae sunt et rerum possimus rem culpa quasi.
+            Hic voluptas deserunt et iste ullam et nisi quia et repellat nisi
+            vel omnis quia.
+          </p>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default NewsDetail;

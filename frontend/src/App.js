@@ -10,6 +10,8 @@ import Donate from "./pages/Donate";
 import Institution from "./pages/Institution";
 import Academy from "./pages/Academy";
 import ContactUs from "./pages/ContactUs";
+import News from "./pages/News";
+import NewsDetail from "./pages/NewsDetail";
 
 function App() {
   useEffect(() => {
@@ -30,6 +32,8 @@ function App() {
         <Route path="/donate" element={<Donate />} />
         <Route path="/institution" element={<Institution />} />
         <Route path="/academy" element={<Academy />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/news-detail" element={<NewsDetail />} />
         <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </Router>
