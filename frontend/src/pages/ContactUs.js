@@ -46,7 +46,7 @@ const ContactUs = () => {
                   Get in touch with us. <br /> We're here to assist you.
                 </h2>
               </div>
-              <div className="col-lg-3 d-flex justify-content-end">
+              <div className="col-lg-3 d-flex justify-content-lg-end justify-content-start mb-lg-0 mb-5">
                 <ul className="contact-links">
                   <li>
                     <a href="#">
@@ -169,6 +169,40 @@ const ContactUs = () => {
                     </div>
                   </div>
                 </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="contact-info">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-5">
+              <h6 className="section-subtitle">Contact Info</h6>
+
+              <h2 className="section-title">
+                We are always happy to assist you
+              </h2>
+            </div>
+            <div className="col-lg-3 offset-lg-1 offset-0 col-md-6 col-12 mt-lg-0 mt-5">
+              <div className="contact-div">
+                <h6>India</h6> <span></span>
+                <h6>help@info.com</h6>
+                <h6>(808) 998-34256</h6>
+                <p>
+                  Assistance hours: <br /> Monday - Friday 6 am to 8 pm EST
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-12 mt-lg-0 mt-5">
+              <div className="contact-div">
+                <h6>US</h6> <span></span>
+                <h6>help@info.com</h6>
+                <h6>(808) 998-34256</h6>
+                <p>
+                  Assistance hours: <br /> Monday - Friday 6 am to 8 pm EST
+                </p>
               </div>
             </div>
           </div>
