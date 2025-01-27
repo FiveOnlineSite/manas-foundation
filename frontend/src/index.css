@@ -17,6 +17,12 @@
   font-family: "Lato";
   src: url("../public/fonts/Lato-Regular.ttf");
 }
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/fonts/Inter_18pt-Medium.ttf");
+}
+
 body {
   margin: 0;
   padding: 0 !important;
@@ -416,6 +422,39 @@ nav .navbar-nav .nav-item a,
   right: 5%;
   width: 75px;
   height: 75px;
+}
+
+.video-thumbnail-container .slider-thumbnail {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+}
+
+.video-thumbnail-container .slider-overlay {
+  position: absolute;
+  background: #0000008a;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+}
+
+.video-thumbnail-container .modal-button {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.video-thumbnail-container .slider-text {
+  position: absolute;
+  bottom: 3%;
+  left: 6%;
+}
+
+.video-thumbnail-container .slider-text p {
+  padding-bottom: 0;
 }
 
 .bridging-gap {
@@ -908,7 +947,8 @@ nav .navbar-nav .nav-item a,
   width: 80%;
 }
 
-.inspiration-para p {
+.inspiration-para p,
+.slider-text p {
   font-family: "Museo-Sans";
   font-size: 22px;
   font-weight: 400;
@@ -1126,6 +1166,98 @@ button.slick-next {
   width: 80%;
 }
 
+.contact-div {
+  padding-right: 20px;
+}
+
+.contact-div h6 {
+  font-family: Inter;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26.63px;
+  text-align: left;
+  color: var(--black-font);
+  padding: 5px 0;
+}
+
+.contact-div span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--black-font);
+  margin: 20px 0;
+}
+
+.contact-div p {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  color: var(--black-font);
+}
+
+/* ACADEMY */
+
+.custom-col {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  width: 20%; /* Five columns = 100% / 5 */
+  float: left;
+  padding: 0 20px;
+}
+
+.team-img-div {
+  position: relative;
+}
+
+.team-img-div .team-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.team-img-div .down-img {
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+}
+
+.team-img-div .up-img {
+  position: absolute;
+  top: -10%;
+  right: -20%;
+}
+
+.team-content h6 {
+  font-family: "Museo-Sans";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  text-align: left;
+}
+
+.team-content p {
+  font-family: "Museo-Sans";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 34px;
+  text-align: left;
+}
+
+.grade-title {
+  min-height: 106px;
+}
+
+.grades-div .single-value {
+  border: 1px solid var(--black-font);
+  border-radius: 15px;
+}
+
+.grade-para {
+  min-height: 152px;
+}
+
 /* FOOTER */
 .footer {
   background-color: var(--dark-voilet-bg);
@@ -1214,7 +1346,11 @@ button.slick-next {
 .scholarship-section,
 .awardess-section,
 .achivements-section,
-.institutions-section {
+.institutions-section,
+.contact-form,
+.contact-info,
+.team-section,
+.facilties-slider {
   padding: 50px 0;
 }
 
@@ -1310,6 +1446,18 @@ button.slick-next {
   .extra-big-text {
     font-size: 100px;
     line-height: 110px;
+  }
+
+  .custom-col {
+    width: 25%;
+  }
+
+  .enhancing-img img {
+    width: 100%;
+  }
+
+  .grade-para {
+    min-height: 180px;
   }
 }
 
@@ -1437,6 +1585,21 @@ button.slick-next {
   .pillars-div,
   .institutions-div {
     margin: 20px 0 30px 0;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .contact-links li {
+    margin-right: 20px;
+  }
+
+  .custom-col {
+    width: 50%;
   }
 }
 
@@ -1608,6 +1771,18 @@ button.slick-next {
 
   .half-img-section {
     height: 75vh;
+  }
+
+  .custom-col {
+    width: 100%;
+  }
+
+  .team-img-div .down-img {
+    left: -5%;
+  }
+
+  .team-img-div .up-img {
+    right: -4%;
   }
 }
 

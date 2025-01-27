@@ -77,7 +77,7 @@ const Header = () => {
                   >
                     <NavLink
                       className="nav-link dropdown-toggle"
-                      to="#"
+                      to="/institution"
                       role="button"
                       onClick={(e) => {
                         e.preventDefault(); // Prevent default navigation
@@ -109,7 +109,7 @@ const Header = () => {
 
               <li className="nav-item">
                 <NavLink className="nav-link" to="/">
-                  News & Events
+                  News
                 </NavLink>
               </li>
 
@@ -234,7 +234,8 @@ const Header = () => {
                                   className="accordion-header"
                                   id="headingOne"
                                 >
-                                  <button
+                                  <NavLink
+                                    to="/institution"
                                     className="accordion-button nav-link collapsed" // Add "collapsed" class
                                     type="button"
                                     data-bs-toggle="collapse"
@@ -243,7 +244,7 @@ const Header = () => {
                                     aria-controls="institutes"
                                   >
                                     Institutions
-                                  </button>
+                                  </NavLink>
                                 </h2>
                                 <div
                                   id="institutes"
@@ -283,7 +284,7 @@ const Header = () => {
 
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/">
-                    News & Events
+                    News
                   </NavLink>
                 </li>
 
