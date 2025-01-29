@@ -1538,7 +1538,9 @@ button.slick-next {
 .team-section,
 .facilties-slider,
 .lastest-news,
-.news-tabs-section {
+.news-tabs-section,
+.new-detail-para,
+.related-news-sections {
   padding: 50px 0;
 }
 
