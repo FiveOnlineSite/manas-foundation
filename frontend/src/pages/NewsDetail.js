@@ -1,7 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../components/Layout";
 
 const NewsDetail = () => {
+  const [visibleCount, setVisibleCount] = useState(2);
+
+  const relatedNewsItems = [
+    {
+      image: "/images/smiling-students-looking-globe.png",
+      date: "00.00.00",
+      title: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "/images/smiling-students-looking-globe.png",
+      date: "00.00.01",
+      title: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "/images/smiling-students-looking-globe.png",
+      date: "00.00.02",
+      title: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "/images/smiling-students-looking-globe.png",
+      date: "00.00.03",
+      title: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "/images/smiling-students-looking-globe.png",
+      date: "00.00.04",
+      title: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "/images/smiling-students-looking-globe.png",
+      date: "00.00.05",
+      title: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "/images/smiling-students-looking-globe.png",
+      date: "00.00.06",
+      title: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "/images/smiling-students-looking-globe.png",
+      date: "00.00.07",
+      title: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "/images/smiling-students-looking-globe.png",
+      date: "00.00.08",
+      title: "Lorem ipsum dolor sit amet",
+    },
+  ];
+
+  const showAll = () => {
+    setVisibleCount(relatedNewsItems.length);
+  };
+
+  const showLess = () => {
+    setVisibleCount(2);
+  };
+
   return (
     <Layout>
       <section className="news-detail-banner">
@@ -98,6 +156,56 @@ const NewsDetail = () => {
             Hic voluptas deserunt et iste ullam et nisi quia et repellat nisi
             vel omnis quia.
           </p>
+        </div>
+      </section>
+
+      <section className="related-news-sections">
+        <div className="container">
+          <div className="row align-items-center mb-5">
+            <div className="col-lg-6">
+              <h2 className="section-title">Related News</h2>
+            </div>
+            <div className="col-lg-6 d-flex justify-content-lg-end justify-content-start">
+              {/* <h5 className="see-all-btn"> */}
+              {/* See all */}
+              {visibleCount < relatedNewsItems.length ? (
+                <button onClick={showAll} className="see-all-btn">
+                  See all
+                </button>
+              ) : (
+                <button onClick={showLess} className="see-all-btn">
+                  See less
+                </button>
+              )}
+              {/* </h5> */}
+            </div>
+          </div>
+
+          <div className="row ">
+            {relatedNewsItems.slice(0, visibleCount).map((item, index) => (
+              <div className="col-lg-6 mb-5">
+                <div className="row related-news align-items-center">
+                  <div className="col-lg-7">
+                    <img
+                      src={item.image}
+                      alt={`news-${index}`}
+                      className="w-100"
+                    />
+                  </div>
+                  <div className="col-lg-5">
+                    <div className="related-news-content mt-lg-0 mt-4">
+                      <div className="related-news-time">
+                        <h5>NEWS</h5>
+                        <span></span>
+                        <h6>{item.date}</h6>
+                      </div>
+                      <p>{item.title}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </Layout>
