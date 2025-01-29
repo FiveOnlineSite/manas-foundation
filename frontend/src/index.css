@@ -610,21 +610,25 @@ nav .navbar-nav .nav-item a,
 }
 
 /* Custom scrollbar for testimonial links */
-.testimonial-links ul::-webkit-scrollbar {
+.testimonial-links ul::-webkit-scrollbar,
+.facilities-row ul::-webkit-scrollbar {
   width: 8px; /* Width of the scrollbar */
 }
 
-.testimonial-links ul::-webkit-scrollbar-track {
+.testimonial-links ul::-webkit-scrollbar-track,
+.facilities-row ul::-webkit-scrollbar-track {
   background: #f1f1f1; /* Background color of the scrollbar track */
   border-radius: 4px; /* Optional rounded corners for the track */
 }
 
-.testimonial-links ul::-webkit-scrollbar-thumb {
+.testimonial-links ul::-webkit-scrollbar-thumb,
+.facilities-row ul::-webkit-scrollbar-thumb {
   background: #888; /* Color of the scrollbar thumb */
   border-radius: 4px; /* Optional rounded corners for the thumb */
 }
 
-.testimonial-links ul::-webkit-scrollbar-thumb:hover {
+.testimonial-links ul::-webkit-scrollbar-thumb:hover,
+.facilities-row ul::-webkit-scrollbar-thumb:hover {
   background: #555; /* Darker thumb color on hover */
 }
 
@@ -1261,6 +1265,28 @@ button.slick-next {
   min-height: 152px;
 }
 
+.facilities-slider img,
+.facilities-slider video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.facilities-row ul {
+  border: none;
+}
+
+.facilities-row .nav-tabs {
+  overflow-y: scroll;
+  height: 80vh;
+}
+
+.modal-header button {
+  left: 100% !important;
+  top: 0% !important;
+  padding: 0 10px !important;
+  z-index: 11;
+}
 /* NEWS */
 
 .latest-news-content .latest-news-time-div {
@@ -1649,6 +1675,10 @@ button.slick-next {
   .grade-para {
     min-height: 180px;
   }
+
+  .facilities-row .nav-tabs {
+    height: 50vh;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -1806,6 +1836,44 @@ button.slick-next {
   }
 }
 
+@media screen and (max-width: 912px) {
+  .half-img-section {
+    height: 41vh;
+  }
+
+  .facilities-row ul {
+    border: none;
+    white-space: nowrap !important; /* Prevent tab wrapping */
+    padding: 0;
+  }
+
+  .facilities-row .nav-tabs {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden; /* Ensure only horizontal scrolling */
+    height: auto;
+    max-width: 100%;
+    scrollbar-width: thin; /* For Firefox */
+    padding: 10px 0;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+  }
+
+  .facilities-row .nav-item {
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  .facilities-row .nav-link {
+    display: inline-block;
+    white-space: nowrap !important;
+  }
+
+  .facilities-row .nav-tabs .nav-link img {
+    width: 150px !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .banner .container-fluid .banner-text {
     z-index: 11;
@@ -1875,8 +1943,8 @@ button.slick-next {
   }
 
   .modal-video {
-    height: 75vh;
-    margin-top: 50px;
+    height: 100%;
+    /* margin-top: 50px; */
   }
 
   .funding-img-div img {
@@ -1988,6 +2056,10 @@ button.slick-next {
     right: -4%;
   }
 
+  .grade-para {
+    min-height: 100px;
+  }
+
   .news-detail-content-subsection h4,
   .news-detail-content-subsection h6 {
     font-size: 20px;
@@ -2009,6 +2081,11 @@ button.slick-next {
   .news-detail-banner .container-fluid img {
     height: 25vh;
     border-radius: 75px;
+  }
+
+  .modal-header button {
+    left: 93% !important;
+    top: -6% !important;
   }
 }
 
@@ -2036,11 +2113,15 @@ button.slick-next {
   .half-img-section {
     height: 57vh;
   }
+
+  .institutions-div {
+    padding: 20px;
+  }
 }
 
 @media screen and (max-width: 410px) {
   .half-img-section {
-    height: 90vh;
+    height: 64vh;
   }
 }
 

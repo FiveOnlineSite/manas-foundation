@@ -12,28 +12,31 @@ const Academy = () => {
       video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
       video: "/videos/215471_tiny.mp4",
       text: "Sports & Recreational Spaces",
-      modal_gallery: {
-        image: "/images/slider/medium-shot-kids-playing-together.png",
-        video: "/videos/215471_tiny.mp4",
-      },
     },
     {
-      video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
-      video: "/videos/89066-613200185_tiny.mp4",
+      image: "/images/slider/medium-shot-kids-playing-together.png",
+      // video: "/videos/89066-613200185_tiny.mp4",
       text: "Extracurriculars",
-      modal_gallery: {
-        image: "/images/slider/medium-shot-kids-playing-together.png",
-        video: "/videos/215471_tiny.mp4",
-      },
     },
     {
       video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
       video: "/videos/215475_tiny.mp4",
       text: "Classrooms & Labs",
-      modal_gallery: {
-        image: "/images/slider/medium-shot-kids-playing-together.png",
-        video: "/videos/215471_tiny.mp4",
-      },
+    },
+    {
+      image: "/images/slider/medium-shot-kids-playing-together.png",
+
+      text: "Classrooms & Labs",
+    },
+    {
+      video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
+      video: "/videos/215475_tiny.mp4",
+      text: "Classrooms & Labs",
+    },
+    {
+      image: "/images/slider/medium-shot-kids-playing-together.png",
+
+      text: "Classrooms & Labs",
     },
   ];
 

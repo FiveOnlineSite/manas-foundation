@@ -28,7 +28,7 @@ const SlickSlider = ({ items, settings }) => {
     isModalOpen &&
     createPortal(
       <div
-        className="modal fade show"
+        className="modal fade show overflow-hidden"
         tabIndex="-1"
         role="dialog"
         style={{
@@ -42,8 +42,8 @@ const SlickSlider = ({ items, settings }) => {
           className="modal-dialog modal-xl modal-dialog-centered"
           role="document"
         >
-          <div className="modal-content modal-backdrop">
-            <div className="modal-header">
+          <div className="modal-content">
+            <div className="modal-header p-0">
               <button
                 type="button"
                 onClick={(e) => {
@@ -51,7 +51,6 @@ const SlickSlider = ({ items, settings }) => {
                   closeModal();
                 }}
               >
-                {" "}
                 <i className="fa-solid fa-circle-xmark"></i>
               </button>
             </div>

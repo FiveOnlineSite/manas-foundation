@@ -242,7 +242,7 @@ const Scholarship = () => {
                   <li>Official SAT or ACT reports. (Optional)</li>
                 </ul>
               </div>
-              <div className="col-lg-5 d-flex justify-content-lg-end justify-content-start">
+              <div className="col-lg-5 d-flex justify-content-lg-end justify-content-center">
                 <div>
                   <img
                     src="/images/banner/924c80318fdb786e2f3307a9666dc70a.png"
