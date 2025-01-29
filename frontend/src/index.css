@@ -1372,6 +1372,54 @@ button.slick-next {
   margin-bottom: 0;
 }
 
+.see-all-btn {
+  font-family: "Museo-Sans";
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 31.2px;
+  text-align: left;
+  text-decoration-line: underline;
+  background-color: transparent;
+  border: none;
+}
+
+.related-news-time {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.related-news-time h5 {
+  font-family: "Museo-Sans";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+  text-align: left;
+}
+
+.related-news-time span {
+  height: 4px;
+  width: 4px;
+  background-color: var(--black-font);
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.related-news-time h6 {
+  font-family: "Museo-Sans";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.8px;
+  text-align: left;
+}
+
+.related-news-content p {
+  font-family: "Museo-Sans";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.8px;
+  text-align: left;
+}
 /* FOOTER */
 .footer {
   background-color: var(--dark-voilet-bg);
