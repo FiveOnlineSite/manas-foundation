@@ -2084,8 +2084,8 @@ button.slick-next {
   }
 
   .modal-header button {
-    left: 93% !important;
-    top: -6% !important;
+    left: 92% !important;
+    top: -16% !important;
   }
 }
 
@@ -2116,6 +2116,10 @@ button.slick-next {
 
   .institutions-div {
     padding: 20px;
+  }
+
+  .history-section .section-title {
+    width: 100%;
   }
 }
 

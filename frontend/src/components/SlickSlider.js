@@ -54,7 +54,7 @@ const SlickSlider = ({ items, settings }) => {
                 <i className="fa-solid fa-circle-xmark"></i>
               </button>
             </div>
-            <div className="modal-body text-center">
+            <div className="modal-body text-center m-0">
               {selectedVideo ? (
                 <video
                   ref={videoRef}
