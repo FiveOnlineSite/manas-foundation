@@ -73,16 +73,13 @@ const Header = () => {
                     className={`nav-item dropdown institute-dropdown ${
                       isInstitutionsDropdownOpen ? "show" : ""
                     }`}
-                    onMouseLeave={() => setInstitutionsDropdownOpen(false)} // Close on mouse leave
+                    onMouseEnter={() => setInstitutionsDropdownOpen(true)}
+                    onMouseLeave={() => setInstitutionsDropdownOpen(false)}
                   >
                     <NavLink
                       className="nav-link dropdown-toggle"
                       to="/institution"
                       role="button"
-                      onClick={(e) => {
-                        e.preventDefault(); // Prevent default navigation
-                        toggleDropdown();
-                      }}
                       aria-expanded={isInstitutionsDropdownOpen}
                     >
                       Institutions
@@ -228,25 +225,26 @@ const Header = () => {
                                 Scholarships
                               </NavLink>
                             </li>
-                            <div className="accordion" id="instituteAccordion">
-                              <div className="accordion-item">
-                                <h2
-                                  className="accordion-header"
-                                  id="headingOne"
-                                >
-                                  <NavLink
-                                    to="/institution"
-                                    className="accordion-button nav-link collapsed" // Add "collapsed" class
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#institutes"
-                                    aria-expanded="false" // Set to false
-                                    aria-controls="institutes"
-                                  >
-                                    Institutions
-                                  </NavLink>
-                                </h2>
-                                <div
+                            {/* <div className="accordion" id="instituteAccordion"> */}
+                            {/* <div className="accordion-item"> */}
+                            <li
+                            // className="accordion-header"
+                            // id="headingOne" className="nav-item"
+                            >
+                              <NavLink
+                                to="/institution"
+                                // className="accordion-button nav-link collapsed" // Add "collapsed" class
+                                className="nav-links"
+                                // type="button"
+                                // data-bs-toggle="collapse"
+                                // data-bs-target="#institutes"
+                                // aria-expanded="false" // Set to false
+                                // aria-controls="institutes"
+                              >
+                                Institutions
+                              </NavLink>
+                            </li>
+                            {/* <div
                                   id="institutes"
                                   className="accordion-collapse collapse" // Keep only "collapse", remove "show"
                                   aria-labelledby="headingOne"
@@ -272,9 +270,9 @@ const Header = () => {
                                       </li>
                                     </ul>
                                   </div>
-                                </div>
-                              </div>
-                            </div>
+                                </div> */}
+                            {/* </div>
+                            </div> */}
                           </ul>
                         </div>
                       </div>

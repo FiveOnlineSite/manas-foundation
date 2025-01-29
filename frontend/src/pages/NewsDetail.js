@@ -181,7 +181,7 @@ const NewsDetail = () => {
             </div>
           </div>
 
-          <div className="row ">
+          <div className="row">
             {relatedNewsItems.slice(0, visibleCount).map((item, index) => (
               <div className="col-lg-6 mb-5">
                 <div className="row related-news align-items-center">
