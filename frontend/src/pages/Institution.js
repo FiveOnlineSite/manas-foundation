@@ -173,8 +173,8 @@ const Institution = () => {
                   <button className="custom-btn bridge-btn my-3">
                     <NavLink
                       className="nav-link"
-                      to="/"
-                      onClick={() => window.scrollTo(0, 0)}
+                      to="/academy"
+                      // onClick={() => window.scrollTo(0, 0)}
                     >
                       KNOW MORE
                     </NavLink>
@@ -195,8 +195,8 @@ const Institution = () => {
                   <button className="custom-btn bridge-btn my-3">
                     <NavLink
                       className="nav-link"
-                      to="/"
-                      onClick={() => window.scrollTo(0, 0)}
+                      to="/academy"
+                      // onClick={() => window.scrollTo(0, 0)}
                     >
                       KNOW MORE
                     </NavLink>
