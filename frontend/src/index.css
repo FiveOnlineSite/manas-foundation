@@ -27,7 +27,7 @@ body {
   margin: 0;
   padding: 0 !important;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   overflow-y: scroll;
   scrollbar-width: thin; /* Thin scrollbar */
   scrollbar-color: var(--dark-voilet-bg);
