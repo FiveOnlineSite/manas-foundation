@@ -17,6 +17,20 @@ const SlickSlider = ({ items, settings }) => {
     setIsModalOpen(false);
   };
 
+  // Effect to disable body scroll when modal is open
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      document.body.style.overflow = "auto"; // Enable scrolling when modal is closed
+    }
+
+    // Cleanup when component unmounts or modal is closed
+    return () => {
+      document.body.style.overflow = "auto"; // Ensure scrolling is enabled when modal is closed
+    };
+  }, [isModalOpen]); // Runs whenever `isModalOpen` changes
+
   useEffect(() => {
     if (isModalOpen && selectedVideo && videoRef.current) {
       videoRef.current.play();

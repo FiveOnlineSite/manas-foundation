@@ -126,7 +126,7 @@ const News = () => {
                       className="w-100 my-4"
                     />
                     <p>{item.date}</p>
-                    <h5 className="py-3">{item.title}</h5>-
+                    <h5 className="py-3">{item.title}</h5>
                   </div>
                 </NavLink>
               </div>
