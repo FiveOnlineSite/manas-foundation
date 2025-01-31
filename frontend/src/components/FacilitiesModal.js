@@ -1,48 +1,45 @@
 import React, { useState, useEffect } from "react";
-import Slider from "react-slick";
 import { createPortal } from "react-dom";
 
-const FacilitiesSlider = ({ items, settings }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentMedia, setCurrentMedia] = useState(items[0]); // Track the current media (video/image) in the tab content
+const FacilitiesModal = ({
+  isModalOpen,
+  closeModal,
+  currentMedia,
+  items,
+  handleTabClick,
+}) => {
+  // Store the scroll position in a ref to preserve it when modal is closed
+  const scrollYRef = React.useRef(0);
 
-  // Open the modal
-  const openModal = () => setIsModalOpen(true);
-
-  // Close the modal
-  const closeModal = () => setIsModalOpen(false);
-
-  // Update current media on tab link click
-  const handleTabClick = (mediaItem) => {
-    setCurrentMedia(mediaItem);
-  };
-
-  // Effect to disable body scroll when modal is open
   useEffect(() => {
     if (isModalOpen) {
-      document.body.style.overflow = "hidden"; // Disable scrolling
+      // Store the scroll position when the modal is opened
+      scrollYRef.current = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollYRef.current}px`;
+      document.body.style.width = "100%";
     } else {
-      document.body.style.overflow = "auto"; // Enable scrolling when modal is closed
+      // Restore the scroll position when the modal is closed
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollYRef.current); // Scroll back to the saved position
     }
-
-    // Cleanup when component unmounts or modal is closed
-    return () => {
-      document.body.style.overflow = "auto"; // Ensure scrolling is enabled when modal is closed
-    };
   }, [isModalOpen]); // Runs whenever `isModalOpen` changes
 
-  // Modal component for lightbox gallery
-  const Modal = () =>
+  return (
     isModalOpen &&
     createPortal(
       <div
         className="modal fade show overflow-hidden facilities-modal"
         tabIndex="-1"
+        aria-hidden="true"
+        data-bs-keyboard="false"
         role="dialog"
         style={{
           display: "block",
           backgroundColor: "rgba(0, 0, 0, 0.8)",
-          zIndex: 1050, // Ensure modal is above other content
+          zIndex: 1050,
         }}
         onClick={closeModal}
       >
@@ -68,7 +65,7 @@ const FacilitiesSlider = ({ items, settings }) => {
               <div className="container">
                 <div className="row facilities-row">
                   <div className="col-lg-2 col-12">
-                    <ul className="nav nav-tabs ">
+                    <ul className="nav nav-tabs">
                       {items.map((item, index) => (
                         <li className="nav-item" key={index}>
                           <a
@@ -78,24 +75,15 @@ const FacilitiesSlider = ({ items, settings }) => {
                             onClick={() => handleTabClick(item)}
                           >
                             {item.video ? (
-                              <div className="video-thumbnail-div">
-                                <img
-                                  src={item.video_thumbnail}
-                                  alt={`Video Poster ${index}`}
-                                  className="w-100 video-thumbnail"
-                                />
-                                <img
-                                  src="/images/icons/Group 8249.png"
-                                  alt="play-icon"
-                                  className="tabs-play-icon"
-                                  width={"50px"}
-                                  height={"50px"}
-                                />
-                              </div>
+                              <img
+                                src={item.video_thumbnail}
+                                alt={`Video Poster ${index}`}
+                                className="w-100"
+                              />
                             ) : (
                               <img
                                 src={item.image}
-                                alt={`Modal img ${index}`}
+                                alt={`Image ${index}`}
                                 className="w-100"
                               />
                             )}
@@ -120,7 +108,7 @@ const FacilitiesSlider = ({ items, settings }) => {
                               ) : (
                                 <img
                                   src={currentMedia.image}
-                                  alt={`Selected Content`}
+                                  alt="Selected Content"
                                   style={{ width: "100%", maxHeight: "80vh" }}
                                 />
                               )}
@@ -137,42 +125,8 @@ const FacilitiesSlider = ({ items, settings }) => {
         </div>
       </div>,
       document.body
-    );
-
-  return (
-    <>
-      {/* Render the slider */}
-      <Slider {...settings}>
-        {items.map((item, index) => (
-          <div className="element" key={index}>
-            <div className="video-thumbnail-container">
-              <img
-                className="slider-thumbnail"
-                src={item.image || item.video_thumbnail}
-                alt={`Thumbnail ${index}`}
-              />
-              <div className="slider-overlay"></div>
-              <div
-                className="modal-button"
-                onClick={() => {
-                  setCurrentMedia(item);
-                  openModal();
-                }}
-              >
-                <img src="/images/icons/Group 8338.png" alt="play-icon" />
-              </div>
-              <div className="slider-text">
-                <p>{item.text}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </Slider>
-
-      {/* Render the modal */}
-      <Modal />
-    </>
+    )
   );
 };
 
-export default FacilitiesSlider;
+export default FacilitiesModal;

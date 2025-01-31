@@ -28,7 +28,7 @@ body {
   padding: 0 !important;
   box-sizing: border-box;
   overflow-x: hidden;
-  overflow-y: scroll !important;
+  overflow-y: scroll;
   scrollbar-width: thin; /* Thin scrollbar */
   scrollbar-color: var(--dark-voilet-bg);
 }
@@ -1287,6 +1287,19 @@ button.slick-next {
   padding: 0 10px !important;
   z-index: 11;
 }
+
+.video-thumbnail-div,
+.video-thumbnail-div .video-thumbnail {
+  position: relative;
+}
+
+.tabs-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+}
 /* NEWS */
 
 .latest-news-content .latest-news-time-div {
@@ -1599,6 +1612,11 @@ button.slick-next {
   position: absolute;
   top: 10%;
   right: 0;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+  padding-right: 0 !important;
 }
 
 @media screen and (max-width: 1024px) {
