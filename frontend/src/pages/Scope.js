@@ -83,7 +83,7 @@ const Scope = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <h6 className="section-subtitle">LOREM IPSUM</h6>
+              {/* <h6 className="section-subtitle">LOREM IPSUM</h6> */}
 
               <h2 className="section-title">
                 Enhancing Educational Institutions
