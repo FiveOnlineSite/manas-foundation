@@ -70,26 +70,29 @@ const ReachOut = () => {
                           <option selected disabled>
                             Select Inquiry Type
                           </option>
-                          <option value="School Construction">
-                            School Construction
+                          <option value="Manas Academy">
+                          New Admission – Manas Academy
                           </option>
-                          <option value="School Renovation/Repair">
-                            School Renovation/Repair
+                          <option value="Vidhya Vanam">
+                          New Admission – Vidhya Vanam
                           </option>
-                          <option value="School Supplies/Equipment">
-                            School Supplies/Equipment
+                          <option value="Scholarships / Financial Aid">
+                          Scholarships / Financial Aid
                           </option>
-                          <option value="Teacher Training/Support">
-                            Teacher Training/Support
+                          <option value="Employment Opportunities">
+                          Employment Opportunities
                           </option>
-                          <option value="Scholarship/Financial Aid">
-                            Scholarship/Financial Aid
+                          <option value="Vendor / Supplier Opportunities">
+                          Vendor / Supplier Opportunities
                           </option>
                           <option value="Volunteer Opportunities">
-                            Volunteer Opportunities
+                          Volunteer Opportunities
                           </option>
-                          <option value="General Inquiry">
-                            General Inquiry
+                          <option value="Want to Donate">
+                          Want to Donate
+                          </option>
+                          <option value="General Information Request">
+                          General Information Request
                           </option>
                         </select>
                       </div>
