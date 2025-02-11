@@ -259,7 +259,7 @@ const Academy = () => {
 
       <section className="bg-img-row">
         <div className="container">
-          <h6 className="section-subtitle">lorem ipsum set</h6>
+          {/* <h6 className="section-subtitle">lorem ipsum set</h6> */}
 
           <h2 className="section-title">Grade levels offered</h2>
 
