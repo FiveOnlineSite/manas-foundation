@@ -57,11 +57,7 @@ const Scope = () => {
 
               <div className="order-lg-2 order-1">
                 <p className="paragraph bridge-para p-0 pt-2 ">
-                  Scholarships are offered in the USA in partnership with
-                  Scholarships America so young students can continue having the
-                  best education available. The purpose is to design and deliver
-                  students scholarship programs that meet their educational
-                  needs and long-term professional objectives.
+                Scholarships are available in the U.S. through our partnership with Scholarships America, ensuring that young students can access the best education possible. Our goal is to design and implement scholarship programs that align with students' educational needs and long-term career aspirations.
                 </p>
 
                 <button className="custom-btn bridge-btn">
@@ -86,17 +82,15 @@ const Scope = () => {
               {/* <h6 className="section-subtitle">LOREM IPSUM</h6> */}
 
               <h2 className="section-title">
-                Enhancing Educational Institutions
+              Enhancing Educational Opportunities
               </h2>
 
               <p className="paragraph bridge-para p-0 pt-2">
-                A network of schools located in rural India that share our
-                integrated approach, lifting up children and allowing them to
-                build holistic life skills through physical, mental, moral and
-                spiritual aspects of learning.
-                <br />
-                This raises the level of thinking, knowledge skills, physical
-                standards, discipline and scientific attitude of the students.
+              A network of schools in rural India shares our integrated approach,
+               empowering children with holistic life skills that nurture their 
+               physical, mental, moral, and spiritual growth. This model enhances 
+               critical thinking, knowledge, academic standards, discipline, and 
+               scientific aptitude among students.
               </p>
 
               <button className="custom-btn bridge-btn">

@@ -84,9 +84,7 @@ const Home = () => {
                 data-aos="fade-up" // Fade in as you scroll
                 data-aos-duration="1500"
               >
-                We promote equality and curiosity mindsets through direct and
-                indirect assistance in education, for children seeking quality
-                teaching and personal growth.
+               We foster equality and curiosity by providing both direct and indirect educational support, empowering children with quality teaching and personal growth opportunities
               </p>
               <NavLink to="/">
                 <button className="custom-btn white-btn wow">
@@ -152,10 +150,7 @@ const Home = () => {
                     </h2>
 
                     <p className="paragraph bridge-para">
-                      Providing education that’s accessible to rural and
-                      low-income communities and opening learning opportunities
-                      that integrate top-tier education with holistic life
-                      skills.
+                    We provide quality education to rural and low-income communities, creating learning opportunities that combine top-tier academics with essential life skills.
                     </p>
 
                     <button className="custom-btn bridge-btn">
@@ -249,7 +244,7 @@ const Home = () => {
                           >
                             <div className="accordion-body">
                               <p>
-                              Uplifting institutions that share the core principles of motivation to provide opportunities in the rural areas.
+                              Supporting institutions that align with our core values, fostering opportunities in rural communities.
                               </p>
                             </div>
                           </div>
@@ -274,7 +269,7 @@ const Home = () => {
                           >
                             <div className="accordion-body">
                               <p>
-                              Establishing institutions with our integrated approach to shape today’s young minds for a better tomorrow.
+                              Building institutions through an integrated approach to education, shaping young minds for a brighter future.
                               </p>
                             </div>
                           </div>

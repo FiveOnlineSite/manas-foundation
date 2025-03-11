@@ -19,10 +19,10 @@ const Achivements = () => {
                     alt="achivement-img" className="img-rep"
                   />
                   <h4 className="banner-subtitle small-line-height text-start mt-4">
-                    Manas Academy
+                  Well-rounded
                   </h4>
                   <p className="paragraph bridge-para">
-                  The acquisition and development of Manas Academy in rural Madhya Pradesh, India. The school is now serving +1,200 children from +90 villages.
+                  Our emphasis is on well-rounded education that involves physical, mental, moral, and spiritual aspects of learning, which improves our students’ critical thinking, athletic ability, and self-discipline.
                   </p>
                 </div>
               </div>
@@ -33,12 +33,10 @@ const Achivements = () => {
                     alt="achivement-img"
                   />
                   <h4 className="banner-subtitle small-line-height text-start mt-4">
-                    Google Non-profit Recognition
+                  Platform for future
                   </h4>
                   <p className="paragraph bridge-para">
-                    Because Google recognizes My Manas Foundation as a
-                    non-profit educational services organization, My Manas
-                    Institutes are able to use G Suite for Education for free.
+                  Each child at Manas Academy is empowered to form opinions and articulate them, creating a generation that is not afraid to chase their dreams.
                   </p>
                 </div>
               </div>
@@ -49,13 +47,10 @@ const Achivements = () => {
                     alt="achivement-img"
                   />
                   <h4 className="banner-subtitle small-line-height text-start mt-4">
-                    Technology Solutions for Everyone
+                  Infrastructure
                   </h4>
                   <p className="paragraph bridge-para">
-                    Students in areas without access to computers or the
-                    internet are able to use cell phones to participate in
-                    online or virtual education they might not otherwise have
-                    access to.
+                  The school is housed in a serene and eco-friendly campus with solar-power, with all the facilities required for a conducive learning environment: spacious classrooms, six outdoor playgrounds, two indoor playgrounds, well equipped labs and fine-arts studios. 
                   </p>
                 </div>
               </div>
@@ -66,13 +61,39 @@ const Achivements = () => {
                     alt="achivement-img"
                   />
                   <h4 className="banner-subtitle small-line-height text-start mt-4">
-                    Enhancing Opportunities
+                  STEM Program
                   </h4>
                   <p className="paragraph bridge-para">
-                    In our first year we have implemented integrated learning
-                    projects using our four pillars of education: knowledge,
-                    skills, values, and mindset.
-                  </p>
+                  Apply math and science to solve an engineering problem using technology.
+                  hild is given an opportunity to think, learn, build and act like an engineer.<br/>
+                 <strong>The STEM program at Manas Academy is run by experienced engineers.</strong></p>
+                </div>
+              </div>
+              <div className="col-lg-6 mt-5">
+                <div className="achivements-div">
+                  <img
+                    src="/images/banner/Mask-Group-14-1.png"
+                    alt="achivement-img"
+                  />
+                  <h4 className="banner-subtitle small-line-height text-start mt-4">
+                  Google G Suite for Education
+                  </h4>
+                  <p className="paragraph bridge-para">
+                  Google recognized and supported institution for students and staff to use G Suite for Education for free.</p>
+                  
+                </div>
+              </div>
+              <div className="col-lg-6 mt-5">
+                <div className="achivements-div">
+                  <img
+                    src="/images/banner/opportunitiesmym.png"
+                    alt="achivement-img"
+                  />
+                  <h4 className="banner-subtitle small-line-height text-start mt-4">
+                  Competitions
+                  </h4>
+                  <p className="paragraph bridge-para">
+                  Our students participate in national and international academic competitions and have won several medals.</p>
                 </div>
               </div>
             </div>

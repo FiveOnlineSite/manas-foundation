@@ -364,21 +364,15 @@ const Scholarship = () => {
               {/* <h6 className="section-subtitle">LOREM IPSUM</h6> */}
 
               <h2 className="section-title">
-                Our goal is to reach those who are most disadvantaged
+              Our Goal: Reaching Those Who Need It Most
               </h2>
             </div>
             <div className="col-lg-7">
               <p className="paragraph bridge-para">
-                We give additional consideration to youth who demonstrate the
-                traits of an underdog.
+              We prioritize students who face disadvantages, offering additional consideration to those who demonstrate resilience and determination despite financial or academic challenges.
               </p>
               <p className="paragraph bridge-para">
-                We give additional consideration to youth who demonstrate the
-                traits of an underdog. An underdog is an individual that,
-                despite facing challenges such as those of academic or financial
-                caliber, still displays the tenacity to better themselves given
-                the right opportunity and can still endeavor to succeed in life
-                with the right support.
+              An underdog is someone who, despite obstacles, shows the tenacity to improve themselves when given the right opportunities and support. With access to the right resources, they can thrive and achieve success in life.
               </p>
             </div>
           </div>
@@ -392,11 +386,12 @@ const Scholarship = () => {
                   className="w-auto w-sm-100"
                 />
                 <h4 className="banner-subtitle small-line-height text-start mt-4">
-                  Show us how Committed you are
+                Show Us Your Commitment
                 </h4>
                 <p className="paragraph bridge-para">
-                  We encourage you to speak about your passions, goals, and the
-                  challenges you face either academically or personally.
+                We encourage students to share their passions, goals, and 
+                challenges—whether academic or personal. Your story matters, 
+                and we value dedication and perseverance as much as achievement.
                 </p>
               </div>
             </div>
@@ -409,12 +404,12 @@ const Scholarship = () => {
                 />
 
                 <h4 className="banner-subtitle small-line-height text-start mt-4">
-                  Grades are important, but not everything
+                  Grades
                 </h4>
                 <p className="paragraph bridge-para">
-                  We believe that knowledge is not only represented by how high
-                  grades are, but also the student’s attitude towards others and
-                  problem solving capabilities.
+                Knowledge isn't defined solely by grades. A student’s attitude, problem-solving skills,
+                 and ability to work with others are equally important indicators of 
+                 potential and success.
                 </p>
               </div>
             </div>

@@ -146,8 +146,7 @@ const AboutUs = () => {
                     </div>
 
                     <p>
-                      We believe that cultivating and maintaining collaboration
-                      and teamwork is essential to succeed in our life.
+                    We believe teamwork and collaboration are essential for success in education and life.
                     </p>
                   </div>
                 </div>
@@ -180,9 +179,7 @@ const AboutUs = () => {
                     </div>
 
                     <p>
-                      We believe that motivating students to become independent
-                      thinkers leads them to take responsibility as learners and
-                      as global citizens.
+                    We encourage students to become independent thinkers who take ownership of their learning and grow into responsible global citizens.
                     </p>
                   </div>
                 </div>
@@ -194,9 +191,7 @@ const AboutUs = () => {
                     </div>
 
                     <p>
-                      We believe in providing all students a balanced education,
-                      consisting of quality instruction, perseverance,
-                      tolerance, and inclusion.
+                    We are committed to providing every student with a balanced education that includes quality instruction, perseverance, tolerance, and inclusion.
                     </p>
                   </div>
                 </div>

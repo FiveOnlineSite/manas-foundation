@@ -72,6 +72,7 @@ const Academy = () => {
           <img src="/images/banner/scope-banner.png" alt="scope-banner" />
           <div className="about-banner-text">
             <h1 className="banner-title mt-5">Manas Academy</h1>
+            <p className="paragraph bridge-para p-0 pt-2 para-two">“Knowledge alone does not guarantee success; skills, values and culture with a positive mindset are essential for a promising future.”</p>
           </div>
         </div>
       </section>
@@ -80,21 +81,17 @@ const Academy = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-7">
-              <h6 className="section-subtitle">HISTORY</h6>
+              {/* <h6 className="section-subtitle"></h6> */}
 
-              <h2 className="section-title">Lorem Ipsum dolor sit amet</h2>
+              <h2 className="section-title">HISTORY</h2>
 
               <p className="paragraph bridge-para p-0 pt-2">
-                Lorem ipsum dolor sit amet. Non nulla voluptatem eos laboriosam
-                voluptatem ad eveniet assumenda est velit animi. Et
-                necessitatibus quia rem explicabo galisum id atque rerum?
-                <br />A velit repellat qui dolor culpa et architecto dolor. Qui
-                dolor praesentium quo velit commodi sit quod consequuntur qui
-                dicta minus. Est voluptatem unde ut sequi quis vel aperiam
-                accusamus et accusamus earum ea praesentium quisquam qui
-                molestiae illum. Qui veniam numquam cum soluta Quis eos dolore
-                consequatur id nulla repellat et officia rerum non eligendi
-                veritatis est debitis doloribus.
+              When My Manas Foundation began in 2019, it was with a mission to provide children in 
+              the rural areas lacking opportunities of an inclusive learning environment and 
+              a curriculum that integrates today’s educational requirements with tomorrow’s needs. 
+              Manas Academy has taken a full form after COVID-19 impact and is now providing 
+              meaningful education to the children in rural areas with excellent academic 
+              programs and an enthusiastic learning environment.
               </p>
             </div>
 
