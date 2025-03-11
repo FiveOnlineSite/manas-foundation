@@ -1632,6 +1632,13 @@ button.slick-next {
   width: 220px;
 }
 
+/* academy */
+.para-two {
+  color: var(--white-font);
+  text-align: center;
+  font-size: 22px;
+}
+
 @media screen and (max-width: 1400px) {
   .institutions-div{
     min-height: 640px;

@@ -191,10 +191,10 @@ const ContactUs = () => {
             <div className="col-lg-4 offset-0 col-md-6 col-12 mt-lg-0 mt-5">
               <div className="contact-div">
                 <h6>India</h6> <span></span>
-                <h6>Info.india@mymanas.org</h6>
-                <h6>(808) 998-34256</h6>
+                <h6>Info.manasacademy@mymanas.org</h6>
+                {/* <h6>(808) 998-34256</h6> */}
                 <p>
-                  Address: <br /> B-26 Maan Heritage Colony, Mandu Link Road, Dhar, MP 454 001
+                  Address: <br /> Bidwal-Shergarh Road, Tehsil Badnawar, Dist. Dhar, Dhar, MP 454665 India
 
                 </p>
               </div>
@@ -202,8 +202,8 @@ const ContactUs = () => {
             <div className="col-lg-3 col-md-6 col-12 mt-lg-0 mt-5">
               <div className="contact-div">
                 <h6>US</h6> <span></span>
-                <h6>Info.usa@mymanas.org</h6>
-                <h6>(808) 998-34256</h6>
+                <h6>Info.manasacademy@mymanas.org</h6>
+                {/* <h6>(808) 998-34256</h6> */}
                 <p>
                   Address: <br />2213 Nantucket Dr. Unit C, Houston, TX 77057
 
