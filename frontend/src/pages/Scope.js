@@ -9,7 +9,7 @@ const Scope = () => {
     <Layout>
       <section className="about-banner">
         <div className="container-fluid">
-          <img src="/images/banner/scope-banner.png" alt="scope-banner" />
+          <img src="/images/banner/OurScope-01.jpeg" alt="scope-banner" />
           <div className="about-banner-text">
             <h5 className="banner-subtitle">EDUCATION</h5>
             <h1 className="banner-title">
@@ -42,22 +42,26 @@ const Scope = () => {
 
               <div className="funding-img-div text-end pe-lg-5 pe-0">
                 <img
-                  src="/images/scope/group-young-children-running-playing-park.png"
-                  className=" text-end"
+                  src="/images/scope/OurScope-04 1.png"
+                  className="text-end"
                   alt=""
                 />
               </div>
             </div>
             <div className="col-lg-6 d-flex flex-column">
               <img
-                src="/images/scope/school-boy-holding-delicious-apple.png"
+                src="/images/scope/OurScope-05 1.png"
                 className="w-100 order-2 order-lg-1"
                 alt=""
               />
 
               <div className="order-lg-2 order-1">
                 <p className="paragraph bridge-para p-0 pt-2 ">
-                Scholarships are available in the U.S. through our partnership with Scholarships America, ensuring that young students can access the best education possible. Our goal is to design and implement scholarship programs that align with students' educational needs and long-term career aspirations.
+                  Scholarships are available in the U.S. through our partnership
+                  with Scholarships America, ensuring that young students can
+                  access the best education possible. Our goal is to design and
+                  implement scholarship programs that align with students'
+                  educational needs and long-term career aspirations.
                 </p>
 
                 <button className="custom-btn bridge-btn">
@@ -82,15 +86,15 @@ const Scope = () => {
               {/* <h6 className="section-subtitle">LOREM IPSUM</h6> */}
 
               <h2 className="section-title">
-              Enhancing Educational Opportunities
+                Enhancing Educational Opportunities
               </h2>
 
               <p className="paragraph bridge-para p-0 pt-2">
-              A network of schools in rural India shares our integrated approach,
-               empowering children with holistic life skills that nurture their 
-               physical, mental, moral, and spiritual growth. This model enhances 
-               critical thinking, knowledge, academic standards, discipline, and 
-               scientific aptitude among students.
+                A network of schools in rural India shares our integrated
+                approach, empowering children with holistic life skills that
+                nurture their physical, mental, moral, and spiritual growth.
+                This model enhances critical thinking, knowledge, academic
+                standards, discipline, and scientific aptitude among students.
               </p>
 
               <button className="custom-btn bridge-btn">
@@ -106,10 +110,7 @@ const Scope = () => {
 
             <div className="col-lg-6 text-lg-end text-start">
               <div className="enhancing-img">
-                <img
-                  src="/images/school-children-dressed-uniform-have-fun-play-schoolyard.png"
-                  alt=""
-                />
+                <img src="/images/scope/OurScope-06 1.png" alt="" />
               </div>
             </div>
           </div>

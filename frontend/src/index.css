@@ -428,8 +428,9 @@ nav .navbar-nav .nav-item a,
 .video-thumbnail-container .slider-thumbnail {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 300px;
   border-radius: 60px;
+  object-fit: cover;
 }
 
 .video-thumbnail-container .slider-overlay {
@@ -502,7 +503,7 @@ nav .navbar-nav .nav-item a,
   padding: 10px 30px;
   margin: 40px 0;
 }
-.bridge-btn-one{
+.bridge-btn-one {
   position: absolute;
   bottom: 15px;
 }
@@ -1192,6 +1193,12 @@ button.slick-next {
   padding: 5px 0;
 }
 
+.contact-div h6 a {
+  font-size: 20px;
+  color: var(--black-font);
+  text-decoration: none;
+}
+
 .contact-div span {
   display: block;
   width: 30px;
@@ -1227,6 +1234,9 @@ button.slick-next {
   position: relative;
   z-index: 1;
   width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 25px;
 }
 
 .team-img-div .down-img {
@@ -1254,7 +1264,7 @@ button.slick-next {
   font-family: "Museo-Sans";
   font-size: 16px;
   font-weight: 300;
-  line-height: 34px;
+  line-height: 26px;
   text-align: left;
 }
 
@@ -1298,6 +1308,11 @@ button.slick-next {
 .video-thumbnail-div .video-thumbnail {
   position: relative;
 }
+
+/* .video-thumbnail-div img {
+  height: 200px;
+  object-fit: contain;
+} */
 
 .tabs-play-icon {
   position: absolute;
@@ -1626,7 +1641,7 @@ button.slick-next {
   padding-right: 0 !important;
 }
 
-.img-rep{
+.img-rep {
   border-radius: 50%;
   height: 220px;
   width: 220px;
@@ -1639,15 +1654,27 @@ button.slick-next {
   font-size: 22px;
 }
 
-@media screen and (max-width: 1400px) {
-  .institutions-div{
-    min-height: 640px;
+.affialte-text {
+  font-size: 15px;
+  font-family: "Museo-Sans";
 }
+
+.achivements-div img {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1400px) {
+  .institutions-div {
+    min-height: 640px;
+  }
 }
 @media screen and (max-width: 1200px) {
-  .institutions-div{
+  .institutions-div {
     min-height: 725px;
-}
+  }
 }
 @media screen and (max-width: 1024px) {
   .donate-img {
@@ -1727,13 +1754,12 @@ button.slick-next {
   .facilities-row .nav-tabs {
     height: 50vh;
   }
-
 }
 
 @media screen and (max-width: 991px) {
-  .institutions-div{
+  .institutions-div {
     min-height: auto;
-}
+  }
   .mobile-navbar {
     display: block;
     background-color: var(--white-font);
@@ -1886,20 +1912,22 @@ button.slick-next {
   .news-detail-banner .container-fluid .row {
     width: 100%;
   }
-    .bridge-btn-one{
+  .bridge-btn-one {
     position: relative;
   }
   .donate-para {
     position: relative;
     top: auto;
     right: auto;
-  transform: translate(-0%, -0%);
+    transform: translate(-0%, -0%);
+  }
+
+  .team-img-div .team-img {
+    height: auto;
   }
 }
 
 @media screen and (max-width: 912px) {
- 
-
   .facilities-row ul {
     border: none;
     white-space: nowrap !important; /* Prevent tab wrapping */
@@ -1931,8 +1959,6 @@ button.slick-next {
   .facilities-row .nav-tabs .nav-link img {
     width: 150px !important;
   }
-
-  
 }
 
 @media screen and (max-width: 768px) {
@@ -1967,7 +1993,6 @@ button.slick-next {
   .half-img-text {
     padding: 5%;
   }
-
 
   .support-text-div h2 {
     font-size: 60px;
@@ -2028,7 +2053,7 @@ button.slick-next {
     position: relative;
     top: auto;
     right: auto;
-  transform: translate(-0%, -0%);
+    transform: translate(-0%, -0%);
   }
 
   .donate-img {
@@ -2060,9 +2085,9 @@ button.slick-next {
     height: 51vh;
   }
 
-  .achivements-div img {
+  /* .achivements-div img {
     width: 100%;
-  }
+  } */
 
   .pillars-div img {
     width: 100%;

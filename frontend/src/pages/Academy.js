@@ -9,17 +9,17 @@ import FacilitiesSlider from "../components/FacilitiesSlider";
 const Academy = () => {
   const facilities = [
     {
-      video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
+      video_thumbnail: "/images/slider/Lab07.jpeg",
       video: "/videos/215471_tiny.mp4",
       text: "Sports & Recreational Spaces",
     },
     {
-      image: "/images/slider/medium-shot-kids-playing-together.png",
+      image: "/images/slider/Lab08.jpeg",
       // video: "/videos/89066-613200185_tiny.mp4",
       text: "Extracurriculars",
     },
     {
-      video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
+      video_thumbnail: "/images/slider/Lab09.jpeg",
       video: "/videos/215475_tiny.mp4",
       text: "Classrooms & Labs",
     },
@@ -28,11 +28,11 @@ const Academy = () => {
 
       text: "Classrooms & Labs",
     },
-    {
-      video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
-      video: "/videos/215475_tiny.mp4",
-      text: "Classrooms & Labs",
-    },
+    // {
+    //   video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
+    //   video: "/videos/215475_tiny.mp4",
+    //   text: "Classrooms & Labs",
+    // },
     {
       image: "/images/slider/medium-shot-kids-playing-together.png",
 
@@ -69,37 +69,45 @@ const Academy = () => {
     <Layout>
       <section className="about-banner">
         <div className="container-fluid">
-          <img src="/images/banner/scope-banner.png" alt="scope-banner" />
+          <img src="/images/banner/MA-Campus.jpg" alt="scope-banner" />
           <div className="about-banner-text">
             <h1 className="banner-title mt-5">Manas Academy</h1>
-            <p className="paragraph bridge-para p-0 pt-2 para-two">“Knowledge alone does not guarantee success; skills, values and culture with a positive mindset are essential for a promising future.”</p>
+            <p className="paragraph bridge-para p-0 pt-2 para-two">
+              “Knowledge alone does not guarantee success; skills, values and
+              culture with a positive mindset are essential for a promising
+              future.”
+            </p>
           </div>
         </div>
       </section>
 
       <section className="enhancing-section history-section">
         <div className="container">
-          <div className="row">
+          <div className="row align-items-center justify-content-center">
             <div className="col-lg-7">
               {/* <h6 className="section-subtitle"></h6> */}
 
               <h2 className="section-title">HISTORY</h2>
 
               <p className="paragraph bridge-para p-0 pt-2">
-              When My Manas Foundation began in 2019, it was with a mission to provide children in 
-              the rural areas lacking opportunities of an inclusive learning environment and 
-              a curriculum that integrates today’s educational requirements with tomorrow’s needs. 
-              Manas Academy has taken a full form after COVID-19 impact and is now providing 
-              meaningful education to the children in rural areas with excellent academic 
-              programs and an enthusiastic learning environment.
+                When My Manas Foundation began in 2019, it was with a mission to
+                provide children in the rural areas lacking opportunities of an
+                inclusive learning environment and a curriculum that integrates
+                today’s educational requirements with tomorrow’s needs. Manas
+                Academy has taken a full form after COVID-19 impact and is now
+                providing meaningful education to the children in rural areas
+                with excellent academic programs and an enthusiastic learning
+                environment.
               </p>
             </div>
 
-            <div className="col-lg-5 text-lg-end text-start">
-              <div className="enhancing-img">
+            <div className="col-lg-5 col-md-5 col-12">
+              <div className="enhancing-img text-center">
                 <img
-                  src="/images/school-children-dressed-uniform-have-fun-play-schoolyard.png"
-                  alt=""
+                  src="/images/banner/academy.png"
+                  alt="logo"
+                  width="100%"
+                  height="300px"
                 />
               </div>
             </div>
@@ -116,10 +124,58 @@ const Academy = () => {
               <h2 className="section-title">Lorem Ipsum dolor sit amet</h2>
             </div>
           </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="row">
-                <div className="custom-col">
+          <div className="row align-items-center justify-content-center">
+            <div className="col-lg-8">
+              <div className="row align-items-center justify-content-center">
+                <div className="col-lg-6">
+                  <div className="team-div">
+                    <div className="team-img-div">
+                      <img
+                        src="/images/teams/Sri Valleru.jpg"
+                        alt="team"
+                        className="team-img mt-4"
+                      />
+                      <img
+                        src="/images/banner/Vector 8.png"
+                        alt="down-img"
+                        className="down-img"
+                      />
+                    </div>
+                    <div className="team-content mt-4">
+                      <h6>Srikant (Sri) Valleru</h6>
+                      <p>
+                        Over 30 years of mutlitnational industry experience from
+                        USA, with expertise in leadership coaching and
+                        development of young graduates.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6 mt-lg-0 mt-5">
+                  <div className="team-div">
+                    <div className="team-img-div ">
+                      <img
+                        src="/images/teams/Gunjan Thakur.png"
+                        alt="team"
+                        className="team-img"
+                      />
+                      <img
+                        src="/images/banner/Vector 6.png"
+                        alt="up-img"
+                        className="up-img"
+                      />
+                    </div>
+                    <div className="team-content mt-4">
+                      <h6>Gunjan Thakur</h6>
+                      <p>
+                        Over 20 years of teaching in CBSE schools with master’s
+                        in education. Expertise in training educators and child
+                        development.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* <div className="custom-col mt-lg-0 mt-5">
                   <div className="team-div">
                     <div className="team-img-div">
                       <img
@@ -139,7 +195,7 @@ const Academy = () => {
                     </div>
                   </div>
                 </div>
-                <div className="custom-col">
+                <div className="custom-col mt-lg-0 mt-5">
                   <div className="team-div">
                     <div className="team-img-div">
                       <img
@@ -178,47 +234,7 @@ const Academy = () => {
                       <p>Designation</p>
                     </div>
                   </div>
-                </div>
-                <div className="custom-col mt-lg-0 mt-5">
-                  <div className="team-div">
-                    <div className="team-img-div">
-                      <img
-                        src="/images/banner/two-students-studying-together-online-with-laptop-park 1.png"
-                        alt="team"
-                        className="team-img"
-                      />
-                      <img
-                        src="/images/banner/Vector 6.png"
-                        alt="up-img"
-                        className="up-img"
-                      />
-                    </div>
-                    <div className="team-content mt-4">
-                      <h6>Name</h6>
-                      <p>Designation</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="custom-col mt-lg-0 mt-5">
-                  <div className="team-div">
-                    <div className="team-img-div">
-                      <img
-                        src="/images/banner/two-students-studying-together-online-with-laptop-park 1.png"
-                        alt="team"
-                        className="team-img"
-                      />
-                      <img
-                        src="/images/banner/Vector 8.png"
-                        alt="down-img"
-                        className="down-img"
-                      />
-                    </div>
-                    <div className="team-content mt-4">
-                      <h6>Name</h6>
-                      <p>Designation</p>
-                    </div>
-                  </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -233,9 +249,9 @@ const Academy = () => {
             <div className="col-lg-12">
               <div className="row justify-content-center">
                 <div className="col-lg-3">
-                  <h6 className="section-subtitle">CURRICULUM</h6>
+                  {/* <h6 className="section-subtitle">CURRICULUM</h6> */}
 
-                  <h2 className="section-title">Lorem Ipsum Dolor Set</h2>
+                  <h2 className="section-title">Curriculum</h2>
                 </div>
 
                 <div className="col-lg-6 offset-lg-3">
@@ -390,6 +406,73 @@ const Academy = () => {
       </section>
 
       <Testimonials />
+
+      <section className="contact-info">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-5">
+              <h6 className="section-subtitle">Contact Info</h6>
+
+              <h2 className="section-title">
+                We are always happy to assist you
+              </h2>
+            </div>
+            <div className="col-lg-7">
+              <div className="row">
+                <div className="col-lg-6 mt-lg-0 mt-5">
+                  <div className="contact-div">
+                    <h6>India</h6> <span></span>
+                    <h6>
+                      <a href="mailto:Info.manasacademy@mymanas.org">
+                        Info.manasacademy@mymanas.org
+                      </a>
+                    </h6>
+                    {/* <h6>(808) 998-34256</h6> */}
+                    <p>
+                      Address: <br /> Bidwal-Shergarh Road, Tehsil Badnawar,
+                      Dist. Dhar, Dhar, MP 454665 India
+                    </p>
+                  </div>
+                </div>
+                <div className="col-lg-5 offset-lg-1 offset-0 mt-lg-0 mt-5">
+                  <div className="contact-div">
+                    <h6>US</h6> <span></span>
+                    <h6>
+                      <a href="mailto:Info.manasacademy@mymanas.org">
+                        Info.manasacademy@mymanas.org
+                      </a>
+                    </h6>
+                    {/* <h6>(808) 998-34256</h6> */}
+                    <p>
+                      Address: <br />
+                      2213 Nantucket Dr. Unit C, Houston, TX 77057
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="row mt-3">
+                <div className="contact-div">
+                  <h6>
+                    For Jobs, send resume to{" "}
+                    <a href="mailto:hr.manasacademy@mymanas.org">
+                      hr.manasacademy@mymanas.org
+                    </a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="row mt-5">
+            <div className="contact-div d-flex align-items-center justify-content-center">
+              <h6>
+                For Admission and Additional Information, send us a message or
+                call __________:
+              </h6>
+            </div>
+          </div> */}
+        </div>
+      </section>
 
       <ReachOut />
     </Layout>

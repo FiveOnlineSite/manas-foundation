@@ -56,7 +56,7 @@ const Home = () => {
             <div className="left-img-div">
               <img
                 className="left-img1"
-                src="/images/banner/group-young-children-running-playing-park.png"
+                src="/images/banner/Mask group (10).png"
                 alt="light-img"
               />
               <img
@@ -66,7 +66,7 @@ const Home = () => {
               />
               <img
                 className="left-img3"
-                src="/images/banner/medium-shot-friends-posing-together.png"
+                src="/images/banner/Mask group (11).png"
                 alt="light-img"
               />
             </div>
@@ -84,7 +84,9 @@ const Home = () => {
                 data-aos="fade-up" // Fade in as you scroll
                 data-aos-duration="1500"
               >
-               We foster equality and curiosity by providing both direct and indirect educational support, empowering children with quality teaching and personal growth opportunities
+                We foster equality and curiosity by providing both direct and
+                indirect educational support, empowering children with quality
+                teaching and personal growth opportunities
               </p>
               <NavLink to="/">
                 <button className="custom-btn white-btn wow">
@@ -101,7 +103,7 @@ const Home = () => {
               />
               <img
                 className="right-img2"
-                src="/images/banner/portrait-young-girl-student-attending-school.png"
+                src="/images/banner/Mask group (12).png"
                 alt="right-img"
               />
             </div>
@@ -150,7 +152,9 @@ const Home = () => {
                     </h2>
 
                     <p className="paragraph bridge-para">
-                    We provide quality education to rural and low-income communities, creating learning opportunities that combine top-tier academics with essential life skills.
+                      We provide quality education to rural and low-income
+                      communities, creating learning opportunities that combine
+                      top-tier academics with essential life skills.
                     </p>
 
                     <button className="custom-btn bridge-btn">
@@ -244,7 +248,9 @@ const Home = () => {
                           >
                             <div className="accordion-body">
                               <p>
-                              Supporting institutions that align with our core values, fostering opportunities in rural communities.
+                                Supporting institutions that align with our core
+                                values, fostering opportunities in rural
+                                communities.
                               </p>
                             </div>
                           </div>
@@ -269,7 +275,9 @@ const Home = () => {
                           >
                             <div className="accordion-body">
                               <p>
-                              Building institutions through an integrated approach to education, shaping young minds for a brighter future.
+                                Building institutions through an integrated
+                                approach to education, shaping young minds for a
+                                brighter future.
                               </p>
                             </div>
                           </div>
