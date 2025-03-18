@@ -8,7 +8,11 @@ const Scholarship = () => {
     <Layout>
       <section className="about-banner">
         <div className="container-fluid">
-          <img src="/images/banner/scope-banner.png" alt="scope-banner" />
+          <img
+            src="/images/banner/A7402468_1.jpg"
+            alt="scope-banner"
+            className="about-img"
+          />
           <div className="about-banner-text">
             <h1 className="banner-title mt-5">Scholarships</h1>
           </div>
@@ -40,7 +44,7 @@ const Scholarship = () => {
                 />
                 <div className="bridging-img2">
                   <img
-                    src="/images/banner/two-students-studying-together-online-with-laptop-park.png"
+                    src="/images/banner/FirstDay06 1.png"
                     alt="briding-img"
                   />
                 </div>
@@ -244,10 +248,7 @@ const Scholarship = () => {
               </div>
               <div className="col-lg-5 d-flex justify-content-lg-end justify-content-center">
                 <div>
-                  <img
-                    src="/images/banner/924c80318fdb786e2f3307a9666dc70a.png"
-                    alt="document-img"
-                  />
+                  <img src="/images/banner/Home-01 1.png" alt="document-img" />
                 </div>
               </div>
             </div>
@@ -364,15 +365,20 @@ const Scholarship = () => {
               {/* <h6 className="section-subtitle">LOREM IPSUM</h6> */}
 
               <h2 className="section-title">
-              Our Goal: Reaching Those Who Need It Most
+                Our Goal: Reaching Those Who Need It Most
               </h2>
             </div>
             <div className="col-lg-7">
               <p className="paragraph bridge-para">
-              We prioritize students who face disadvantages, offering additional consideration to those who demonstrate resilience and determination despite financial or academic challenges.
+                We prioritize students who face disadvantages, offering
+                additional consideration to those who demonstrate resilience and
+                determination despite financial or academic challenges.
               </p>
               <p className="paragraph bridge-para">
-              An underdog is someone who, despite obstacles, shows the tenacity to improve themselves when given the right opportunities and support. With access to the right resources, they can thrive and achieve success in life.
+                An underdog is someone who, despite obstacles, shows the
+                tenacity to improve themselves when given the right
+                opportunities and support. With access to the right resources,
+                they can thrive and achieve success in life.
               </p>
             </div>
           </div>
@@ -381,24 +387,25 @@ const Scholarship = () => {
             <div className="col-lg-4 col-md-6 col-12">
               <div>
                 <img
-                  src="/images/banner/joyful-schoolboy-with-heavy-backpack.png"
+                  src="/images/banner/Adobe Express - file (2) 1.png"
                   alt="goal-img"
                   className="w-auto w-sm-100"
                 />
                 <h4 className="banner-subtitle small-line-height text-start mt-4">
-                Show Us Your Commitment
+                  Show Us Your Commitment
                 </h4>
                 <p className="paragraph bridge-para">
-                We encourage students to share their passions, goals, and 
-                challenges—whether academic or personal. Your story matters, 
-                and we value dedication and perseverance as much as achievement.
+                  We encourage students to share their passions, goals, and
+                  challenges—whether academic or personal. Your story matters,
+                  and we value dedication and perseverance as much as
+                  achievement.
                 </p>
               </div>
             </div>
             <div className="col-lg-5 col-md-6 col-12">
               <div>
                 <img
-                  src="/images/banner/smiling-students-looking-globe.png"
+                  src="/images/banner/Adobe Express - file (3) 1.png"
                   alt="goal-img"
                   className="w-auto w-sm-100"
                 />
@@ -407,9 +414,10 @@ const Scholarship = () => {
                   Grades
                 </h4>
                 <p className="paragraph bridge-para">
-                Knowledge isn't defined solely by grades. A student’s attitude, problem-solving skills,
-                 and ability to work with others are equally important indicators of 
-                 potential and success.
+                  Knowledge isn't defined solely by grades. A student’s
+                  attitude, problem-solving skills, and ability to work with
+                  others are equally important indicators of potential and
+                  success.
                 </p>
               </div>
             </div>

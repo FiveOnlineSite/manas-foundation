@@ -46,7 +46,7 @@ const Achivements = () => {
               <div className="col-lg-6 mt-5">
                 <div className="achivements-div">
                   <img
-                    src="/images/banner/MA-Campus.jpg"
+                    src="/images/banner/Adobe Express - file.jpg"
                     alt="achivement-img"
                   />
                   <h4 className="banner-subtitle small-line-height text-start mt-4">
@@ -64,7 +64,7 @@ const Achivements = () => {
               <div className="col-lg-6 mt-5">
                 <div className="achivements-div">
                   <img
-                    src="/images/banner/opportunitiesmym.png"
+                    src="/images/banner/Students Working in ChemLab.jpeg"
                     alt="achivement-img"
                   />
                   <h4 className="banner-subtitle small-line-height text-start mt-4">

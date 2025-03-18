@@ -7,19 +7,23 @@ import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   const homeBanner = [
+    // {
+    //   image: "/images/slider/school-boy-holding-delicious-apple.png",
+    // },
     {
-      image: "/images/slider/school-boy-holding-delicious-apple.png",
-    },
-    {
-      video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
+      video_thumbnail: "/images/slider/Exhibition India.jpeg",
       video: "/videos/215471_tiny.mp4",
     },
     {
-      video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
+      video_thumbnail: "/images/slider/Exhibition Smart Village.jpeg",
       video: "/videos/89066-613200185_tiny.mp4",
     },
     {
-      video_thumbnail: "/images/slider/medium-shot-kids-playing-together.png",
+      video_thumbnail: "/images/slider/KG Students 04.jpg",
+      video: "/videos/215475_tiny.mp4",
+    },
+    {
+      video_thumbnail: "/images/slider/OurScope-08.jpeg",
       video: "/videos/215475_tiny.mp4",
     },
   ];
@@ -127,7 +131,7 @@ const Home = () => {
                     />
                     <div className="bridging-img2">
                       <img
-                        src="/images/banner/two-students-studying-together-online-with-laptop-park.png"
+                        src="/images/banner/Adobe Express - file 1.png"
                         alt="briding-img"
                       />
                     </div>
@@ -293,7 +297,7 @@ const Home = () => {
                 >
                   <div className="core-strategies-img">
                     <img
-                      src="/images/school-children-dressed-uniform-have-fun-play-schoolyard.png"
+                      src="/images/banner/Adobe Express - file (1) 1.png"
                       alt="core-strategy"
                     />
                   </div>
@@ -429,7 +433,7 @@ const Home = () => {
                 >
                   <div className="news-img">
                     <img
-                      src="/images/banner/image-18-copyright.png"
+                      src="/images/banner/A7402698 1.png"
                       alt="banner"
                       className="w-100"
                     />
