@@ -298,10 +298,7 @@ const AboutUs = () => {
                   className="bridging-img1"
                 />
                 <div className="bridging-img2">
-                  <img
-                    src="/images/banner/two-students-studying-together-online-with-laptop-park.png"
-                    alt="briding-img"
-                  />
+                  <img src="/images/banner/A7402707 1.png" alt="briding-img" />
                 </div>
 
                 <img

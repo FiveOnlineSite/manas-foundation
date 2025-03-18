@@ -10,7 +10,11 @@ const Donate = () => {
     <Layout>
       <section className="about-banner">
         <div className="container-fluid">
-          <img src="/images/banner/scope-banner.png" alt="scope-banner" />
+          <img
+            src="/images/banner/A7402508.jpg"
+            alt="scope-banner"
+            className="about-img"
+          />
           <div className="about-banner-text">
             <h1 className="banner-title mt-5">Support Us</h1>
           </div>

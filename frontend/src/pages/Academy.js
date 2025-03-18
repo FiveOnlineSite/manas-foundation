@@ -69,7 +69,11 @@ const Academy = () => {
     <Layout>
       <section className="about-banner">
         <div className="container-fluid">
-          <img src="/images/banner/MA-Campus.jpg" alt="scope-banner" />
+          <img
+            src="/images/banner/MA-Campus.jpg"
+            alt="scope-banner"
+            className="about-img"
+          />
           <div className="about-banner-text">
             <h1 className="banner-title mt-5">Manas Academy</h1>
             <p className="paragraph bridge-para p-0 pt-2 para-two">
@@ -104,7 +108,7 @@ const Academy = () => {
             <div className="col-lg-5 col-md-5 col-12">
               <div className="enhancing-img text-center">
                 <img
-                  src="/images/banner/academy.png"
+                  src="/images/banner/academy_enhanced_enhanced.png"
                   alt="logo"
                   width="100%"
                   height="300px"
@@ -119,15 +123,15 @@ const Academy = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-4">
-              <h6 className="section-subtitle">Leadership team</h6>
+              {/* <h6 className="section-subtitle">Leadership team</h6> */}
 
-              <h2 className="section-title">Lorem Ipsum dolor sit amet</h2>
+              <h2 className="section-title">Leadership team</h2>
             </div>
           </div>
           <div className="row align-items-center justify-content-center">
             <div className="col-lg-8">
               <div className="row align-items-center justify-content-center">
-                <div className="col-lg-6">
+                <div className="col-lg-5">
                   <div className="team-div">
                     <div className="team-img-div">
                       <img
@@ -151,7 +155,7 @@ const Academy = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-6 mt-lg-0 mt-5">
+                <div className="col-lg-5 offset-lg-1 mt-lg-0 mt-5">
                   <div className="team-div">
                     <div className="team-img-div ">
                       <img

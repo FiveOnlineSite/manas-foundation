@@ -7,7 +7,7 @@ const ContactUs = () => {
     <Layout>
       <section className="about-banner">
         <div className="container-fluid">
-          <img src="/images/banner/Group 8126.png" alt="Group 8126" />
+          <img src="/images/banner/A7402577 1.png" alt="Group 8126" />
           <div className="banner-text about-banner-text contact-banner-text">
             <h1
               className="banner-title black-text wow black-text"

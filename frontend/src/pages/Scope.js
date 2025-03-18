@@ -9,7 +9,11 @@ const Scope = () => {
     <Layout>
       <section className="about-banner">
         <div className="container-fluid">
-          <img src="/images/banner/OurScope-01.jpeg" alt="scope-banner" />
+          <img
+            src="/images/banner/OurScope-01.jpeg"
+            alt="scope-banner"
+            className="about-img"
+          />
           <div className="about-banner-text">
             <h5 className="banner-subtitle">EDUCATION</h5>
             <h1 className="banner-title">

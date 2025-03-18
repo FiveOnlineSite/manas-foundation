@@ -8,7 +8,11 @@ const Institution = () => {
     <Layout>
       <section className="about-banner">
         <div className="container-fluid">
-          <img src="/images/banner/scope-banner.png" alt="scope-banner" />
+          <img
+            src="/images/banner/KG Graduation 06.jpg"
+            alt="scope-banner"
+            className="about-img"
+          />
           <div className="about-banner-text">
             <h1 className="banner-title mt-5">Institutions</h1>
           </div>
@@ -26,10 +30,10 @@ const Institution = () => {
               </div>
               <div className="col-lg-6 offset-lg-1 offset-0 ">
                 <p className="paragraph bridge-para light-paragraph pt-0 mt-0">
-                  With your generous support we are able to help students
-                  foster a sense of equality and curiosity that can help them
-                  develop their talents, build their self esteem, and set
-                  themselves on the road to success.
+                  With your generous support we are able to help students foster
+                  a sense of equality and curiosity that can help them develop
+                  their talents, build their self esteem, and set themselves on
+                  the road to success.
                 </p>
               </div>
             </div>
@@ -79,8 +83,8 @@ const Institution = () => {
                     </div>
                   </div>
                   <p className="paragraph bridge-para">
-                    We provide children with the best academic curriculum
-                    in all subjects and technology to empower them with required
+                    We provide children with the best academic curriculum in all
+                    subjects and technology to empower them with required
                     knowledge to continue their education for life.
                   </p>
                 </div>
@@ -163,10 +167,16 @@ const Institution = () => {
                 <div className="institutions-div">
                   <img src="/images/banner/academy.png" alt="institution-img" />
                   <p className="paragraph bridge-para mt-2">
-                  A My Manas Society Institution
+                    A My Manas Society Institution
                   </p>
                   <p className="paragraph bridge-para mt-2">
-                  A CBSE English Medium school serving over 90 villages in the Badnawar and Sardarpur Tehsils in Dhar District, MP-India. With the best infrastructure and qualified staff, our emphasis is on well-rounded education that involves physical, mental, moral, and spiritual aspects of learning, which improves our students’ critical thinking, athletic ability, and self-discipline.
+                    A CBSE English Medium school serving over 90 villages in the
+                    Badnawar and Sardarpur Tehsils in Dhar District, MP-India.
+                    With the best infrastructure and qualified staff, our
+                    emphasis is on well-rounded education that involves
+                    physical, mental, moral, and spiritual aspects of learning,
+                    which improves our students’ critical thinking, athletic
+                    ability, and self-discipline.
                   </p>
 
                   <button className="custom-btn bridge-btn bridge-btn-one my-3">
@@ -182,13 +192,23 @@ const Institution = () => {
               </div>
               <div className="col-lg-6">
                 <div className="institutions-div">
-                  <img src="/images/banner/academy-two.png" alt="institution-img" />
+                  <img
+                    src="/images/banner/academy-two.png"
+                    alt="institution-img"
+                  />
                   <p className="paragraph bridge-para mt-2">
-                  A Manas Sanctuary Foundation Institution
+                    A Manas Sanctuary Foundation Institution
                   </p>
                   <p className="paragraph bridge-para mt-2">
-                  --COMING SOON— <br/>
-                  An Integrated Learning Environment at Manas Sanctuary, India. At Manas Sanctuary, Intellectual, Emotional and Social educational programs will be provided in an environment that fosters continuous learning to develop a growth mindset. With open indoor and outdoor learning spaces in over a 10-acre property away from city noises and pollution, the Sanctuary vision includes housing for students with teacher families on-site.
+                    --COMING SOON— <br />
+                    An Integrated Learning Environment at Manas Sanctuary,
+                    India. At Manas Sanctuary, Intellectual, Emotional and
+                    Social educational programs will be provided in an
+                    environment that fosters continuous learning to develop a
+                    growth mindset. With open indoor and outdoor learning spaces
+                    in over a 10-acre property away from city noises and
+                    pollution, the Sanctuary vision includes housing for
+                    students with teacher families on-site.
                   </p>
 
                   <button className="custom-btn bridge-btn bridge-btn-one my-3">
