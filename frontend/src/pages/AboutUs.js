@@ -9,7 +9,7 @@ const AboutUs = () => {
       <section className="about-banner">
         <div className="container-fluid">
           <img
-            src="/images/banner/diverse-kids-reading-books.png"
+            src="/images/banner/AboutUs-01.jpeg"
             alt="about-banner"
             className="about-img"
           />
@@ -115,7 +115,9 @@ const AboutUs = () => {
           </h2>
 
           <p className="paragraph bridge-para">
-          Providing education that’s accessible to rural communities and opening learning opportunities that integrate top-tier education with holistic life skills.
+            Providing education that’s accessible to rural communities and
+            opening learning opportunities that integrate top-tier education
+            with holistic life skills.
           </p>
 
           <div className="values-div">
@@ -146,7 +148,8 @@ const AboutUs = () => {
                     </div>
 
                     <p>
-                    We believe teamwork and collaboration are essential for success in education and life.
+                      We believe teamwork and collaboration are essential for
+                      success in education and life.
                     </p>
                   </div>
                 </div>
@@ -179,7 +182,9 @@ const AboutUs = () => {
                     </div>
 
                     <p>
-                    We encourage students to become independent thinkers who take ownership of their learning and grow into responsible global citizens.
+                      We encourage students to become independent thinkers who
+                      take ownership of their learning and grow into responsible
+                      global citizens.
                     </p>
                   </div>
                 </div>
@@ -191,7 +196,9 @@ const AboutUs = () => {
                     </div>
 
                     <p>
-                    We are committed to providing every student with a balanced education that includes quality instruction, perseverance, tolerance, and inclusion.
+                      We are committed to providing every student with a
+                      balanced education that includes quality instruction,
+                      perseverance, tolerance, and inclusion.
                     </p>
                   </div>
                 </div>
@@ -312,8 +319,8 @@ const AboutUs = () => {
 
                 <p className="paragraph bridge-para">
                   You can give your children a bright future.
-                  <br /> There are no extra costs for an opportunity
-                  that is extraordinary.
+                  <br /> There are no extra costs for an opportunity that is
+                  extraordinary.
                 </p>
 
                 {/* <div className="donate-para"> */}

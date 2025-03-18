@@ -121,28 +121,26 @@ const ContactUs = () => {
                             Select Inquiry Type
                           </option>
                           <option value="Manas Academy">
-                          New Admission – Manas Academy
+                            New Admission – Manas Academy
                           </option>
                           <option value="Vidhya Vanam">
-                          New Admission – Vidhya Vanam
+                            New Admission – Vidhya Vanam
                           </option>
                           <option value="Scholarships / Financial Aid">
-                          Scholarships / Financial Aid
+                            Scholarships / Financial Aid
                           </option>
                           <option value="Employment Opportunities">
-                          Employment Opportunities
+                            Employment Opportunities
                           </option>
                           <option value="Vendor / Supplier Opportunities">
-                          Vendor / Supplier Opportunities
+                            Vendor / Supplier Opportunities
                           </option>
                           <option value="Volunteer Opportunities">
-                          Volunteer Opportunities
+                            Volunteer Opportunities
                           </option>
-                          <option value="Want to Donate">
-                          Want to Donate
-                          </option>
+                          <option value="Want to Donate">Want to Donate</option>
                           <option value="General Information Request">
-                          General Information Request
+                            General Information Request
                           </option>
                         </select>
                       </div>
@@ -188,29 +186,60 @@ const ContactUs = () => {
                 We are always happy to assist you
               </h2>
             </div>
-            <div className="col-lg-4 offset-0 col-md-6 col-12 mt-lg-0 mt-5">
-              <div className="contact-div">
-                <h6>India</h6> <span></span>
-                <h6>Info.manasacademy@mymanas.org</h6>
-                {/* <h6>(808) 998-34256</h6> */}
-                <p>
-                  Address: <br /> Bidwal-Shergarh Road, Tehsil Badnawar, Dist. Dhar, Dhar, MP 454665 India
-
-                </p>
+            <div className="col-lg-7">
+              <div className="row">
+                <div className="col-lg-6 mt-lg-0 mt-5">
+                  <div className="contact-div">
+                    <h6>India</h6> <span></span>
+                    <h6>
+                      <a href="mailto:Info.manasacademy@mymanas.org">
+                        Info.manasacademy@mymanas.org
+                      </a>
+                    </h6>
+                    {/* <h6>(808) 998-34256</h6> */}
+                    <p>
+                      Address: <br /> Bidwal-Shergarh Road, Tehsil Badnawar,
+                      Dist. Dhar, Dhar, MP 454665 India
+                    </p>
+                  </div>
+                </div>
+                <div className="col-lg-5 offset-lg-1 offset-0 mt-lg-0 mt-5">
+                  <div className="contact-div">
+                    <h6>US</h6> <span></span>
+                    <h6>
+                      <a href="mailto:Info.manasacademy@mymanas.org">
+                        Info.manasacademy@mymanas.org
+                      </a>
+                    </h6>
+                    {/* <h6>(808) 998-34256</h6> */}
+                    <p>
+                      Address: <br />
+                      2213 Nantucket Dr. Unit C, Houston, TX 77057
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-12 mt-lg-0 mt-5">
-              <div className="contact-div">
-                <h6>US</h6> <span></span>
-                <h6>Info.manasacademy@mymanas.org</h6>
-                {/* <h6>(808) 998-34256</h6> */}
-                <p>
-                  Address: <br />2213 Nantucket Dr. Unit C, Houston, TX 77057
-
-                </p>
+              <div className="row mt-3">
+                <div className="contact-div">
+                  <h6>
+                    For Jobs, send resume to{" "}
+                    <a href="mailto:hr.manasacademy@mymanas.org">
+                      hr.manasacademy@mymanas.org
+                    </a>
+                  </h6>
+                </div>
               </div>
             </div>
           </div>
+
+          {/* <div className="row mt-5">
+            <div className="contact-div d-flex align-items-center justify-content-center">
+              <h6>
+                For Admission and Additional Information, send us a message or
+                call __________:
+              </h6>
+            </div>
+          </div> */}
         </div>
       </section>
     </Layout>
