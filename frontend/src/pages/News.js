@@ -95,7 +95,7 @@ const News = () => {
             <div className="col-lg-4">
               <NavLink to="/news-detail">
                 <img
-                  src="/images/smiling-students-looking-globe.png"
+                  src="/images/banner/ram-mandir-img.png"
                   alt="news"
                   className="w-100"
                 />
@@ -106,9 +106,11 @@ const News = () => {
                 <div className="latest-news-time-div">
                   <h6>News</h6> <span></span> <p> 15 minutes ago</p>
                 </div>
-                <div className="latest-news-title">
-                  <h2>Ram Mandir</h2>
-                </div>
+                <NavLink to="/news-detail">
+                  <div className="latest-news-title">
+                    <h2>Ram Mandir</h2>
+                  </div>
+                </NavLink>
               </div>
             </div>
           </div>

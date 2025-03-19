@@ -67,8 +67,9 @@ const NewsDetail = () => {
           <div className="row align-items-center">
             <div className="col-lg-5 px-0">
               <img
-                src="/images/banner/copy-space-childrens-reading.png"
+                src="/images/banner/ram-mandir-img.png"
                 alt="new-details-banner"
+                className="news-detail-banner-img"
               />
             </div>
 
