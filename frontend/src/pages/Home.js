@@ -21,10 +21,10 @@ const Home = () => {
     {
       image: "/images/slider/KG Students 04.jpg",
       // video: "/videos/215475_tiny.mp4",
+      video: "/videos/lv_0_20250221192441.mp4",
     },
     {
       video_thumbnail: "/images/slider/OurScope-08.jpeg",
-      video: "/videos/lv_0_20250221192441.mp4",
     },
   ];
 

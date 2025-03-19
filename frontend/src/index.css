@@ -1672,6 +1672,12 @@ button.slick-next {
   border-radius: 50%;
 }
 
+.facilities-row .nav-tabs .nav-link .facilities-img {
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 1400px) {
   .institutions-div {
     min-height: 640px;

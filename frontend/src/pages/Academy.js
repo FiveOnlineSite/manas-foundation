@@ -9,7 +9,7 @@ import FacilitiesSlider from "../components/FacilitiesSlider";
 const Academy = () => {
   const facilities = [
     {
-      image: "/images/slider/Lab07.jpeg",
+      image: "/images/slider/Lab08.jpeg",
       text: "Sports & Recreational Spaces",
       modal_data: {
         videos: [
@@ -18,22 +18,30 @@ const Academy = () => {
             video_thumbnail: "/images/slider/Lab08.jpeg",
             src: "/videos/lv_0_20250221192257.mp4",
           },
-          {
-            video_thumbnail: "/images/slider/Lab08.jpeg",
-            src: "/videos/lv_0_20250221192257.mp4",
-          },
+          // {
+          //   video_thumbnail: "/images/slider/Lab08.jpeg",
+          //   src: "/videos/lv_0_20250221192257.mp4",
+          // },
         ],
         modal_images: [
-          "/images/slider/Lab07.jpeg",
-          "/images/slider/Lab07.jpeg",
+          "/images/slider/A7402682.jpg",
+          "/images/slider/KG Students 04.jpg",
         ], // Use an array for multiple images
       },
     },
     {
-      image: "/images/slider/Lab08.jpeg",
+      image: "/images/slider/Lab07.jpeg",
       text: "Extracurriculars",
       modal_data: {
-        modal_images: ["/images/slider/Lab08.jpeg"],
+        modal_images: [
+          "/images/slider/DSC04685.jpg",
+          "/images/slider/Dance Team02.jpeg",
+          "/images/slider/DSC04762.jpg",
+          "/images/slider/DSC04905.jpg",
+          "/images/slider/Exhibition India.jpeg",
+          "/images/slider/Exhibition Smart Village.jpeg",
+          "/images/slider/OurScope-08.jpeg",
+        ],
         videos: [
           {
             video_thumbnail: "/images/slider/Lab08.jpeg",
@@ -46,7 +54,10 @@ const Academy = () => {
       image: "/images/slider/Lab09.jpeg",
       text: "Classrooms & Labs",
       modal_data: {
-        modal_images: ["/images/slider/Lab09.jpeg"],
+        modal_images: [
+          "/images/slider/AboutUs-03.jpeg",
+          "/images/slider/Gayatri 01.jpeg",
+        ],
         videos: [
           {
             video_thumbnail: "/images/slider/Lab09.jpeg",
