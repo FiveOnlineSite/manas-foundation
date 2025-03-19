@@ -35,10 +35,8 @@ const Testimonials = () => {
 
                         <div className="testimonial-name ">
                           <h6>Jason Bott</h6>
-                          <p className="mb-0 pb-0 mt-5">
-                            Chief Executive Officer
-                          </p>
-                          <br />
+                          <p className="mb-1">Chief Executive Officer</p>
+
                           <p>WebCreek Technology Inc.</p>
                         </div>
                       </div>
@@ -92,8 +90,8 @@ const Testimonials = () => {
 
                         <div className="testimonial-name ">
                           <h6>Dr. Ronald Vardy Ph.D</h6>
-                          <p className="mb-0 pb-0 mt-5"> Professor</p>
-                          <br />
+                          <p className="mb-1"> Professor</p>
+
                           <p> University of Houston</p>
                         </div>
                       </div>
@@ -138,11 +136,7 @@ const Testimonials = () => {
 
                         <div className="testimonial-name ">
                           <h6>Dr. Tom Wymore</h6>
-                          <p className="mb-0 pb-0 mt-5">
-                            {" "}
-                            Leadership Coach and Mentor
-                          </p>
-                          <br />
+                          <p className="mb-1">Leadership Coach and Mentor</p>
                           <p> Eagles’ Wings Leadership Coaching</p>
                         </div>
                       </div>
@@ -190,11 +184,7 @@ const Testimonials = () => {
 
                         <div className="testimonial-name ">
                           <h6>Anthony G. Petrello</h6>
-                          <p className="mb-0 pb-0 mt-5">
-                            {" "}
-                            Chief Executive Officer
-                          </p>
-                          <br />
+                          <p className="mb-1"> Chief Executive Officer</p>
                           <p> Nabors Industries Ltd</p>
                         </div>
                       </div>

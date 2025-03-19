@@ -82,7 +82,7 @@ const Institution = () => {
                       />
                     </div>
                   </div>
-                  <p className="paragraph bridge-para">
+                  <p className="paragraph bridge-para pillars-para">
                     We provide children with the best academic curriculum in all
                     subjects and technology to empower them with required
                     knowledge to continue their education for life.
@@ -102,7 +102,7 @@ const Institution = () => {
                       />
                     </div>
                   </div>
-                  <p className="paragraph bridge-para">
+                  <p className="paragraph bridge-para pillars-para">
                     We train children in skills, such as communication,
                     teamwork, critical thinking, and problem solving so that
                     they may effectively apply their knowledge from the
@@ -123,7 +123,7 @@ const Institution = () => {
                       />
                     </div>
                   </div>
-                  <p className="paragraph bridge-para">
+                  <p className="paragraph bridge-para pillars-para">
                     We teach children important values such as respect,
                     responsibility, and fairness so that they may ethically
                     apply the knowledge and skills they have gained in their
@@ -144,7 +144,7 @@ const Institution = () => {
                       />
                     </div>
                   </div>
-                  <p className="paragraph bridge-para">
+                  <p className="paragraph bridge-para pillars-para">
                     We promote positive mindsets in children that nurture
                     curiosity, growth, resilience, and empathy. This philosophy
                     will help these children continue to develop themselves,
