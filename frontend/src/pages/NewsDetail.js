@@ -65,18 +65,20 @@ const NewsDetail = () => {
       <section className="news-detail-banner">
         <div className="container-fluid">
           <div className="row align-items-center">
-            <div className="col-lg-5 px-0">
-              <img
-                src="/images/banner/ram-mandir-img.png"
-                alt="new-details-banner"
-                className="news-detail-banner-img"
-              />
+            <div className="col-lg-5">
+              <div className="news-detail-img">
+                <img
+                  src="/images/banner/ram-mandir-img.png"
+                  alt="new-details-banner"
+                  className="news-detail-banner-img"
+                />
+              </div>
             </div>
 
             <div className="col-lg-7 news-detail-banner-section">
               <div className="news-detail-content">
                 <div className="news-detail-content-subsection d-flex align-items-baseline">
-                  <h4>NEWS</h4> <span></span> <h6>00.00.00</h6>
+                  <h4>NEWS</h4> <span></span> <h6>19.03.25</h6>
                 </div>
                 <h1 className="section-title news-detail-title">Ram Mandir</h1>
 
