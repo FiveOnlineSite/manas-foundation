@@ -77,10 +77,7 @@ const NewsDetail = () => {
                 <div className="news-detail-content-subsection d-flex align-items-baseline">
                   <h4>NEWS</h4> <span></span> <h6>00.00.00</h6>
                 </div>
-                <h1 className="section-title news-detail-title">
-                  Lorem ipsum dolor sit amet. Sed temporibus quos non voluptas
-                  neque
-                </h1>
+                <h1 className="section-title news-detail-title">Ram Mandir</h1>
 
                 <p className="paragraph bridge-para text-justify">
                   Lorem ipsum dolor sit amet. In assumenda molestiae sit
@@ -91,6 +88,16 @@ const NewsDetail = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="news-video-section">
+        <div className="container">
+          <video
+            src="/videos/05 - Ram Mandir.mp4"
+            controls
+            className="w-100"
+          ></video>
         </div>
       </section>
 

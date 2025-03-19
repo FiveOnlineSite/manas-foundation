@@ -93,11 +93,13 @@ const News = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-4">
-              <img
-                src="/images/smiling-students-looking-globe.png"
-                alt="news"
-                className="w-100"
-              />
+              <NavLink to="/news-detail">
+                <img
+                  src="/images/smiling-students-looking-globe.png"
+                  alt="news"
+                  className="w-100"
+                />
+              </NavLink>
             </div>
             <div className="col-lg-6 ps-lg-5 ps-auto">
               <div className="latest-news-content">
@@ -105,14 +107,14 @@ const News = () => {
                   <h6>News</h6> <span></span> <p> 15 minutes ago</p>
                 </div>
                 <div className="latest-news-title">
-                  <h2>Lorem ipsum dolor sit amet</h2>
+                  <h2>Ram Mandir</h2>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
+      {/* 
       <section className="news-tabs-section">
         <div className="container">
           <div className="row">
@@ -145,7 +147,7 @@ const News = () => {
             )}
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };

@@ -114,7 +114,11 @@ const SlickSlider = ({ items, settings }) => {
                 </div>
               </div>
             ) : (
-              <img src={item.image} alt="Slider Img" />
+              <img
+                src={item.image}
+                alt="Slider Img"
+                className="slider-thumbnail"
+              />
             )}
           </div>
         ))}
