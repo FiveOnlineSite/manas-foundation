@@ -102,7 +102,7 @@ const NewsDetail = () => {
         </div>
       </section>
 
-      <section className="new-detail-para">
+      {/* <section className="new-detail-para">
         <div className="container">
           <p className="paragraph bridge-para text-justify">
             Lorem ipsum dolor sit amet. In assumenda molestiae sit molestiae
@@ -165,7 +165,7 @@ const NewsDetail = () => {
             vel omnis quia.
           </p>
         </div>
-      </section>
+      </section> */}
 
       <section className="related-news-sections">
         <div className="container">
