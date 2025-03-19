@@ -267,7 +267,7 @@ const FacilitiesSlider = ({ items, settings }) => {
                                 <img
                                   src={img}
                                   alt="Thumbnail"
-                                  className="w-100"
+                                  className="w-100 facilities-img"
                                 />
                               </a>
                             </li>
@@ -287,7 +287,7 @@ const FacilitiesSlider = ({ items, settings }) => {
                                     <img
                                       src={video.video_thumbnail}
                                       alt="Video Thumbnail"
-                                      className="w-100"
+                                      className="w-100 facilities-img"
                                     />
                                     <img
                                       src="/images/icons/Group 8249.png"
