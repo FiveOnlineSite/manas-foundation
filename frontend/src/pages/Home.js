@@ -24,7 +24,7 @@ const Home = () => {
     },
     {
       video_thumbnail: "/images/slider/OurScope-08.jpeg",
-      video: "/videos/215475_tiny.mp4",
+      video: "/videos/lv_0_20250221192441.mp4",
     },
   ];
 
