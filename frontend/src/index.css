@@ -28,7 +28,7 @@ body {
   padding: 0 !important;
   box-sizing: border-box;
   overflow-x: hidden !important;
-  overflow-y: scroll;
+  overflow-y: scroll !important;
   scrollbar-width: thin; /* Thin scrollbar */
   scrollbar-color: var(--dark-voilet-bg);
 }
@@ -425,7 +425,7 @@ nav .navbar-nav .nav-item a,
   height: 75px;
 }
 
-.video-thumbnail-container .slider-thumbnail {
+.slider-thumbnail {
   display: block;
   width: 100%;
   height: 300px;
@@ -1600,7 +1600,8 @@ button.slick-next {
 .lastest-news,
 .news-tabs-section,
 .new-detail-para,
-.related-news-sections {
+.related-news-sections,
+.news-video-section {
   padding: 50px 0;
 }
 

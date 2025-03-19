@@ -10,22 +10,21 @@ const Academy = () => {
   const facilities = [
     {
       video_thumbnail: "/images/slider/Lab07.jpeg",
-      video: "/videos/215471_tiny.mp4",
+      video: "/videos/lv_0_20250221192257.mp4",
       text: "Sports & Recreational Spaces",
     },
     {
-      image: "/images/slider/Lab08.jpeg",
-      // video: "/videos/89066-613200185_tiny.mp4",
+      video_thumbnail: "/images/slider/Lab08.jpeg",
+      video: "/videos/lv_0_20250221192441.mp4",
       text: "Extracurriculars",
     },
     {
       video_thumbnail: "/images/slider/Lab09.jpeg",
-      video: "/videos/215475_tiny.mp4",
+      video: "/videos/lv_0_20250221192322.mp4",
       text: "Classrooms & Labs",
     },
     {
-      image: "/images/slider/medium-shot-kids-playing-together.png",
-
+      image: "/images/slider/Lab09.jpeg",
       text: "Classrooms & Labs",
     },
     // {
@@ -34,8 +33,8 @@ const Academy = () => {
     //   text: "Classrooms & Labs",
     // },
     {
-      image: "/images/slider/medium-shot-kids-playing-together.png",
-
+      video_thumbnail: "/images/slider/Lab09.jpeg",
+      video: "/videos/lv_0_20250221193509.mp4",
       text: "Classrooms & Labs",
     },
   ];

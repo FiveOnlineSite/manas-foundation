@@ -11,16 +11,16 @@ const Home = () => {
     //   image: "/images/slider/school-boy-holding-delicious-apple.png",
     // },
     {
-      video_thumbnail: "/images/slider/Exhibition India.jpeg",
-      video: "/videos/215471_tiny.mp4",
+      image: "/images/slider/Exhibition India.jpeg",
+      // video: "/videos/215471_tiny.mp4",
     },
     {
-      video_thumbnail: "/images/slider/Exhibition Smart Village.jpeg",
-      video: "/videos/89066-613200185_tiny.mp4",
+      image: "/images/slider/Exhibition Smart Village.jpeg",
+      // video: "/videos/89066-613200185_tiny.mp4",
     },
     {
-      video_thumbnail: "/images/slider/KG Students 04.jpg",
-      video: "/videos/215475_tiny.mp4",
+      image: "/images/slider/KG Students 04.jpg",
+      // video: "/videos/215475_tiny.mp4",
     },
     {
       video_thumbnail: "/images/slider/OurScope-08.jpeg",
