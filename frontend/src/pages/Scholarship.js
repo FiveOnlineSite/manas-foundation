@@ -248,7 +248,7 @@ const Scholarship = () => {
               </div>
               <div className="col-lg-5 d-flex justify-content-lg-end justify-content-center">
                 <div>
-                  <img src="/images/banner/Home-01 1.png" alt="document-img" />
+                  <img src="/images/banner/students-outside.jpeg" alt="document-img" className="scholr-img-one" />
                 </div>
               </div>
             </div>
@@ -387,9 +387,9 @@ const Scholarship = () => {
             <div className="col-lg-4 col-md-6 col-12">
               <div>
                 <img
-                  src="/images/banner/Adobe Express - file (2) 1.png"
+                  src="/images/banner/kg-graduation.png"
                   alt="goal-img"
-                  className="w-auto w-sm-100"
+                  className=" w-sm-100 schol-img-two"
                 />
                 <h4 className="banner-subtitle small-line-height text-start mt-4">
                   Show Us Your Commitment

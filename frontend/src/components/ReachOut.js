@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const ReachOut = () => {
   return (
-    <section className="get-started">
+    <section className="get-started" >
       <div className="container">
         <div
           className="col-lg-12 wow"

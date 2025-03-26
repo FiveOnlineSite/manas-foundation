@@ -90,7 +90,7 @@ const Header = () => {
                       }`}
                     >
                       <li>
-                        <NavLink className="dropdown-item" to="/institution">
+                        <NavLink className="dropdown-item" to="/vidhya-vanam">
                           Vidhya Vanam
                         </NavLink>
                       </li>

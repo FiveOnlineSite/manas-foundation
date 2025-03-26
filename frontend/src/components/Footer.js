@@ -20,7 +20,7 @@ const Footer = () => {
                 />
               </NavLink>
 
-              <NavLink className="navbar-item" to="/">
+              <NavLink className="navbar-item" to="https://www.instagram.com/mymanasfoundation?igsh=cmUxZzVoMTQzdnlp">
                 <img
                   src="/images/icons/ph_instagram-logo-fill.png"
                   alt="social"

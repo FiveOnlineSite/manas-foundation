@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react'
 import Layout from "../components/Layout";
 import { NavLink } from "react-router-dom";
-import Achivements from "../components/Achivements";
 import Testimonials from "../components/Testimonials";
-import ReachOut from "../components/ReachOut";
 import FacilitiesSlider from "../components/FacilitiesSlider";
+import ReachOut from "../components/ReachOut";
 
-const Academy = () => {
-  const facilities = [
+
+const Vidhya = () => {
+      const facilities = [
     {
       image: "/images/slider/Lab08.jpeg",
       text: "Sports & Recreational Areas",
@@ -92,8 +92,8 @@ const Academy = () => {
       },
     ],
   };
-
   return (
+    <>
     <Layout>
       <section className="about-banner">
         <div className="container-fluid">
@@ -105,9 +105,7 @@ const Academy = () => {
           <div className="about-banner-text">
             <h1 className="banner-title mt-5">Manas Academy</h1>
             <p className="paragraph bridge-para p-0 pt-2 para-two">
-              “Knowledge alone does not guarantee success; skills, values and
-              culture with a positive mindset are essential for a promising
-              future.”
+              “Knowledge alone does not guarantee success; skills, values and culture with a positive mindset are essential for a promising future.”
             </p>
           </div>
         </div>
@@ -122,21 +120,14 @@ const Academy = () => {
               <h2 className="section-title">HISTORY</h2>
 
               <p className="paragraph bridge-para p-0 pt-2">
-                When My Manas Foundation began in 2019, it was with a mission to
-                provide children in the rural areas lacking opportunities of an
-                inclusive learning environment and a curriculum that integrates
-                today’s educational requirements with tomorrow’s needs. Manas
-                Academy has taken a full form after COVID-19 impact and is now
-                providing meaningful education to the children in rural areas
-                with excellent academic programs and an enthusiastic learning
-                environment.
+              When My Manas Foundation began in 2019, it was with a mission to provide children in the rural areas lacking opportunities of an inclusive learning environment and a curriculum that integrates today’s educational requirements with tomorrow’s needs. Vidhya Vanam is planned from ground-up in a 10-acre land to provide meaningful education to the children in rural areas of Dhar with excellent academic programs and an enthusiastic learning environment starting 2026.
               </p>
             </div>
 
             <div className="col-lg-5 col-md-5 col-12">
               <div className="enhancing-img text-center">
                 <img
-                  src="/images/banner/academy_enhanced_enhanced.png"
+                  src="/images/banner/academy-two.png"
                   alt="logo"
                   width="100%"
                   height="300px"
@@ -207,73 +198,14 @@ const Academy = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div className="custom-col mt-lg-0 mt-5">
-                  <div className="team-div">
-                    <div className="team-img-div">
-                      <img
-                        src="/images/banner/two-students-studying-together-online-with-laptop-park 1.png"
-                        alt="team"
-                        className="team-img"
-                      />
-                      <img
-                        src="/images/banner/Vector 8.png"
-                        alt="down-img"
-                        className="down-img"
-                      />
-                    </div>
-                    <div className="team-content mt-4">
-                      <h6>Name</h6>
-                      <p>Designation</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="custom-col mt-lg-0 mt-5">
-                  <div className="team-div">
-                    <div className="team-img-div">
-                      <img
-                        src="/images/banner/two-students-studying-together-online-with-laptop-park 1.png"
-                        alt="team"
-                        className="team-img"
-                      />
-                      <img
-                        src="/images/banner/Vector 6.png"
-                        alt="up-img"
-                        className="up-img"
-                      />
-                    </div>
-                    <div className="team-content mt-4">
-                      <h6>Name</h6>
-                      <p>Designation</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="custom-col mt-lg-0 mt-5">
-                  <div className="team-div">
-                    <div className="team-img-div">
-                      <img
-                        src="/images/banner/two-students-studying-together-online-with-laptop-park 1.png"
-                        alt="team"
-                        className="team-img"
-                      />
-                      <img
-                        src="/images/banner/Vector 8.png"
-                        alt="down-img"
-                        className="down-img"
-                      />
-                    </div>
-                    <div className="team-content mt-4">
-                      <h6>Name</h6>
-                      <p>Designation</p>
-                    </div>
-                  </div>
-                </div> */}
+               
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <Achivements />
+      {/* <Achivements /> */}
 
       <section className="half-img-section about-half-img d-flex align-items-center">
         <div className="container">
@@ -312,7 +244,7 @@ const Academy = () => {
             <div className="col-lg-12">
               <div className="row">
                 <div className="col-lg-3">
-                  <div className="single-value sing-box-one">
+                  <div className="single-value ">
                     <div className="d-flex flex-column">
                       <div>
                         <img
@@ -332,7 +264,7 @@ const Academy = () => {
                   </div>
                 </div>
                 <div className="col-lg-3 mt-lg-0 mt-5">
-                  <div className="single-value sing-box-one">
+                  <div className="single-value">
                     <div className="d-flex flex-column">
                       <div>
                         <img
@@ -352,7 +284,7 @@ const Academy = () => {
                   </div>
                 </div>
                 <div className="col-lg-3 mt-lg-0 mt-5">
-                  <div className="single-value sing-box-one">
+                  <div className="single-value">
                     <div className="d-flex flex-column">
                       <div>
                         <img
@@ -372,7 +304,7 @@ const Academy = () => {
                   </div>
                 </div>
                 <div className="col-lg-3 mt-lg-0 mt-5">
-                  <div className="single-value sing-box-one">
+                  <div className="single-value">
                     <div className="d-flex flex-column">
                       <div>
                         <img
@@ -399,8 +331,10 @@ const Academy = () => {
       <section className="apply-section">
         <div className="container">
           <h2 className="section-title pb-2">How to Apply</h2>
-          <div className="apply-btn-div">
-            <button className="custom-btn bridge-btn me-4">
+          <h4>COMING SOON</h4>
+          {/* <div className="apply-btn-div"> */}
+            
+            {/* <button className="custom-btn bridge-btn me-4">
               <NavLink className="nav-link" to="https://wa.me/917489906950">
                 WHATSAPP US
               </NavLink>
@@ -409,16 +343,17 @@ const Academy = () => {
             <button className="custom-btn bridge-btn" onClick={() =>
     document.getElementById("contact-section-one")?.scrollIntoView({ behavior: "smooth" })
   }>CONTACT US
-            </button>
-          </div>
+            </button> */}
+          {/* </div> */}
         </div>
       </section>
 
       <section className="facilties-slider">
         <div className="container">
-          <h2 className="section-title">Facilities</h2>
+          <h2 className="section-title pb-2">Facilities</h2>
+          <h4>COMING SOON</h4>
         </div>
-        <div className="row">
+        {/* <div className="row">
           <div
             className="home-slick-slider wow"
             data-aos="zoom-in" // Fade in as you scroll
@@ -429,7 +364,7 @@ const Academy = () => {
               items={facilities}
             />
           </div>
-        </div>
+        </div> */}
       </section>
 
       <Testimonials />
@@ -448,16 +383,17 @@ const Academy = () => {
               <div className="row">
                 <div className="col-lg-6 mt-lg-0 mt-5">
                   <div className="contact-div">
-                    <h6>Manas Academy</h6> <span></span>
+                    <h6>Vidhya Vanam</h6> <span></span>
                     <h6>
-                      <a href="mailto:Info.manasacademy@mymanas.org">
-                        Info.manasacademy@mymanas.org
+                      <a href="mailto:Info.vidhyavanam@mymanas.org">
+                      Info.vidhyavanam@mymanas.org
                       </a>
                     </h6>
                     {/* <h6>(808) 998-34256</h6> */}
                     <p>
-                      Address: <br /> Bidwal-Shergarh Road, Tehsil Badnawar,
-                      Dist. Dhar, Dhar, MP 454665 India
+                      Address: <br /> Manas Sanctuary
+                      B-26 Maan Heritage Colony
+                      Dhar, MP 454001 India
                     </p>
                   </div>
                 </div>
@@ -485,8 +421,8 @@ const Academy = () => {
                 <div className="contact-div">
                   <h6>
                     For Jobs, send resume to{" "}
-                    <a href="mailto:hr.manasacademy@mymanas.org">
-                      hr.manasacademy@mymanas.org
+                    <a href="mailto:hr.vidhyavanam@mymanas.org">
+                    hr.vidhyavanam@mymanas.org
                     </a>
                   </h6>
                 </div>
@@ -510,7 +446,8 @@ const Academy = () => {
 </section>
       
     </Layout>
-  );
-};
+    </>
+  )
+}
 
-export default Academy;
+export default Vidhya
