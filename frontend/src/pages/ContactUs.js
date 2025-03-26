@@ -54,7 +54,7 @@ const ContactUs = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://www.instagram.com/manas_academy?igsh=N3liaGVvYWxyMHBt">
                       <img src="/images/icons/insta.png" alt="insta" />
                     </a>
                   </li>
@@ -190,7 +190,11 @@ const ContactUs = () => {
               <div className="row">
                 <div className="col-lg-6 mt-lg-0 mt-5">
                   <div className="contact-div">
-                    <h6>India</h6> <span></span>
+                    <h6>India  <img
+    src="https://flagcdn.com/w40/in.png"
+    width="40"
+    alt="India Flag"
+  /></h6> <span></span>
                     <h6>
                       <a href="mailto:Info.manasacademy@mymanas.org">
                         Info.manasacademy@mymanas.org
@@ -205,10 +209,14 @@ const ContactUs = () => {
                 </div>
                 <div className="col-lg-5 offset-lg-1 offset-0 mt-lg-0 mt-5">
                   <div className="contact-div">
-                    <h6>US</h6> <span></span>
+                    <h6>US  <img
+    src="https://flagcdn.com/w40/us.png"
+    width="40"
+    alt="USA Flag"
+  /></h6> <span></span>
                     <h6>
-                      <a href="mailto:Info.manasacademy@mymanas.org">
-                        Info.manasacademy@mymanas.org
+                      <a href="mailto:info@mymanas.org">
+                      info@mymanas.org
                       </a>
                     </h6>
                     {/* <h6>(808) 998-34256</h6> */}
@@ -221,12 +229,12 @@ const ContactUs = () => {
               </div>
               <div className="row mt-3">
                 <div className="contact-div">
-                  <h6>
+                  {/* <h6>
                     For Jobs, send resume to{" "}
                     <a href="mailto:hr.manasacademy@mymanas.org">
                       hr.manasacademy@mymanas.org
                     </a>
-                  </h6>
+                  </h6> */}
                 </div>
               </div>
             </div>
