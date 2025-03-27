@@ -16,7 +16,7 @@ const Academy = () => {
           // Use an array if multiple videos are needed
           {
             video_thumbnail: "/images/slider/Lab08.jpeg",
-            src: "/videos/lv_0_20250221192257.mp4",
+            src: "/videos/annual-sports-Week-2024-25.mp4",
           },
           // {
           //   video_thumbnail: "/images/slider/Lab08.jpeg",
@@ -24,8 +24,8 @@ const Academy = () => {
           // },
         ],
         modal_images: [
-          "/images/slider/A7402682.jpg",
-          "/images/slider/KG Students 04.jpg",
+          "/images/slider/Basketball.jpeg",
+          "/images/slider/Vollyball.jpeg",
         ], // Use an array for multiple images
       },
     },
@@ -61,7 +61,7 @@ const Academy = () => {
         videos: [
           {
             video_thumbnail: "/images/slider/Lab09.jpeg",
-            src: "/videos/lv_0_20250221192441.mp4",
+            src: "/videos/Labs.mp4",
           },
         ],
       },

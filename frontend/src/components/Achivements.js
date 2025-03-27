@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Achivements = () => {
   return (
@@ -115,8 +116,8 @@ const Achivements = () => {
             </div>
             <div className="row mt-2">
               <h6 className="affialte-text">
-                Affiliated to <a href="#">CBSE</a>. Affiliation No: 1030824.{" "}
-                <a href="#">School Info</a>.
+                Affiliated to <Link to="https://cbseacademic.nic.in/">CBSE</Link>. Affiliation No: 1030824.{" "}
+                <Link to="https://drive.google.com/file/d/1ULxf8cAFtTGn202Y_SWUMQgBdxP8ZmF2/view">School Info</Link>.
               </h6>
             </div>
           </div>
