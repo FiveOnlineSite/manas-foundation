@@ -244,7 +244,7 @@ const Vidhya = () => {
             <div className="col-lg-12">
               <div className="row">
                 <div className="col-lg-3">
-                  <div className="single-value ">
+                  <div className="single-value sing-box-one">
                     <div className="d-flex flex-column">
                       <div>
                         <img
@@ -264,7 +264,7 @@ const Vidhya = () => {
                   </div>
                 </div>
                 <div className="col-lg-3 mt-lg-0 mt-5">
-                  <div className="single-value">
+                  <div className="single-value sing-box-one">
                     <div className="d-flex flex-column">
                       <div>
                         <img
@@ -284,7 +284,7 @@ const Vidhya = () => {
                   </div>
                 </div>
                 <div className="col-lg-3 mt-lg-0 mt-5">
-                  <div className="single-value">
+                  <div className="single-value sing-box-one">
                     <div className="d-flex flex-column">
                       <div>
                         <img
@@ -304,7 +304,7 @@ const Vidhya = () => {
                   </div>
                 </div>
                 <div className="col-lg-3 mt-lg-0 mt-5">
-                  <div className="single-value">
+                  <div className="single-value sing-box-one">
                     <div className="d-flex flex-column">
                       <div>
                         <img
