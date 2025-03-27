@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Difference from "../components/Difference";
 import Testimonials from "../components/Testimonials";
 import Achivements from "../components/Achivements";
+import DonateAchivement from "../components/DonateAchivement";
 
 const Donate = () => {
   return (
@@ -105,7 +106,7 @@ const Donate = () => {
         </div>
       </section>
 
-      <Achivements />
+      <DonateAchivement />
 
       <Testimonials />
     </Layout>
