@@ -37,15 +37,17 @@ const Academy = () => {
           "/images/slider/DSC04685.jpg",
           "/images/slider/Dance Team02.jpeg",
           "/images/slider/DSC04762.jpg",
-          "/images/slider/DSC04905.jpg",
           "/images/slider/Exhibition India.jpeg",
           "/images/slider/Exhibition Smart Village.jpeg",
-          "/images/slider/OurScope-08.jpeg",
         ],
         videos: [
           {
-            video_thumbnail: "/images/slider/Lab08.jpeg",
-            src: "/videos/lv_0_20250221192441.mp4",
+            video_thumbnail: "/images/slider/DSC04905.jpg",
+            src: "/videos/kathak-dance-certification-2024.mp4",
+          },
+          {
+            video_thumbnail: "/images/slider/OurScope-08.jpeg",
+            src: "/videos/navratri-2024-performances-in-communities.mp4",
           },
         ],
       },
@@ -402,13 +404,19 @@ const Academy = () => {
           <div className="apply-btn-div">
             <button className="custom-btn bridge-btn me-4">
               <NavLink className="nav-link" to="https://wa.me/917489906950">
-                WHATSAPP US
+              <i class="fa-brands fa-whatsapp"></i> WHATSAPP US
               </NavLink>
             </button>
 
-            <button className="custom-btn bridge-btn" onClick={() =>
+            <button className="custom-btn bridge-btn me-4" onClick={() =>
     document.getElementById("contact-section-one")?.scrollIntoView({ behavior: "smooth" })
-  }>CONTACT US
+  }><i class="fa-regular fa-address-book"></i> CONTACT US
+            </button>
+
+            <button className="custom-btn bridge-btn">
+              <NavLink className="nav-link" to="https://www.instagram.com/manas_academy?igsh=N3liaGVvYWxyMHBt">
+              <i class="fa-brands fa-instagram"></i> DM US
+              </NavLink>
             </button>
           </div>
         </div>
