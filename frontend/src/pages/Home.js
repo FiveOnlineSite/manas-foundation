@@ -92,7 +92,7 @@ const Home = () => {
                 indirect educational support, empowering children with quality
                 teaching and personal growth opportunities
               </p>
-              <NavLink to="/">
+              <NavLink to="/about-us">
                 <button className="custom-btn white-btn wow">
                   <li className="nav-link ">Explore</li>
                 </button>
@@ -162,7 +162,7 @@ const Home = () => {
                     </p>
 
                     <button className="custom-btn bridge-btn">
-                      <NavLink className="nav-link" to="/">
+                      <NavLink className="nav-link" to="/our-scope">
                         Know More
                       </NavLink>
                     </button>

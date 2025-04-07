@@ -71,7 +71,7 @@ const Scope = () => {
                 <button className="custom-btn bridge-btn">
                   <NavLink
                     className="nav-link"
-                    to="/"
+                    to="/scholarships"
                     onClick={() => window.scrollTo(0, 0)}
                   >
                     Scholarships
@@ -104,7 +104,7 @@ const Scope = () => {
               <button className="custom-btn bridge-btn">
                 <NavLink
                   className="nav-link"
-                  to="/"
+                  to="/institutions"
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   Institutions
