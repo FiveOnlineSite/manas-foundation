@@ -94,7 +94,7 @@ const AboutUs = () => {
                   </p> */}
 
                   <button className="custom-btn bridge-btn read-btn">
-                    <NavLink className="nav-link" to="/">
+                    <NavLink className="nav-link" to="/our-scope">
                       GET STARTED
                     </NavLink>
                   </button>
@@ -324,7 +324,7 @@ const AboutUs = () => {
                 <button className="custom-btn bridge-btn">
                   <NavLink
                     className="nav-link"
-                    to="/"
+                    to="/our-scope"
                     onClick={() => window.scrollTo(0, 0)}
                   >
                     KNOW MORE

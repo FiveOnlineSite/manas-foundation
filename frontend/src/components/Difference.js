@@ -17,7 +17,7 @@ const Difference = () => {
             <button className="custom-btn bridge-btn">
               <NavLink
                 className="nav-link"
-                to="/"
+                to="/donate"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Donate Now
