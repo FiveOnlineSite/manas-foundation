@@ -13,21 +13,25 @@ const Footer = () => {
           </div>
           <div className="col-lg-6 d-flex justify-content-end col-6">
             <div className="social-media">
-              <NavLink className="navbar-item" to="/https://www.facebook.com/share/19MZeCuWCt/?mibextid=wwXIfr">
+              <NavLink className="navbar-item" to="https://www.facebook.com/share/19MZeCuWCt/?mibextid=wwXIfr" target="_blank">
                 <img
                   src="/images/icons/ic_baseline-facebook.png"
                   alt="social"
                 />
               </NavLink>
 
-              <NavLink className="navbar-item" to="https://www.instagram.com/mymanasfoundation?igsh=cmUxZzVoMTQzdnlp">
+              <NavLink className="navbar-item" to="https://www.instagram.com/mymanasfoundation?igsh=cmUxZzVoMTQzdnlp" target="_blank">
                 <img
                   src="/images/icons/ph_instagram-logo-fill.png"
                   alt="social"
                 />
               </NavLink>
 
-              <NavLink className="navbar-item" to="/">
+              <NavLink className="navbar-item" to="https://m.youtube.com/@manasacademy2020" target="_blank">
+              <i class="fa-brands fa-youtube fs-5" style={{color: "#ffffff"}}></i>
+              </NavLink>
+
+              <NavLink className="navbar-item" to="/" target="_blank">
                 <img
                   src="/images/icons/entypo-social_linkedin-with-circle.png"
                   alt="social"

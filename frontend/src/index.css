@@ -1514,6 +1514,14 @@ button.slick-next {
   margin-left: 10px;
 }
 
+.footer .social-media{
+  display: flex;
+  align-items: center;
+}
+.footer .social-media a i {
+  margin-left: 10px;
+}
+
 .footer .row.copyright-row {
   border-top: 1px solid var(--white-font);
   margin-top: 30px;
