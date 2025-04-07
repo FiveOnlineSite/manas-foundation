@@ -103,7 +103,7 @@ const Vidhya = () => {
             className="about-img"
           />
           <div className="about-banner-text">
-            <h1 className="banner-title mt-5">Manas Academy</h1>
+            <h1 className="banner-title mt-5">Vidhya Vanam</h1>
             <p className="paragraph bridge-para p-0 pt-2 para-two">
               “Knowledge alone does not guarantee success; skills, values and culture with a positive mindset are essential for a promising future.”
             </p>
@@ -212,13 +212,13 @@ const Vidhya = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="row justify-content-center">
-                <div className="col-lg-5">
+                <div className="col-lg-10">
                   {/* <h6 className="section-subtitle">CURRICULUM</h6> */}
 
-                  <h2 className="section-title">An integrated Curriculum at each grade level that prepares them for life.</h2>
+                  <h2 className="section-title text-center">An integrated Curriculum at each grade level that prepares them for life.</h2>
                 </div>
 
-                <div className="col-lg-6 offset-lg-1">
+                {/* <div className="col-lg-6 offset-lg-1">
                   <p className="paragraph bridge-para">
                     Lorem ipsum dolor sit amet. Vel cupiditate iusto id officia
                     dolores sed pariatur vero est asperiores veniam ea inventore
@@ -227,7 +227,7 @@ const Vidhya = () => {
                     laudantium et omnis quae eos iusto architecto ut fugiat
                     itaque.
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -279,7 +279,7 @@ const Vidhya = () => {
                     </div>
 
                     <p className="pt-1 grade-para">
-                    Elementary school emphasizes core subjects like reading, writing, math, science, and social studies, fostering literacy and numeracy skills.
+                    Elementary school emphasizes core subjects like English, Hindi, Math, Science, Social Studies, etc., fostering literacy and numeracy skills.
                     </p>
                   </div>
                 </div>

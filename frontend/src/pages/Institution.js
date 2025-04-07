@@ -200,7 +200,7 @@ const Institution = () => {
                     A Manas Sanctuary Foundation Institution
                   </p>
                   <p className="paragraph bridge-para mt-2">
-                    --COMING SOON— <br />
+                  <strong>—COMING SOON—</strong> <br />
                     An Integrated Learning Environment at Manas Sanctuary,
                     India. At Manas Sanctuary, Intellectual, Emotional and
                     Social educational programs will be provided in an
@@ -214,7 +214,7 @@ const Institution = () => {
                   <button className="custom-btn bridge-btn bridge-btn-one my-3">
                     <NavLink
                       className="nav-link"
-                      to="/academy"
+                      to="/vidhya-vanam"
                       // onClick={() => window.scrollTo(0, 0)}
                     >
                       KNOW MORE

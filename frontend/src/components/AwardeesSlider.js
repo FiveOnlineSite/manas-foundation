@@ -130,7 +130,7 @@ const AwardeesSlider = () => {
                   <h6>2021</h6>
                 </div>
 
-                <h5>Houston Community College</h5>
+                <h5>Indore Institute of Science and Technology</h5>
               </div>
             </div>
 

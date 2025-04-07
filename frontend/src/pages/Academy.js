@@ -15,7 +15,7 @@ const Academy = () => {
         videos: [
           // Use an array if multiple videos are needed
           {
-            video_thumbnail: "/images/slider/Lab08.jpeg",
+            video_thumbnail: "/images/slider/Basketball.jpeg",
             src: "/videos/annual-sports-Week-2024-25.mp4",
           },
           // {
@@ -280,13 +280,13 @@ const Academy = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="row justify-content-center">
-                <div className="col-lg-5">
+                <div className="col-lg-10">
                   {/* <h6 className="section-subtitle">CURRICULUM</h6> */}
 
-                  <h2 className="section-title">An integrated Curriculum at each grade level that prepares them for life.</h2>
+                  <h2 className="section-title text-center">An integrated Curriculum at each grade level that prepares them for life.</h2>
                 </div>
 
-                <div className="col-lg-6 offset-lg-1">
+                {/* <div className="col-lg-6 offset-lg-1">
                   <p className="paragraph bridge-para">
                     Lorem ipsum dolor sit amet. Vel cupiditate iusto id officia
                     dolores sed pariatur vero est asperiores veniam ea inventore
@@ -295,7 +295,7 @@ const Academy = () => {
                     laudantium et omnis quae eos iusto architecto ut fugiat
                     itaque.
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -347,7 +347,7 @@ const Academy = () => {
                     </div>
 
                     <p className="pt-1 grade-para">
-                    Elementary school emphasizes core subjects like reading, writing, math, science, and social studies, fostering literacy and numeracy skills.
+                    Elementary school emphasizes core subjects like English, Hindi, Math, Science, Social Studies, etc., fostering literacy and numeracy skills.
                     </p>
                   </div>
                 </div>
