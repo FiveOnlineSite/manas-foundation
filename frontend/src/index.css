@@ -2230,6 +2230,10 @@ button.slick-next {
   .left-img-div .left-img2 {
     height: 120px;
   }
+  .right-img-one{
+    height: 150px;
+    width: auto;
+  }
 
   .left-img-div .left-img2 {
     bottom: 12%;

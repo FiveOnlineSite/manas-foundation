@@ -59,9 +59,10 @@ const Home = () => {
           <div className="container-fluid">
             <div className="left-img-div">
               <img
-                className="left-img1"
-                src="/images/banner/Mask group (10).png"
+                className="left-img1 right-img-one"
+                src="/images/banner/manas-1.png"
                 alt="light-img"
+                width="290px"
               />
               <img
                 className="left-img2"
@@ -69,9 +70,10 @@ const Home = () => {
                 alt="light-img"
               />
               <img
-                className="left-img3"
-                src="/images/banner/Mask group (11).png"
+                className="left-img3 right-img-one"
+                src="/images/banner/manas-3.png"
                 alt="light-img"
+                width="256px"
               />
             </div>
             <div className="banner-text">
@@ -106,9 +108,10 @@ const Home = () => {
                 alt="right-img"
               />
               <img
-                className="right-img2"
-                src="/images/banner/Mask group (12).png"
+                className="right-img2 right-img-one"
+                src="/images/banner/manas-2.png"
                 alt="right-img"
+                width="225px"
               />
             </div>
           </div>
