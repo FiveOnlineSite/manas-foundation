@@ -74,7 +74,7 @@ const Scholarship = () => {
                 <button className="custom-btn bridge-btn">
                   <NavLink
                     className="nav-link"
-                    to="/"
+                    to="https://docs.google.com/forms/d/1XF2BNvZdz1CtyREJvwXEowxq98pfeTBu4WPvY6Beb2g/viewform?edit_requested=true"
                     onClick={() => window.scrollTo(0, 0)}
                   >
                     START APPLICATION PROCESS
@@ -165,7 +165,7 @@ const Scholarship = () => {
                   <div className="steps-div">
                     <h2 className="steps-no">1</h2>
                     <p className="paragraph bridge-para ps-4 mt-0 mb-4">
-                      Click <a href="#">here</a> to complete the online
+                      Click <a href="https://docs.google.com/forms/d/1XF2BNvZdz1CtyREJvwXEowxq98pfeTBu4WPvY6Beb2g/viewform?edit_requested=true">here</a> to complete the online
                       scholarship application through Google Forms
                     </p>
                   </div>
