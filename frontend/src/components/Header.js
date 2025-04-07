@@ -78,7 +78,7 @@ const Header = () => {
                   >
                     <NavLink
                       className="nav-link dropdown-toggle"
-                      to="/institution"
+                      to="/institutions"
                       role="button"
                       aria-expanded={isInstitutionsDropdownOpen}
                     >
@@ -89,16 +89,17 @@ const Header = () => {
                         isInstitutionsDropdownOpen ? "show" : ""
                       }`}
                     >
+                       <li>
+                        <NavLink className="dropdown-item" to="/academy">
+                          Manas Academy
+                        </NavLink>
+                      </li>
                       <li>
                         <NavLink className="dropdown-item" to="/vidhya-vanam">
                           Vidhya Vanam
                         </NavLink>
                       </li>
-                      <li>
-                        <NavLink className="dropdown-item" to="/academy">
-                          My Manas Academy
-                        </NavLink>
-                      </li>
+                     
                     </ul>
                   </li>
                 </ul>

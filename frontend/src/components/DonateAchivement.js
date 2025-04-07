@@ -115,10 +115,10 @@ const DonateAchivement = () => {
               </div>
             </div>
             <div className="row mt-2">
-              <h6 className="affialte-text">
+              {/* <h6 className="affialte-text">
                 Affiliated to <a href="#">CBSE</a>. Affiliation No: 1030824.{" "}
                 <a href="#">School Info</a>.
-              </h6>
+              </h6> */}
             </div>
           </div>
         </div>

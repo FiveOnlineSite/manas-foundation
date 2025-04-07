@@ -13,7 +13,7 @@ const Footer = () => {
           </div>
           <div className="col-lg-6 d-flex justify-content-end col-6">
             <div className="social-media">
-              <NavLink className="navbar-item" to="/">
+              <NavLink className="navbar-item" to="/https://www.facebook.com/share/19MZeCuWCt/?mibextid=wwXIfr">
                 <img
                   src="/images/icons/ic_baseline-facebook.png"
                   alt="social"
