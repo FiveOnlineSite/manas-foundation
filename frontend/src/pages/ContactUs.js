@@ -1,8 +1,96 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Layout from "../components/Layout";
 import { NavLink } from "react-router-dom";
 
+import emailjs from "@emailjs/browser";
+import { Modal } from "react-bootstrap";
+
 const ContactUs = () => {
+  const formRef = useRef();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    inquiry: "",
+    message: "",
+  });
+
+  const [phoneError, setPhoneError] = useState("");
+  const [successModal, setSuccessModal] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    if (name === "phone") {
+      if (value === "") {
+        setPhoneError(""); // Clear error when input is empty
+      } else {
+        const phoneRegex = /^\d{7,12}$/;
+        if (!phoneRegex.test(value)) {
+          setPhoneError("Phone number must be between 7 and 12 digits.");
+        } else {
+          setPhoneError("");
+        }
+      }
+    }
+
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (phoneError) {
+      return;
+    }
+
+    const emailParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      inquiry: formData.inquiry,
+    };
+
+    emailjs
+      .send(
+        process.env.REACT_APP_CONTACT_SERVICE_ID,
+        process.env.REACT_APP_CONTACT_TEMPLATE_ID,
+        emailParams,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (response) => {
+          console.log(
+            "Email sent successfully!",
+            response.status,
+            response.text
+          );
+          setSuccessModal(true);
+          console.log("Success modal should be set to true");
+
+          // Clear success message after 5 seconds
+          setTimeout(() => {
+            setSuccessModal(false);
+          }, 5000);
+
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            inquiry: "",
+            message: "",
+          });
+          formRef.current.reset();
+        },
+        (err) => {
+          console.error("Failed to send email:", err);
+        }
+      );
+  };
+
   return (
     <Layout>
       <section className="about-banner">
@@ -69,7 +157,7 @@ const ContactUs = () => {
 
             <div className="row">
               <div className="get-started-form">
-                <form>
+                <form ref={formRef} onSubmit={handleSubmit}>
                   <div className="row">
                     <div className="col-lg-6">
                       <div className="mb-4">
@@ -79,7 +167,10 @@ const ContactUs = () => {
                         <input
                           type="text"
                           className="form-control"
-                          id="full-name"
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
                         />
                       </div>
                     </div>
@@ -92,9 +183,17 @@ const ContactUs = () => {
                         <input
                           type="text"
                           className="form-control"
-                          id="phone-number"
+                          id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
                           required
                         />
+                        {phoneError && (
+                          <p className="text-danger phone-error-msg">
+                            {phoneError}
+                          </p>
+                        )}
                       </div>
                     </div>
 
@@ -106,7 +205,11 @@ const ContactUs = () => {
                         <input
                           type="email"
                           className="form-control"
-                          id="email-address"
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
                         />
                       </div>
                     </div>
@@ -116,14 +219,20 @@ const ContactUs = () => {
                         <label for="email-address" className="form-label">
                           Inquiry Type
                         </label>
-                        <select className="form-select">
-                          <option selected disabled>
+                        <select
+                          className="form-select"
+                          id="inquiry"
+                          name="inquiry"
+                          value={formData.inquiry}
+                          onChange={handleChange}
+                        >
+                          <option value="" disabled>
                             Select Inquiry Type
                           </option>
-                          <option value="Manas Academy">
+                          <option value="New Admission – Manas Academy">
                             New Admission – Manas Academy
                           </option>
-                          <option value="Vidhya Vanam">
+                          <option value="New Admission – Vidhya Vanam">
                             New Admission – Vidhya Vanam
                           </option>
                           <option value="Scholarships / Financial Aid">
@@ -155,16 +264,17 @@ const ContactUs = () => {
                           rows="2"
                           className="form-control"
                           id="message"
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
                         ></textarea>
                       </div>
                     </div>
 
                     <div className="col-lg-12">
                       <div className="mb-4">
-                        <button className="custom-btn bridge-btn">
-                          <NavLink className="nav-link" to="/">
-                            LEAVE US A MESSAGE
-                          </NavLink>
+                        <button className="custom-btn bridge-btn" type="submit">
+                          LEAVE US A MESSAGE
                         </button>
                       </div>
                     </div>
@@ -190,11 +300,15 @@ const ContactUs = () => {
               <div className="row">
                 <div className="col-lg-6 mt-lg-0 mt-5">
                   <div className="contact-div">
-                    <h6>India  <img
-    src="https://flagcdn.com/w40/in.png"
-    width="40"
-    alt="India Flag"
-  /></h6> <span></span>
+                    <h6>
+                      India{" "}
+                      <img
+                        src="https://flagcdn.com/w40/in.png"
+                        width="40"
+                        alt="India Flag"
+                      />
+                    </h6>{" "}
+                    <span></span>
                     <h6>
                       <a href="mailto:Info.manasacademy@mymanas.org">
                         Info.manasacademy@mymanas.org
@@ -209,15 +323,17 @@ const ContactUs = () => {
                 </div>
                 <div className="col-lg-5 offset-lg-1 offset-0 mt-lg-0 mt-5">
                   <div className="contact-div">
-                    <h6>US  <img
-    src="https://flagcdn.com/w40/us.png"
-    width="40"
-    alt="USA Flag"
-  /></h6> <span></span>
                     <h6>
-                      <a href="mailto:info@mymanas.org">
-                      info@mymanas.org
-                      </a>
+                      US{" "}
+                      <img
+                        src="https://flagcdn.com/w40/us.png"
+                        width="40"
+                        alt="USA Flag"
+                      />
+                    </h6>{" "}
+                    <span></span>
+                    <h6>
+                      <a href="mailto:info@mymanas.org">info@mymanas.org</a>
                     </h6>
                     {/* <h6>(808) 998-34256</h6> */}
                     <p>
@@ -250,6 +366,31 @@ const ContactUs = () => {
           </div> */}
         </div>
       </section>
+
+      {/* Success Modal */}
+
+      {successModal ? (
+        <Modal
+          centered
+          show={successModal}
+          onHide={() => setSuccessModal(false)}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>
+              <h4>Thank you!</h4>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <div>
+              <p className="section-subtitle pop-msg-one thankyou-msg">
+                Thank you for reaching out! We have received your message and
+                will get back to you soon.
+              </p>
+              {/* <button onClick={() => setSuccessModal(false)}>Close</button> */}
+            </div>
+          </Modal.Body>
+        </Modal>
+      ) : null}
     </Layout>
   );
 };
