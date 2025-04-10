@@ -159,6 +159,58 @@ nav .navbar-nav .nav-item a,
   margin-bottom: 50px;
 }
 
+
+.banner-two{
+  position: relative;
+}
+
+.banner-img {
+  position: relative;
+  width: 100%;
+}
+
+.banner-two .banner-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 50%;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hide mobile image on desktop */
+.mobile-banner {
+  display: none;
+}
+
+/* Hide desktop image on mobile */
+.desktop-banner {
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .mobile-banner {
+    display: block;
+  }
+
+  .desktop-banner {
+    display: none;
+  }
+  .banner-two {
+    padding-top: 62px;
+}
+.banner-two .banner-content {
+  width: 90%;
+}
+}
+
 .banner .container-fluid,
 .contact-banner .container-fluid {
   background-color: var(--dark-voilet-bg);
@@ -2037,9 +2089,12 @@ button.slick-next {
   }
 
   .banner-title {
-    font-size: 3rem;
-    line-height: 4rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
+  .paragraph {
+    padding: 0 15px;
+}
 
   .bridging-img .bridging-img2 {
     padding-left: 5%;
@@ -2281,6 +2336,10 @@ button.slick-next {
   .history-section .section-title {
     width: 100%;
   }
+  
+.banner-two .banner-content {
+  top: 55%;
+}
 }
 
 @media screen and (max-width: 410px) {
