@@ -1710,11 +1710,17 @@ button.slick-next {
   .institutions-div {
     min-height: 640px;
   }
+  .grades-div .sing-box-one{
+    min-height: 460px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .institutions-div {
     min-height: 725px;
   }
+  .grades-div .sing-box-one {
+    min-height: 415px;
+}
 }
 @media screen and (max-width: 1024px) {
   .donate-img {
@@ -1788,7 +1794,7 @@ button.slick-next {
   }
 
   .grade-para {
-    min-height: 180px;
+    min-height: 150px;
   }
 
   .facilities-row .nav-tabs {
@@ -2145,6 +2151,9 @@ button.slick-next {
   .about-banner-text.banner-text.contact-banner-text {
     width: 100% !important;
   }
+  .grades-div .sing-box-one {
+    min-height: auto;
+}
 }
 
 @media screen and (max-width: 600px) {
