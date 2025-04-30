@@ -243,7 +243,7 @@ const Vidhya = () => {
           <div className="values-div grades-div">
             <div className="col-lg-12">
               <div className="row">
-                <div className="col-lg-3">
+                <div className="col-xl-3 col-lg-6 col-md-6 ">
                   <div className="single-value sing-box-one">
                     <div className="d-flex flex-column">
                       <div>
@@ -263,7 +263,7 @@ const Vidhya = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-lg-3 mt-lg-0 mt-5">
+                <div className="col-xl-3 col-lg-6 col-md-6 mt-md-0 mt-5">
                   <div className="single-value sing-box-one">
                     <div className="d-flex flex-column">
                       <div>
@@ -283,7 +283,7 @@ const Vidhya = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-lg-3 mt-lg-0 mt-5">
+                <div className="col-xl-3 col-lg-6 col-md-6 mt-xl-0 mt-5">
                   <div className="single-value sing-box-one">
                     <div className="d-flex flex-column">
                       <div>
@@ -303,7 +303,7 @@ const Vidhya = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-lg-3 mt-lg-0 mt-5">
+                <div className="col-xl-3 col-lg-6 col-md-6 mt-xl-0 mt-5">
                   <div className="single-value sing-box-one">
                     <div className="d-flex flex-column">
                       <div>

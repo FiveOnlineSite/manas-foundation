@@ -55,7 +55,7 @@ const Home = () => {
   return (
     <div>
       <Layout>
-        <section className="banner">
+        {/* <section className="banner">
           <div className="container-fluid">
             <div className="left-img-div">
               <img
@@ -115,7 +115,41 @@ const Home = () => {
               />
             </div>
           </div>
-        </section>
+        </section> */}
+        <section className="banner-two">
+  <div className="container-fluid">
+  <div className="banner-img">
+    <img
+      src="/images/my-manas-desktop-banner.png"
+      alt="Banner" width="100%"
+      className="banner-image desktop-banner"
+    />
+    <img
+      src="/images/my-manas-mobile-banner.png"
+      alt="Banner"
+      className="banner-image mobile-banner"
+    />
+  </div>
+
+  <div className="banner-content">
+    <div className="banner-text">
+      <h1 className="banner-title wow" data-aos="fade-up" data-aos-duration="1500">
+        A Promising Future Begins Here!
+      </h1>
+      <p className="paragraph wow" data-aos="fade-up" data-aos-duration="1500">
+        We foster equality and curiosity by providing both direct and indirect educational support,
+        empowering children with quality teaching and personal growth opportunities.
+      </p>
+      <NavLink to="/about-us">
+        <button className="custom-btn white-btn wow">
+          <li className="nav-link">Explore</li>
+        </button>
+      </NavLink>
+    </div>
+  </div>
+  </div>
+</section>
+
 
         <section className="bridging-gap">
           <div className="container">
