@@ -2,9 +2,14 @@ import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { Modal } from "react-bootstrap";
+import ReCAPTCHA from "react-google-recaptcha";
+
+const SITE_KEY = process.env.REACT_APP_CAPTCHA_SITE_KEY;
 
 const ReachOut = () => {
   const formRef = useRef();
+
+  const captchaRef = useRef(null);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -15,7 +20,17 @@ const ReachOut = () => {
   });
 
   const [phoneError, setPhoneError] = useState("");
+  const [captchaError, setCaptchaError] = useState("");
   const [successModal, setSuccessModal] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+
+  const handleCaptchaChange = (token) => {
+    console.log("CAPTCHA token:", token);
+    if (token) {
+      setCaptchaVerified(true);
+      setCaptchaError("");
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,6 +56,11 @@ const ReachOut = () => {
     e.preventDefault();
 
     if (phoneError) {
+      return;
+    }
+
+    if (!captchaVerified) {
+      setCaptchaError("Verify Captcha");
       return;
     }
 
@@ -82,6 +102,9 @@ const ReachOut = () => {
             message: "",
           });
           formRef.current.reset();
+          setCaptchaVerified(false); // ✅ Reset CAPTCHA state
+          setCaptchaError("");
+          captchaRef.current?.reset();
         },
         (err) => {
           console.error("Failed to send email:", err);
@@ -222,6 +245,17 @@ const ReachOut = () => {
                           ></textarea>
                         </div>
                       </div>
+
+                      <ReCAPTCHA
+                        ref={captchaRef}
+                        sitekey={SITE_KEY}
+                        onChange={handleCaptchaChange}
+                      />
+                      {captchaError && (
+                        <p className="text-danger phone-error-msg">
+                          {captchaError}
+                        </p>
+                      )}
 
                       <div className="col-lg-12">
                         <div className="mb-4">

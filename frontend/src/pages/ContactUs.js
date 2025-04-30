@@ -1,13 +1,15 @@
 import React, { useRef, useState } from "react";
 import Layout from "../components/Layout";
 import { NavLink } from "react-router-dom";
-
+import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
 import { Modal } from "react-bootstrap";
 
+const SITE_KEY = process.env.REACT_APP_CAPTCHA_SITE_KEY;
+
 const ContactUs = () => {
   const formRef = useRef();
-
+  const captchaRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,7 +19,17 @@ const ContactUs = () => {
   });
 
   const [phoneError, setPhoneError] = useState("");
+  const [captchaError, setCaptchaError] = useState("");
   const [successModal, setSuccessModal] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+
+  const handleCaptchaChange = (token) => {
+    console.log("CAPTCHA token:", token);
+    if (token) {
+      setCaptchaVerified(true);
+      setCaptchaError("");
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,6 +55,11 @@ const ContactUs = () => {
     e.preventDefault();
 
     if (phoneError) {
+      return;
+    }
+
+    if (!captchaVerified) {
+      setCaptchaError("Verify Captcha");
       return;
     }
 
@@ -84,6 +101,9 @@ const ContactUs = () => {
             message: "",
           });
           formRef.current.reset();
+          setCaptchaVerified(false); // ✅ Reset CAPTCHA state
+          setCaptchaError("");
+          captchaRef.current?.reset();
         },
         (err) => {
           console.error("Failed to send email:", err);
@@ -174,7 +194,6 @@ const ContactUs = () => {
                         />
                       </div>
                     </div>
-
                     <div className="col-lg-6">
                       <div className="mb-4">
                         <label for="phone-number" className="form-label">
@@ -196,7 +215,6 @@ const ContactUs = () => {
                         )}
                       </div>
                     </div>
-
                     <div className="col-lg-6">
                       <div className="mb-4">
                         <label for="email-address" className="form-label">
@@ -213,7 +231,6 @@ const ContactUs = () => {
                         />
                       </div>
                     </div>
-
                     <div className="col-lg-6">
                       <div className="mb-4">
                         <label for="email-address" className="form-label">
@@ -254,7 +271,6 @@ const ContactUs = () => {
                         </select>
                       </div>
                     </div>
-
                     <div className="col-lg-12">
                       <div className="mb-4">
                         <label for="message" className="form-label">
@@ -270,7 +286,15 @@ const ContactUs = () => {
                         ></textarea>
                       </div>
                     </div>
-
+                    <ReCAPTCHA
+                      sitekey={SITE_KEY}
+                      onChange={handleCaptchaChange}
+                    />{" "}
+                    {captchaError && (
+                      <p className="text-danger phone-error-msg">
+                        {captchaError}
+                      </p>
+                    )}
                     <div className="col-lg-12">
                       <div className="mb-4">
                         <button className="custom-btn bridge-btn" type="submit">
