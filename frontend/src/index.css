@@ -159,8 +159,7 @@ nav .navbar-nav .nav-item a,
   margin-bottom: 50px;
 }
 
-
-.banner-two{
+.banner-two {
   position: relative;
 }
 
@@ -205,10 +204,10 @@ nav .navbar-nav .nav-item a,
   }
   .banner-two {
     padding-top: 62px;
-}
-.banner-two .banner-content {
-  width: 90%;
-}
+  }
+  .banner-two .banner-content {
+    width: 90%;
+  }
 }
 
 .banner .container-fluid,
@@ -1772,11 +1771,27 @@ button.slick-next {
   font-size: 12px;
 }
 
+.youtube-icon {
+  border: 1px solid rgb(192 192 192);
+  border-radius: 50%;
+  height: 52px;
+  width: 51px;
+  position: relative;
+  display: block;
+}
+
+.youtube-icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media screen and (max-width: 1400px) {
   .institutions-div {
     min-height: 640px;
   }
-  .grades-div .sing-box-one{
+  .grades-div .sing-box-one {
     min-height: 460px;
   }
 }
@@ -1786,7 +1801,7 @@ button.slick-next {
   }
   .grades-div .sing-box-one {
     min-height: 415px;
-}
+  }
 }
 @media screen and (max-width: 1024px) {
   .donate-img {
@@ -2094,7 +2109,7 @@ button.slick-next {
   }
   .paragraph {
     padding: 0 15px;
-}
+  }
 
   .bridging-img .bridging-img2 {
     padding-left: 5%;
@@ -2222,7 +2237,7 @@ button.slick-next {
   }
   .grades-div .sing-box-one {
     min-height: auto;
-}
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -2336,10 +2351,10 @@ button.slick-next {
   .history-section .section-title {
     width: 100%;
   }
-  
-.banner-two .banner-content {
-  top: 55%;
-}
+
+  .banner-two .banner-content {
+    top: 55%;
+  }
 }
 
 @media screen and (max-width: 410px) {

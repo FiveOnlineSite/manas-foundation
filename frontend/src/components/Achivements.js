@@ -116,8 +116,13 @@ const Achivements = () => {
             </div>
             <div className="row mt-2">
               <h6 className="affialte-text">
-                Affiliated to <Link to="https://cbseacademic.nic.in/">CBSE</Link>. Affiliation No: 1030824.{" "}
-                <Link to="https://drive.google.com/file/d/1ULxf8cAFtTGn202Y_SWUMQgBdxP8ZmF2/view">School Info</Link>.
+                Affiliated to{" "}
+                <Link to="https://www.cbse.gov.in/cbsenew/cbse.html">CBSE</Link>
+                . Affiliation No: 1030824.{" "}
+                <Link to="https://drive.google.com/file/d/1ULxf8cAFtTGn202Y_SWUMQgBdxP8ZmF2/view">
+                  School Info
+                </Link>
+                .
               </h6>
             </div>
           </div>

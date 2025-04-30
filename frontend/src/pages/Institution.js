@@ -194,13 +194,14 @@ const Institution = () => {
                 <div className="institutions-div">
                   <img
                     src="/images/banner/academy-two.png"
+                    height="170px"
                     alt="institution-img"
                   />
                   <p className="paragraph bridge-para mt-2">
                     A Manas Sanctuary Foundation Institution
                   </p>
                   <p className="paragraph bridge-para mt-2">
-                  <strong>—COMING SOON—</strong> <br />
+                    <strong>—COMING SOON—</strong> <br />
                     An Integrated Learning Environment at Manas Sanctuary,
                     India. At Manas Sanctuary, Intellectual, Emotional and
                     Social educational programs will be provided in an

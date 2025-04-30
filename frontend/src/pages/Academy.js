@@ -10,12 +10,13 @@ const Academy = () => {
   const facilities = [
     {
       image: "/images/slider/Lab08.jpeg",
+      // image: "/images/slider/Basketball_2024.jpg",
       text: "Sports & Recreational Areas",
       modal_data: {
         videos: [
           // Use an array if multiple videos are needed
           {
-            video_thumbnail: "/images/slider/Basketball.jpeg",
+            video_thumbnail: "/images/slider/Basketball_2024.jpg",
             src: "/videos/annual-sports-Week-2024-25.mp4",
           },
           // {
@@ -42,11 +43,11 @@ const Academy = () => {
         ],
         videos: [
           {
-            video_thumbnail: "/images/slider/DSC04905.jpg",
+            video_thumbnail: "/images/slider/GroupDance Jan-2025.jpg",
             src: "/videos/kathak-dance-certification-2024.mp4",
           },
           {
-            video_thumbnail: "/images/slider/OurScope-08.jpeg",
+            video_thumbnail: "/images/slider/Dance Team02.jpeg",
             src: "/videos/navratri-2024-performances-in-communities.mp4",
           },
         ],
@@ -66,6 +67,28 @@ const Academy = () => {
             src: "/videos/Labs.mp4",
           },
         ],
+      },
+    },
+    {
+      image: "/images/slider/Exhibit01.jpeg",
+      // image: "/images/slider/Basketball_2024.jpg",
+      text: "Student Exhibition",
+      modal_data: {
+        videos: [
+          // Use an array if multiple videos are needed
+          {
+            video_thumbnail: "/images/slider/Exhibit01.jpeg",
+            src: "/videos/MA Third Annual Exhibition Jan13-2025.mp4",
+          },
+          // {
+          //   video_thumbnail: "/images/slider/Lab08.jpeg",
+          //   src: "/videos/lv_0_20250221192257.mp4",
+          // },
+        ],
+        modal_images: [
+          "/images/slider/DSC02077.jpg",
+          "/images/slider/DSC02167.jpg",
+        ], // Use an array for multiple images
       },
     },
   ];
@@ -285,7 +308,10 @@ const Academy = () => {
                 <div className="col-lg-10">
                   {/* <h6 className="section-subtitle">CURRICULUM</h6> */}
 
-                  <h2 className="section-title text-center">An integrated Curriculum at each grade level that prepares them for life.</h2>
+                  <h2 className="section-title text-center">
+                    An integrated Curriculum at each grade level that prepares
+                    them for life.
+                  </h2>
                 </div>
 
                 {/* <div className="col-lg-6 offset-lg-1">
@@ -329,7 +355,9 @@ const Academy = () => {
                     </div>
 
                     <p className="pt-1 grade-para">
-                    Kindergarten focuses on foundational skills like reading, writing, and math through play-based learning and social interaction.
+                      Kindergarten focuses on foundational skills like reading,
+                      writing, and math through play-based learning and social
+                      interaction.
                     </p>
                   </div>
                 </div>
@@ -344,12 +372,14 @@ const Academy = () => {
                       </div>
 
                       <h2 className="section-title pt-3 pb-0 grade-title">
-                      Elementary School
+                        Elementary School
                       </h2>
                     </div>
 
                     <p className="pt-1 grade-para">
-                    Elementary school emphasizes core subjects like English, Hindi, Math, Science, Social Studies, etc., fostering literacy and numeracy skills.
+                      Elementary school emphasizes core subjects like English,
+                      Hindi, Math, Science, Social Studies, etc., fostering
+                      literacy and numeracy skills.
                     </p>
                   </div>
                 </div>
@@ -369,7 +399,9 @@ const Academy = () => {
                     </div>
 
                     <p className="pt-1 grade-para">
-                    Middle school transitions students to a more structured learning environment, introducing more diverse subjects and developing critical thinking skills.
+                      Middle school transitions students to a more structured
+                      learning environment, introducing more diverse subjects
+                      and developing critical thinking skills.
                     </p>
                   </div>
                 </div>
@@ -388,7 +420,9 @@ const Academy = () => {
                     </div>
 
                     <p className="pt-1 grade-para">
-                    High school prepares students for higher education, offering a wider array of elective courses and programs to explore specific interests and career paths.
+                      High school prepares students for higher education,
+                      offering a wider array of elective courses and programs to
+                      explore specific interests and career paths.
                     </p>
                   </div>
                 </div>
@@ -404,18 +438,27 @@ const Academy = () => {
           <div className="apply-btn-div">
             <button className="custom-btn bridge-btn me-4">
               <NavLink className="nav-link" to="https://wa.me/917489906950">
-              <i class="fa-brands fa-whatsapp"></i> WHATSAPP US
+                <i class="fa-brands fa-whatsapp"></i> WHATSAPP US
               </NavLink>
             </button>
 
-            <button className="custom-btn bridge-btn me-4" onClick={() =>
-    document.getElementById("contact-section-one")?.scrollIntoView({ behavior: "smooth" })
-  }><i class="fa-regular fa-address-book"></i> CONTACT US
+            <button
+              className="custom-btn bridge-btn me-4"
+              onClick={() =>
+                document
+                  .getElementById("contact-section-one")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              <i class="fa-regular fa-address-book"></i> CONTACT US
             </button>
 
             <button className="custom-btn bridge-btn">
-              <NavLink className="nav-link" to="https://www.instagram.com/manas_academy?igsh=N3liaGVvYWxyMHBt">
-              <i class="fa-brands fa-instagram"></i> DM US
+              <NavLink
+                className="nav-link"
+                to="https://www.instagram.com/manas_academy?igsh=N3liaGVvYWxyMHBt"
+              >
+                <i class="fa-brands fa-instagram"></i> DM US
               </NavLink>
             </button>
           </div>
@@ -481,8 +524,8 @@ const Academy = () => {
                         Info.manasacademy@mymanas.org
                       </a>
                     </h6> */}
-                    {/* <h6>(808) 998-34256</h6> */}
-                    {/* <p>
+                {/* <h6>(808) 998-34256</h6> */}
+                {/* <p>
                       Address: <br />
                       2213 Nantucket Dr. Unit C, Houston, TX 77057
                     </p>
@@ -513,10 +556,9 @@ const Academy = () => {
         </div>
       </section>
 
-<section id="contact-section-one">
-<ReachOut />
-</section>
-      
+      <section id="contact-section-one">
+        <ReachOut />
+      </section>
     </Layout>
   );
 };

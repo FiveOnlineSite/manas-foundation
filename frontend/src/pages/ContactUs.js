@@ -157,18 +157,36 @@ const ContactUs = () => {
               <div className="col-lg-3 d-flex justify-content-lg-end justify-content-start mb-lg-0 mb-5">
                 <ul className="contact-links">
                   <li>
-                    <a href="#">
+                    <a
+                      href="https://www.facebook.com/share/19MZeCuWCt/?mibextid=wwXIfr"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <img src="/images/icons/fb.png" alt="fb" />
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/manas_academy?igsh=N3liaGVvYWxyMHBt">
+                    <a
+                      href="https://www.instagram.com/manas_academy?igsh=N3liaGVvYWxyMHBt"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <img src="/images/icons/insta.png" alt="insta" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
-                      <img src="/images/icons/twitter.png" alt="twitter" />
+                    <a
+                      href="https://m.youtube.com/@manasacademy2020"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="youtube-icon"
+                    >
+                      <img
+                        src="/images/icons/youtube (1).png"
+                        height="15px"
+                        width="20px"
+                        alt="youtube"
+                      />
                     </a>
                   </li>
                 </ul>

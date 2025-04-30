@@ -58,13 +58,16 @@ const AwardeesSlider = () => {
           <div className="awardee-title">
             <div className="d-flex align-items-center">
               <div>
-                <img src="/images/icons/Angel.png" className="w-100 schol-img-two" />
+                <img
+                  src="/images/icons/Angel.png"
+                  className="w-100 schol-img-two"
+                />
               </div>
 
               <div className="d-flex flex-column w-100 px-2">
                 <div className="d-flex flex-row justify-content-between ">
                   <h4>Angel</h4>
-                  <h6>2021</h6>
+                  <h6>2021-25</h6>
                 </div>
 
                 <h5>Houston Community College</h5>
@@ -72,20 +75,27 @@ const AwardeesSlider = () => {
             </div>
 
             <p>
-            This native Houstonian loves to travel and learn new languages. Service is a large part of her passion which is why she stays involved in her church and community. With her sights set on becoming a nurse, Angel demonstrates her commitment to excellence in her academic pursuits.
+              This native Houstonian loves to travel and learn new languages.
+              Service is a large part of her passion which is why she stays
+              involved in her church and community. With her sights set on
+              becoming a nurse, Angel demonstrates her commitment to excellence
+              in her academic pursuits.
             </p>
           </div>
 
           <div className="awardee-title">
             <div className="d-flex align-items-center">
               <div>
-                <img src="/images/icons/Curtis.png" className="w-100 schol-img-two" />
+                <img
+                  src="/images/icons/Curtis.png"
+                  className="w-100 schol-img-two"
+                />
               </div>
 
               <div className="d-flex flex-column w-100 px-2">
                 <div className="d-flex flex-row justify-content-between ">
                   <h4>Curtis</h4>
-                  <h6>2021</h6>
+                  <h6>2021-25</h6>
                 </div>
 
                 <h5>University of Mississippi</h5>
@@ -93,20 +103,27 @@ const AwardeesSlider = () => {
             </div>
 
             <p>
-            An outgoing athlete, Curtis built a long history of community service and volunteering. He plans to combine his passion for science, math and medicine when he enters the PharmD program at Ole Miss. Along with swimming and golf, this Star Wars aficionado hopes to travel the world.
+              An outgoing athlete, Curtis built a long history of community
+              service and volunteering. He plans to combine his passion for
+              science, math and medicine when he enters the PharmD program at
+              Ole Miss. Along with swimming and golf, this Star Wars aficionado
+              hopes to travel the world.
             </p>
           </div>
 
           <div className="awardee-title">
             <div className="d-flex align-items-center">
               <div>
-                <img src="/images/icons/Breanna.png" className="w-100 schol-img-two" />
+                <img
+                  src="/images/icons/Breanna.png"
+                  className="w-100 schol-img-two"
+                />
               </div>
 
               <div className="d-flex flex-column w-100 px-2">
                 <div className="d-flex flex-row justify-content-between ">
                   <h4>Breanna</h4>
-                  <h6>2021</h6>
+                  <h6>2021-25</h6>
                 </div>
 
                 <h5>University of Texas</h5>
@@ -114,20 +131,27 @@ const AwardeesSlider = () => {
             </div>
 
             <p>
-            Setting goals is nothing new for this biology student. Breanna has achieved much in her young life and plans to continue doing so in her chosen field of pediatrics. In her spare time, she enjoys baking, puzzles and listening to music. Among her goals, visiting at least 15 countries.
+              Setting goals is nothing new for this biology student. Breanna has
+              achieved much in her young life and plans to continue doing so in
+              her chosen field of pediatrics. In her spare time, she enjoys
+              baking, puzzles and listening to music. Among her goals, visiting
+              at least 15 countries.
             </p>
           </div>
 
           <div className="awardee-title">
             <div className="d-flex align-items-center">
               <div>
-                <img src="/images/icons/Mahima2.png" className="w-100 schol-img-two" />
+                <img
+                  src="/images/icons/Mahima2.png"
+                  className="w-100 schol-img-two"
+                />
               </div>
 
               <div className="d-flex flex-column w-100 px-2">
                 <div className="d-flex flex-row justify-content-between ">
                   <h4>Mahima</h4>
-                  <h6>2021</h6>
+                  <h6>2022-24</h6>
                 </div>
 
                 <h5>Indore Institute of Science and Technology</h5>
@@ -135,7 +159,10 @@ const AwardeesSlider = () => {
             </div>
 
             <p>
-            Our Manas Academy scholarship student from Jalampura, Dhar, MP, India with a goal to be an engineer, scored 90.5%tile in JEE, now studying  Bachelor of Technology in Computer Science at Indore Institute of Science and Technology.
+              Our Manas Academy scholarship student from Jalampura, Dhar, MP,
+              India with a goal to be an engineer, scored 90.5%tile in JEE, now
+              studying Bachelor of Technology in Computer Science at Indore
+              Institute of Science and Technology.
             </p>
           </div>
         </Slider>
