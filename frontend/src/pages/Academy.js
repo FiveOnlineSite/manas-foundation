@@ -78,7 +78,7 @@ const Academy = () => {
           // Use an array if multiple videos are needed
           {
             video_thumbnail: "/images/slider/Exhibit01.jpeg",
-            src: "/videos/MA Third Annual Exhibition Jan13-2025.mp4",
+            src: "/videos/MA Third Annual Exhibition Jan13-2025 (1).mp4",
           },
           // {
           //   video_thumbnail: "/images/slider/Lab08.jpeg",
