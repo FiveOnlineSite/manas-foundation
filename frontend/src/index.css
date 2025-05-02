@@ -1372,10 +1372,8 @@ button.slick-next {
 .facilities-row .nav-tabs {
   overflow-y: scroll;
   height: 80vh;
-  display: flex;
-  flex-direction: column;
+  display: block;
   align-items: center;
-  justify-content: center;
 }
 
 .modal-header button {
