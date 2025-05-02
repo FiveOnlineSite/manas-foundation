@@ -168,6 +168,14 @@ nav .navbar-nav .nav-item a,
   width: 100%;
 }
 
+.banner-two .container-fluid {
+  height: 85vh;
+  width: 90%;
+}
+
+.banner-two .banner-img .desktop-banner {
+}
+
 .banner-two .banner-content {
   position: absolute;
   left: 50%;
