@@ -1364,6 +1364,10 @@ button.slick-next {
 .facilities-row .nav-tabs {
   overflow-y: scroll;
   height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-header button {
@@ -1761,10 +1765,10 @@ button.slick-next {
   font-family: "Museo";
 }
 
-.modal-header button {
+/* .modal-header button {
   left: 90% !important;
   top: 15% !important;
-}
+} */
 
 .phone-error-msg {
   font-family: "Museo-Sans";

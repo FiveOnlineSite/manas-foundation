@@ -9,7 +9,7 @@ import FacilitiesSlider from "../components/FacilitiesSlider";
 const Academy = () => {
   const facilities = [
     {
-      image: "/images/slider/Lab08.jpeg",
+      image: "/images/slider/Basketball_2024.jpg",
       // image: "/images/slider/Basketball_2024.jpg",
       text: "Sports & Recreational Areas",
       modal_data: {
@@ -25,13 +25,13 @@ const Academy = () => {
           // },
         ],
         modal_images: [
-          "/images/slider/Basketball.jpeg",
+          // "/images/slider/Basketball.jpeg",
           "/images/slider/Vollyball.jpeg",
         ], // Use an array for multiple images
       },
     },
     {
-      image: "/images/slider/Lab07.jpeg",
+      image: "/images/slider/GroupDance Jan-2025.jpg",
       text: "Extracurriculars",
       modal_data: {
         modal_images: [
