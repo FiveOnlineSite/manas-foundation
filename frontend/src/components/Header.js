@@ -89,7 +89,7 @@ const Header = () => {
                         isInstitutionsDropdownOpen ? "show" : ""
                       }`}
                     >
-                       <li>
+                      <li>
                         <NavLink className="dropdown-item" to="/academy">
                           Manas Academy
                         </NavLink>
@@ -99,14 +99,13 @@ const Header = () => {
                           Vidhya Vanam
                         </NavLink>
                       </li>
-                     
                     </ul>
                   </li>
                 </ul>
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/news">
+                <NavLink className="nav-link d-none" to="/news">
                   News
                 </NavLink>
               </li>
@@ -282,7 +281,7 @@ const Header = () => {
                 </li>
 
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/news">
+                  <NavLink className="nav-link d-none" to="/news">
                     News
                   </NavLink>
                 </li>
