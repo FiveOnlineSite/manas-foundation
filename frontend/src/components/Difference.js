@@ -1,7 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Difference = () => {
+  const location = useLocation();
+  const isLocationDonate = location.pathname === "/donate";
+
   return (
     <section className="difference-section">
       <div className="container">
@@ -15,13 +18,23 @@ const Difference = () => {
           /> */}
           <div className="donate-para">
             <button className="custom-btn bridge-btn">
-              <NavLink
-                className="nav-link"
-                to="/donate"
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                Donate Now
-              </NavLink>
+              {isLocationDonate ? (
+                <NavLink
+                  className="nav-link"
+                  to="https://drive.google.com/file/d/1zE1gMfmD9eW41l9FbM1nV9clhYh2IZJz/view?usp=drive_link"
+                  target="_blank"
+                >
+                  Donate Now
+                </NavLink>
+              ) : (
+                <NavLink
+                  className="nav-link"
+                  to="/donate"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Donate Now
+                </NavLink>
+              )}
             </button>
           </div>
         </div>
