@@ -1,11 +1,82 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import { NavLink } from "react-router-dom";
 import Testimonials from "../components/Testimonials";
 import FacilitiesSlider from "../components/FacilitiesSlider";
 import ReachOut from "../components/ReachOut";
+import { getRequest } from "../api/api";
 
 const Vidhya = () => {
+  const [data, setData] = useState([]);
+  const [OtherData, setOtherData] = useState([]);
+
+  const fetchData = async () => {
+    const res = await getRequest("/vidhyavanam/history");
+    if (res.success) {
+      setData(res.data[0]);
+    } else {
+    }
+  };
+
+  console.log(data, "uihuyg");
+
+  const fetchOtherData = async () => {
+    try {
+      const responses = await Promise.allSettled([
+        getRequest("/vidhyavanam/leadership-team"),
+        getRequest("/vidhyavanam/achievements"),
+        getRequest("/vidhyavanam/grade-levels"),
+        getRequest("/vidhyavanam/how-to-apply"),
+        getRequest("/vidhyavanam/facilities"),
+        getRequest("/vidhyavanam/contact-info"),
+        getRequest("/testimonials"),
+        getRequest("/masterbanner"),
+      ]);
+      console.log(responses, "responsesfefe");
+
+      const resultObj = {
+        leadershipteam:
+          responses[0].status === "fulfilled"
+            ? responses[0].value.data[0]
+            : null,
+        achievements:
+          responses[1].status === "fulfilled" ? responses[1].value.data : null,
+        gradelevels:
+          responses[2].status === "fulfilled" ? responses[2].value.data : null,
+        howtoapply:
+          responses[3].status === "fulfilled" ? responses[3].value.data : null,
+        facilities:
+          responses[4].status === "fulfilled" ? responses[4].value.data : null,
+        contactinfo:
+          responses[5].status === "fulfilled" ? responses[5].value.data : null,
+        testimonials:
+          responses[6].status === "fulfilled"
+            ? responses[6].value.data[0]
+            : null,
+        masterbanner:
+          responses[7].status === "fulfilled"
+            ? responses[7].value.data[0]
+            : null,
+      };
+
+      setOtherData(resultObj);
+    } catch (error) {
+      console.error("Unexpected error:", error);
+    }
+  };
+
+  console.log(OtherData, "gfhbh");
+
+  useEffect(() => {
+    fetchData();
+    fetchOtherData();
+    // setData((prev) =>
+    //   prev.map((item) => ({
+    //     ...item,
+    //     checked: false,
+    //   }))i
+    // );
+  }, []);
   const facilities = [
     {
       image: "/images/slider/Lab08.jpeg",
@@ -94,51 +165,48 @@ const Vidhya = () => {
   return (
     <>
       <Layout>
-        <section className="about-banner">
-          <div className="container-fluid">
+        <section className='about-banner'>
+          <div className='container-fluid'>
             <img
-              src="/images/banner/VVMS.jpg"
-              alt="scope-banner"
-              className="about-img"
+              src={OtherData?.masterbanner?.image?.url}
+              alt={OtherData?.masterbanner?.image?.altText}
+              className='about-img'
             />
-            <div className="about-banner-text">
-              <h1 className="banner-title mt-5">Vidhya Vanam</h1>
-              <p className="paragraph bridge-para p-0 pt-2 para-two">
-                “Knowledge alone does not guarantee success; skills, values and
-                culture with a positive mindset are essential for a promising
-                future.”
+            <div className='about-banner-text'>
+              <h1 className='banner-title mt-5'>
+                {OtherData?.masterbanner?.title}
+              </h1>
+              <p className='paragraph bridge-para p-0 pt-2 para-two'>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: OtherData?.masterbanner?.description,
+                  }}
+                />
               </p>
             </div>
           </div>
         </section>
 
-        <section className="enhancing-section history-section">
-          <div className="container">
-            <div className="row align-items-center justify-content-center">
-              <div className="col-lg-7">
+        <section className='enhancing-section history-section'>
+          <div className='container'>
+            <div className='row align-items-center justify-content-center'>
+              <div className='col-lg-7'>
                 {/* <h6 className="section-subtitle"></h6> */}
 
-                <h2 className="section-title">HISTORY</h2>
+                <h2 className='section-title'>{data.title}</h2>
 
-                <p className="paragraph bridge-para p-0 pt-2">
-                  When My Manas Foundation began in 2019, it was with a mission
-                  to provide children in the rural areas lacking opportunities
-                  of an inclusive learning environment and a curriculum that
-                  integrates today’s educational requirements with tomorrow’s
-                  needs. Vidhya Vanam is planned from ground-up in a 10-acre
-                  land to provide meaningful education to the children in rural
-                  areas of Dhar with excellent academic programs and an
-                  enthusiastic learning environment starting 2026.
+                <p className='paragraph bridge-para p-0 pt-2'>
+                  <div dangerouslySetInnerHTML={{ __html: data.description }} />
                 </p>
               </div>
 
-              <div className="col-lg-5 col-md-5 col-12">
-                <div className="enhancing-img text-center">
+              <div className='col-lg-5 col-md-5 col-12'>
+                <div className='enhancing-img text-center'>
                   <img
-                    src="/images/banner/academy-two.png"
-                    alt="logo"
-                    width="100%"
-                    height="300px"
+                    src={data.logo?.url}
+                    alt={data.logo?.altText}
+                    width='100%'
+                    height='300px'
                   />
                 </div>
               </div>
@@ -146,62 +214,80 @@ const Vidhya = () => {
           </div>
         </section>
 
-        <section className="team-section">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-4">
+        <section className='team-section'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-lg-4'>
                 {/* <h6 className="section-subtitle">Leadership team</h6> */}
 
-                <h2 className="section-title">Leadership team</h2>
+                <h2 className='section-title'>Leadership team</h2>
               </div>
             </div>
-            <div className="row align-items-center justify-content-center">
-              <div className="col-lg-8">
-                <div className="row align-items-center justify-content-center">
-                  <div className="col-lg-5">
-                    <div className="team-div">
-                      <div className="team-img-div">
+            <div className='row align-items-center justify-content-center'>
+              <div className='col-lg-8'>
+                <div className='row align-items-center justify-content-center'>
+                  <div className='col-lg-5'>
+                    <div className='team-div'>
+                      <div className='team-img-div'>
                         <img
-                          src="/images/teams/Sri Valleru.jpg"
-                          alt="team"
-                          className="team-img mt-4"
+                          src={
+                            OtherData?.leadershipteam?.members?.[0]?.image?.url
+                          }
+                          alt={
+                            OtherData?.leadershipteam?.members?.[0]?.image
+                              ?.altText
+                          }
+                          className='team-img mt-4'
                         />
                         <img
-                          src="/images/banner/Vector 8.png"
-                          alt="down-img"
-                          className="down-img"
+                          src='/images/banner/Vector 8.png'
+                          alt='down-img'
+                          className='down-img'
                         />
                       </div>
-                      <div className="team-content mt-4">
-                        <h6>Srikanth (Sri) Valleru</h6>
+                      <div className='team-content mt-4'>
+                        <h6>{OtherData?.leadershipteam?.members?.[0]?.name}</h6>
                         <p>
-                          Over 30 years of mutlitnational industry experience
-                          from USA, with expertise in leadership coaching and
-                          development of young graduates.
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html:
+                                OtherData?.leadershipteam?.members?.[0]
+                                  ?.description,
+                            }}
+                          />
                         </p>
                       </div>
                     </div>
                   </div>
-                  <div className="col-lg-5 offset-lg-1 mt-lg-0 mt-5">
-                    <div className="team-div">
-                      <div className="team-img-div ">
+                  <div className='col-lg-5 offset-lg-1 mt-lg-0 mt-5'>
+                    <div className='team-div'>
+                      <div className='team-img-div '>
                         <img
-                          src="/images/teams/Gunjan Thakur.png"
-                          alt="team"
-                          className="team-img"
+                          src={
+                            OtherData?.leadershipteam?.members?.[1]?.image?.url
+                          }
+                          alt={
+                            OtherData?.leadershipteam?.members?.[1]?.image
+                              ?.altText
+                          }
+                          className='team-img'
                         />
                         <img
-                          src="/images/banner/Vector 6.png"
-                          alt="up-img"
-                          className="up-img"
+                          src='/images/banner/Vector 6.png'
+                          alt='up-img'
+                          className='up-img'
                         />
                       </div>
-                      <div className="team-content mt-4">
-                        <h6>Gunjan Thakur</h6>
+                      <div className='team-content mt-4'>
+                        <h6>{OtherData?.leadershipteam?.members?.[1]?.name}</h6>
                         <p>
-                          Over 20 years of teaching in CBSE schools with
-                          master’s in education. Expertise in training educators
-                          and child development.
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html:
+                                OtherData?.leadershipteam?.members?.[1]
+                                  ?.description,
+                            }}
+                          />
                         </p>
                       </div>
                     </div>
@@ -214,15 +300,15 @@ const Vidhya = () => {
 
         {/* <Achivements /> */}
 
-        <section className="half-img-section about-half-img d-flex align-items-center">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="row justify-content-center">
-                  <div className="col-lg-10">
+        <section className='half-img-section about-half-img d-flex align-items-center'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-lg-12'>
+                <div className='row justify-content-center'>
+                  <div className='col-lg-10'>
                     {/* <h6 className="section-subtitle">CURRICULUM</h6> */}
 
-                    <h2 className="section-title text-center">
+                    <h2 className='section-title text-center'>
                       An integrated Curriculum at each grade level that prepares
                       them for life.
                     </h2>
@@ -244,99 +330,107 @@ const Vidhya = () => {
           </div>
         </section>
 
-        <section className="bg-img-row">
-          <div className="container">
+        <section className='bg-img-row'>
+          <div className='container'>
             {/* <h6 className="section-subtitle">lorem ipsum set</h6> */}
 
-            <h2 className="section-title">Grade levels offered</h2>
+            <h2 className='section-title'>Grade levels offered</h2>
 
-            <div className="values-div grades-div">
-              <div className="col-lg-12">
-                <div className="row">
-                  <div className="col-xl-3 col-lg-6 col-md-6 ">
-                    <div className="single-value sing-box-one">
-                      <div className="d-flex flex-column">
+            <div className='values-div grades-div'>
+              <div className='col-lg-12'>
+                <div className='row'>
+                  <div className='col-xl-3 col-lg-6 col-md-6 '>
+                    <div className='single-value sing-box-one'>
+                      <div className='d-flex flex-column'>
                         <div>
                           <img
-                            src="/images/icons/background_2.png"
-                            alt="value-img"
+                            src={OtherData?.gradelevels?.[0]?.icon?.url}
+                            alt={OtherData?.gradelevels?.[0]?.icon?.altText}
                           />
                         </div>
 
-                        <h2 className="section-title pt-3 pb-0 grade-title">
-                          Kindergarten
+                        <h2 className='section-title pt-3 pb-0 grade-title'>
+                          {OtherData?.gradelevels?.[0]?.title}
                         </h2>
                       </div>
 
-                      <p className="pt-1 grade-para">
-                        Kindergarten focuses on foundational skills like
-                        reading, writing, and math through play-based learning
-                        and social interaction.
+                      <p className='pt-1 grade-para'>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: OtherData?.gradelevels?.[0]?.description,
+                          }}
+                        />
                       </p>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-lg-6 col-md-6 mt-md-0 mt-5">
-                    <div className="single-value sing-box-one">
-                      <div className="d-flex flex-column">
+                  <div className='col-xl-3 col-lg-6 col-md-6 mt-md-0 mt-5'>
+                    <div className='single-value sing-box-one'>
+                      <div className='d-flex flex-column'>
                         <div>
                           <img
-                            src="/images/icons/background_2 (1).png"
-                            alt="value-img"
+                            src={OtherData?.gradelevels?.[1]?.icon?.url}
+                            alt={OtherData?.gradelevels?.[1]?.icon?.altText}
                           />
                         </div>
 
-                        <h2 className="section-title pt-3 pb-0 grade-title">
-                          Elementary School
+                        <h2 className='section-title pt-3 pb-0 grade-title'>
+                          {OtherData?.gradelevels?.[1]?.title}{" "}
                         </h2>
                       </div>
 
-                      <p className="pt-1 grade-para">
-                        Elementary school emphasizes core subjects like English,
-                        Hindi, Math, Science, Social Studies, etc., fostering
-                        literacy and numeracy skills.
+                      <p className='pt-1 grade-para'>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: OtherData?.gradelevels?.[1]?.description,
+                          }}
+                        />
                       </p>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-lg-6 col-md-6 mt-xl-0 mt-5">
-                    <div className="single-value sing-box-one">
-                      <div className="d-flex flex-column">
+                  <div className='col-xl-3 col-lg-6 col-md-6 mt-xl-0 mt-5'>
+                    <div className='single-value sing-box-one'>
+                      <div className='d-flex flex-column'>
                         <div>
                           <img
-                            src="/images/icons/background_2 (2).png"
-                            alt="value-img"
+                            src={OtherData?.gradelevels?.[2]?.icon?.url}
+                            alt={OtherData?.gradelevels?.[2]?.icon?.altText}
                           />
                         </div>
 
-                        <h2 className="section-title pt-3 pb-0 grade-title">
-                          Middle School
+                        <h2 className='section-title pt-3 pb-0 grade-title'>
+                          {OtherData?.gradelevels?.[2]?.title}{" "}
                         </h2>
                       </div>
 
-                      <p className="pt-1 grade-para">
-                        Middle school transitions students to a more structured
-                        learning environment, introducing more diverse subjects
-                        and developing critical thinking skills.
+                      <p className='pt-1 grade-para'>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: OtherData?.gradelevels?.[2]?.description,
+                          }}
+                        />
                       </p>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-lg-6 col-md-6 mt-xl-0 mt-5">
-                    <div className="single-value sing-box-one">
-                      <div className="d-flex flex-column">
+                  <div className='col-xl-3 col-lg-6 col-md-6 mt-xl-0 mt-5'>
+                    <div className='single-value sing-box-one'>
+                      <div className='d-flex flex-column'>
                         <div>
                           <img
-                            src="/images/icons/background_2 (3).png"
-                            alt="value-img"
+                            src={OtherData?.gradelevels?.[3]?.icon?.url}
+                            alt={OtherData?.gradelevels?.[3]?.icon?.altText}
                           />
                         </div>
-                        <h2 className="section-title pt-3 pb-0 grade-title">
-                          High School
+                        <h2 className='section-title pt-3 pb-0 grade-title'>
+                          {OtherData?.gradelevels?.[3]?.title}{" "}
                         </h2>
                       </div>
 
-                      <p className="pt-1 grade-para">
-                        High school prepares students for higher education,
-                        offering a wider array of elective courses and programs
-                        to explore specific interests and career paths.
+                      <p className='pt-1 grade-para'>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: OtherData?.gradelevels?.[3]?.description,
+                          }}
+                        />
                       </p>
                     </div>
                   </div>
@@ -346,9 +440,9 @@ const Vidhya = () => {
           </div>
         </section>
 
-        <section className="apply-section">
-          <div className="container">
-            <h2 className="section-title pb-2">How to Apply</h2>
+        <section className='apply-section'>
+          <div className='container'>
+            <h2 className='section-title pb-2'>How to Apply</h2>
             <h4>COMING SOON</h4>
             {/* <div className="apply-btn-div"> */}
 
@@ -366,9 +460,9 @@ const Vidhya = () => {
           </div>
         </section>
 
-        <section className="facilties-slider">
-          <div className="container">
-            <h2 className="section-title pb-2">Facilities</h2>
+        <section className='facilties-slider'>
+          <div className='container'>
+            <h2 className='section-title pb-2'>Facilities</h2>
             <h4>COMING SOON</h4>
           </div>
           {/* <div className="row">
@@ -385,32 +479,33 @@ const Vidhya = () => {
         </div> */}
         </section>
 
-        <Testimonials />
+        <Testimonials testimonials={OtherData?.testimonials || []} />
 
-        <section className="contact-info">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-5">
-                <h6 className="section-subtitle">Contact Info</h6>
+        <section className='contact-info'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-lg-5'>
+                <h6 className='section-subtitle'>Contact Info</h6>
 
-                <h2 className="section-title">
+                <h2 className='section-title'>
                   We are always happy to assist you
                 </h2>
               </div>
-              <div className="col-lg-7">
-                <div className="row">
-                  <div className="col-lg-6 mt-lg-0 mt-5">
-                    <div className="contact-div">
-                      <h6>Vidhya Vanam</h6> <span></span>
+              <div className='col-lg-7'>
+                <div className='row'>
+                  <div className='col-lg-6 mt-lg-0 mt-5'>
+                    <div className='contact-div'>
+                      <h6>{OtherData?.contactinfo?.[0]?.title}</h6>{" "}
+                      <span></span>
                       <h6>
-                        <a href="mailto:Info.vidhyavanam@mymanas.org">
-                          Info.vidhyavanam@mymanas.org
+                        <a href='mailto:Info.vidhyavanam@mymanas.org'>
+                          {OtherData?.contactinfo?.[0]?.email}
                         </a>
                       </h6>
                       {/* <h6>(808) 998-34256</h6> */}
                       <p>
-                        Address: <br /> Manas Sanctuary B-26 Maan Heritage
-                        Colony Dhar, MP 454001 India
+                        Address: <br />
+                        {OtherData?.contactinfo?.[0]?.address}
                       </p>
                     </div>
                   </div>
@@ -434,11 +529,11 @@ const Vidhya = () => {
                   </div>
                 </div> */}
                 </div>
-                <div className="row mt-3">
-                  <div className="contact-div">
+                <div className='row mt-3'>
+                  <div className='contact-div'>
                     <h6>
                       For Jobs, send resume to{" "}
-                      <a href="mailto:hr.vidhyavanam@mymanas.org">
+                      <a href='mailto:hr.vidhyavanam@mymanas.org'>
                         hr.vidhyavanam@mymanas.org
                       </a>
                     </h6>
@@ -458,7 +553,7 @@ const Vidhya = () => {
           </div>
         </section>
 
-        <section id="contact-section-one">
+        <section id='contact-section-one'>
           <ReachOut />
         </section>
       </Layout>

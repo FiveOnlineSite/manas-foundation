@@ -1,69 +1,131 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import Difference from "../components/Difference";
 import { NavLink } from "react-router-dom";
+import { getRequest } from "../api/api";
 
 const AboutUs = () => {
+  const [data, setData] = useState([]);
+  const [OtherData, setOtherData] = useState([]);
+
+  const fetchData = async () => {
+    const res = await getRequest("/about/overview");
+    if (res.success) {
+      setData(res.data[0]);
+    } else {
+    }
+  };
+  console.log(data, "uihuyg");
+
+  const fetchOtherData = async () => {
+    try {
+      const responses = await Promise.allSettled([
+        getRequest("/about/our-values"),
+        getRequest("/about/our-inspiration"),
+        getRequest("/about/future-leaders"),
+        getRequest("/masterquote"),
+      ]);
+      console.log(responses, "responsesfefe");
+
+      const resultObj = {
+        ourvalues:
+          responses[0].status === "fulfilled"
+            ? responses[0].value.data[0]
+            : null,
+        ourinspiration:
+          responses[1].status === "fulfilled" ? responses[1].value.data : null,
+        futureleaders:
+          responses[2].status === "fulfilled"
+            ? responses[2].value.data[0]
+            : null,
+        masterquote:
+          responses[2].status === "fulfilled"
+            ? responses[3].value.data[0]
+            : null,
+      };
+
+      setOtherData(resultObj);
+    } catch (error) {
+      console.error("Unexpected error:", error);
+    }
+  };
+
+  console.log(OtherData, "gfhbh");
+
+  useEffect(() => {
+    fetchData();
+    fetchOtherData();
+    // setData((prev) =>
+    //   prev.map((item) => ({
+    //     ...item,
+    //     checked: false,
+    //   }))
+    // );
+  }, []);
+
   return (
     <Layout>
-      <section className="about-banner">
-        <div className="container-fluid">
+      <section className='about-banner'>
+        <div className='container-fluid'>
           <img
-            src="/images/banner/AboutUs-01.jpeg"
-            alt="about-banner"
-            className="about-img"
+            src='/images/banner/AboutUs-01.jpeg'
+            alt='about-banner'
+            className='about-img'
           />
-          <div className="about-banner-text banner-text">
-            <h1 className="banner-title">Academic Excellence Within Reach</h1>
+          <div className='about-banner-text banner-text'>
+            <h1 className='banner-title'>Academic Excellence Within Reach</h1>
           </div>
         </div>
       </section>
 
-      <section className="inspiring-section">
-        <div className="container">
-          <div className="col-lg-12">
-            <div className="row">
-              <div className="col-lg-4">
-                <h4 className="small-title text-start px-0 py-3">
-                  Inspiring excellence through growth and responsibility.
+      <section className='inspiring-section'>
+        <div className='container'>
+          <div className='col-lg-12'>
+            <div className='row'>
+              <div className='col-lg-4'>
+                <h4 className='small-title text-start px-0 py-3'>
+                  {data?.title}
                 </h4>
               </div>
-              <div className="col-lg-4">
-                <p className="paragraph bridge-para light-paragraph">
-                  Promoting mindsets of equality and curiosity so that every
-                  student may discover and develop the talent, discipline, and
-                  self-esteem of fearless success.
+              <div className='col-lg-4'>
+                <p className='paragraph bridge-para light-paragraph'>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: data?.description1 }}
+                  />
                 </p>
               </div>
-              <div className="col-lg-4">
-                <p className="paragraph bridge-para light-paragraph">
-                  This non-profit provides direct and indirect assistance in
-                  education and other related services to children in need of
-                  higher education and personal growth.
+              <div className='col-lg-4'>
+                <p className='paragraph bridge-para light-paragraph'>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: data?.description2 }}
+                  />
                 </p>
               </div>
             </div>
 
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="row">
-                  <div className="col-lg-6 mt-5">
-                    <div className="director">
-                      <div className="director-img">
+            <div className='row'>
+              <div className='col-lg-12'>
+                <div className='row'>
+                  <div className='col-lg-6 mt-5'>
+                    <div className='director'>
+                      <div className='director-img'>
                         <img
-                          src="/images/icons/Group 8236.png"
-                          alt="director-img"
+                          src={data?.bodImage?.url}
+                          alt={data?.bodImage?.altText}
                         />
                       </div>
-                      <div className="director-content">
-                        <h6>SRI VALLERU</h6>
+                      <div className='director-content'>
+                        <h6>{data?.bodName}</h6>
                         <p>Board of director</p>
                       </div>
                     </div>
                   </div>
-                  <div className="col-lg-6 d-flex justify-content-lg-center justify-content-start">
+                  <div className='col-lg-6 d-flex justify-content-lg-center justify-content-start'>
                     <div>
-                      <img src="/images/icons/signature.png" alt="signature" />
+                      <img
+                        src={data?.bodSignature?.url}
+                        alt={data?.bodSignature?.altText}
+                      />
                     </div>
                   </div>
                 </div>
@@ -73,18 +135,18 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <Difference />
+      <Difference masterquote={OtherData?.masterquote || []} />
 
-      <section className="half-img-section about-half-img">
-        <div className="container">
-          <div className="row">
-            <div className="container">
-              <div className="row justify-content-center">
-                <div className="half-img-text about-half-img-text p-lg-5 mb-0">
+      <section className='half-img-section about-half-img'>
+        <div className='container'>
+          <div className='row'>
+            <div className='container'>
+              <div className='row justify-content-center'>
+                <div className='half-img-text about-half-img-text p-lg-5 mb-0'>
                   <h2
-                    className="section-title text-center wow w-lg-50 w-100 p-1"
-                    data-aos="zoom-in" // Fade in as you scroll
-                    data-aos-duration="1500"
+                    className='section-title text-center wow w-lg-50 w-100 p-1'
+                    data-aos='zoom-in' // Fade in as you scroll
+                    data-aos-duration='1500'
                   >
                     An inspiring vision to uplift youth.
                   </h2>
@@ -93,8 +155,8 @@ const AboutUs = () => {
                   Providing education that’s accessible to rural communities and opening learning opportunities that integrate top-tier education with holistic life skills.
                   </p> */}
 
-                  <button className="custom-btn bridge-btn read-btn">
-                    <NavLink className="nav-link" to="/our-scope">
+                  <button className='custom-btn bridge-btn read-btn'>
+                    <NavLink className='nav-link' to='/our-scope'>
                       GET STARTED
                     </NavLink>
                   </button>
@@ -105,116 +167,141 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="bg-img-row">
-        <div className="container">
+      <section className='bg-img-row'>
+        <div className='container'>
           {/* <h6 className="section-subtitle"></h6> */}
 
-          <h2 className="section-title">
-            Unbreakable values and an unwavering commitment to the progress of
-            all children.
-          </h2>
+          <h2 className='section-title'>{OtherData?.ourvalues?.title}</h2>
 
-          <p className="paragraph bridge-para">
-            Providing education that’s accessible to rural communities and
-            opening learning opportunities that integrate top-tier education
-            with holistic life skills.
+          <p className='paragraph bridge-para'>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: OtherData?.ourvalues?.description,
+              }}
+            />
           </p>
 
-          <div className="values-div">
-            <div className="col-lg-12">
-              <div className="row">
-                <div className="col-lg-4">
-                  <div className="single-value">
-                    <div className="value-title">
-                      <img src="/images/icons/respect 1.png" alt="value-img" />
-                      <h5>Respect</h5>
-                    </div>
-
-                    <p>
-                      We believe in creating a safe and accessible learning
-                      environment where respect, honesty, and tolerance are
-                      fostered with compassion.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-value">
-                    <div className="value-title">
+          <div className='values-div'>
+            <div className='col-lg-12'>
+              <div className='row'>
+                <div className='col-lg-4'>
+                  <div className='single-value'>
+                    <div className='value-title'>
                       <img
-                        src="/images/icons/collaborate 1.png"
-                        alt="value-img"
+                        src={OtherData?.ourvalues?.values?.[0]?.icon?.url}
+                        alt={OtherData?.ourvalues?.values?.[0]?.icon?.altText}
                       />
-                      <h5>Collaboration</h5>
+                      <h5>{OtherData?.ourvalues?.values?.[0]?.title}</h5>
                     </div>
 
                     <p>
-                      We believe teamwork and collaboration are essential for
-                      success in education and life.
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            OtherData?.ourvalues?.values?.[0]?.description,
+                        }}
+                      />
                     </p>
                   </div>
                 </div>
-
-                <div className="col-lg-4">
-                  <div className="single-value">
-                    <div className="value-title">
+                <div className='col-lg-4'>
+                  <div className='single-value'>
+                    <div className='value-title'>
                       <img
-                        src="/images/icons/expectation 1.png"
-                        alt="value-img"
+                        src={OtherData?.ourvalues?.values?.[1]?.icon?.url}
+                        alt={OtherData?.ourvalues?.values?.[1]?.icon?.altText}
                       />
-                      <h5>Expectations</h5>
+                      <h5>{OtherData?.ourvalues?.values?.[1]?.title}</h5>
                     </div>
 
                     <p>
-                      We believe that maintaining rigorous standards and high
-                      expectations for all students are key to excellence and
-                      lifelong learning.
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            OtherData?.ourvalues?.values?.[1]?.description,
+                        }}
+                      />
                     </p>
                   </div>
                 </div>
-                <div className="col-lg-4">
-                  <div className="single-value">
-                    <div className="value-title">
+
+                <div className='col-lg-4'>
+                  <div className='single-value'>
+                    <div className='value-title'>
                       <img
-                        src="/images/icons/responsibility 1.png"
-                        alt="value-img"
+                        src={OtherData?.ourvalues?.values?.[2]?.icon?.url}
+                        alt={OtherData?.ourvalues?.values?.[2]?.icon?.altText}
                       />
-                      <h5>Responsibility</h5>
+                      <h5>{OtherData?.ourvalues?.values?.[2]?.title}</h5>
                     </div>
 
                     <p>
-                      We encourage students to become independent thinkers who
-                      take ownership of their learning and grow into responsible
-                      global citizens.
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            OtherData?.ourvalues?.values?.[2]?.description,
+                        }}
+                      />
                     </p>
                   </div>
                 </div>
-                <div className="col-lg-4">
-                  <div className="single-value">
-                    <div className="value-title">
-                      <img src="/images/icons/protest.png" alt="value-img" />
-                      <h5>Equity</h5>
-                    </div>
-
-                    <p>
-                      We are committed to providing every student with a
-                      balanced education that includes quality instruction,
-                      perseverance, tolerance, and inclusion.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-value">
-                    <div className="value-title">
+                <div className='col-lg-4'>
+                  <div className='single-value'>
+                    <div className='value-title'>
                       <img
-                        src="/images/icons/confidence 1.png"
-                        alt="value-img"
+                        src={OtherData?.ourvalues?.values?.[3]?.icon?.url}
+                        alt={OtherData?.ourvalues?.values?.[3]?.icon?.altText}
                       />
-                      <h5>Pride</h5>
+                      <h5>{OtherData?.ourvalues?.values?.[3]?.title}</h5>
                     </div>
 
                     <p>
-                      We believe in instilling a sense of pride in all of our
-                      students, schools, and communities.
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            OtherData?.ourvalues?.values?.[3]?.description,
+                        }}
+                      />
+                    </p>
+                  </div>
+                </div>
+                <div className='col-lg-4'>
+                  <div className='single-value'>
+                    <div className='value-title'>
+                      <img
+                        src={OtherData?.ourvalues?.values?.[4]?.icon?.url}
+                        alt={OtherData?.ourvalues?.values?.[4]?.icon?.altText}
+                      />
+                      <h5>{OtherData?.ourvalues?.values?.[4]?.title}</h5>
+                    </div>
+
+                    <p>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            OtherData?.ourvalues?.values?.[4]?.description,
+                        }}
+                      />
+                    </p>
+                  </div>
+                </div>
+                <div className='col-lg-4'>
+                  <div className='single-value'>
+                    <div className='value-title'>
+                      <img
+                        src={OtherData?.ourvalues?.values?.[5]?.icon?.url}
+                        alt={OtherData?.ourvalues?.values?.[5]?.icon?.altText}
+                      />
+                      <h5>{OtherData?.ourvalues?.values?.[5]?.title}</h5>
+                    </div>
+
+                    <p>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            OtherData?.ourvalues?.values?.[5]?.description,
+                        }}
+                      />
                     </p>
                   </div>
                 </div>
@@ -224,55 +311,39 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="inspiration-section">
-        <h2 className="section-title text-center">Our Inspiration</h2>
-        <div className="inspiration-div">
-          <div className="container">
-            <div className="col-lg-12">
-              <div className="row">
-                <div className="col-lg-6">
+      <section className='inspiration-section'>
+        <h2 className='section-title text-center'>
+          {OtherData?.ourinspiration?.[0]?.title}
+        </h2>
+        <div className='inspiration-div'>
+          <div className='container'>
+            <div className='col-lg-12'>
+              <div className='row'>
+                <div className='col-lg-6'>
                   <div>
-                    <img src="/images/banner/manas_valleru 1.png" alt="manas" />
+                    <img
+                      src={OtherData?.ourinspiration?.[0]?.image?.url}
+                      alt={OtherData?.ourinspiration?.[0]?.image?.altText}
+                    />
                   </div>
                 </div>
-                <div className="col-lg-6 mt-lg-0 mt-5">
-                  <div className="beloved-text">
-                    <h6 className="section-subtitle white-color">
-                      the inspiration of our efforts.
+                <div className='col-lg-6 mt-lg-0 mt-5'>
+                  <div className='beloved-text'>
+                    <h6 className='section-subtitle white-color'>
+                      {OtherData?.ourinspiration?.[0]?.subtitle}
                     </h6>
 
-                    <h2 className="section-title white-color">
+                    <h2 className='section-title white-color'>
                       Our Beloved Manas
                     </h2>
 
-                    <div className="inspiration-para">
+                    <div className='inspiration-para'>
                       <p>
-                        Brilliance of his mind <br />
-                        Shine without bind
-                        <br />
-                        His heart so pure
-                        <br />
-                        His smile so sure
-                        <br />
-                        Helping lives bloom
-                        <br />
-                        Always there to groom…
-                      </p>
-
-                      <p>
-                        There’s no stopping now
-                        <br />
-                        The shine, the smile
-                        <br />
-                        The heart, the warmth
-                        <br />
-                        Forever spreading
-                        <br />
-                        To create a world
-                        <br />
-                        Where success has
-                        <br />
-                        No ending.
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: OtherData?.ourinspiration?.[0]?.description,
+                          }}
+                        />
                       </p>
                     </div>
                   </div>
@@ -283,51 +354,55 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="shaping-section">
-        <div className="container">
-          <div className="row">
+      <section className='shaping-section'>
+        <div className='container'>
+          <div className='row'>
             <div
-              className="col-lg-6"
-              data-aos="fade-right" // Fade in as you scroll
-              data-aos-duration="1500"
+              className='col-lg-6'
+              data-aos='fade-right' // Fade in as you scroll
+              data-aos-duration='1500'
             >
-              <div className="bridging-img">
+              <div className='bridging-img'>
                 <img
-                  src="/images/banner/Vector 6.png"
-                  alt="vector-6"
-                  className="bridging-img1"
+                  src={OtherData?.futureleaders?.[0]?.image?.url}
+                  alt={OtherData?.futureleaders?.[0]?.image?.altText}
+                  className='bridging-img1'
                 />
-                <div className="bridging-img2">
-                  <img src="/images/banner/A7402707 1.png" alt="briding-img" />
+                <div className='bridging-img2'>
+                  <img src='/images/banner/A7402707 1.png' alt='briding-img' />
                 </div>
 
                 <img
-                  src="/images/banner/Vector 7.png"
-                  alt="vector-7"
-                  className="bridging-img3"
+                  src='/images/banner/Vector 7.png'
+                  alt='vector-7'
+                  className='bridging-img3'
                 />
               </div>
             </div>
-            <div className="col-lg-6">
-              <div className="shaping-content bridging-text">
+            <div className='col-lg-6'>
+              <div className='shaping-content bridging-text'>
                 {/* <h6 className="section-subtitle"></h6> */}
 
-                <h2 className="section-title">Shaping future leaders.</h2>
+                <h2 className='section-title'>
+                  {OtherData?.futureleaders?.title}
+                </h2>
 
-                <p className="paragraph bridge-para">
-                  You can give your children a bright future.
-                  <br /> There are no extra costs for an opportunity that is
-                  extraordinary.
+                <p className='paragraph bridge-para'>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: OtherData?.futureleaders?.description,
+                    }}
+                  />
                 </p>
 
                 {/* <div className="donate-para"> */}
-                <button className="custom-btn bridge-btn">
+                <button className='custom-btn bridge-btn'>
                   <NavLink
-                    className="nav-link"
-                    to="/our-scope"
+                    className='nav-link'
+                    to={OtherData?.futureleaders?.buttonLink}
                     onClick={() => window.scrollTo(0, 0)}
                   >
-                    KNOW MORE
+                    {OtherData?.futureleaders?.buttonText}
                   </NavLink>
                 </button>
               </div>
