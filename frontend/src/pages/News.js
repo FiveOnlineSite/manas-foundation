@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import { NavLink } from "react-router-dom";
-import { getRequest } from "../api/api";
 
 const News = () => {
   const [visibleCount, setVisibleCount] = useState(6);
