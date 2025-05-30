@@ -1,12 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
 
-const AwardeesSlider = ({ awardees }) => {
+const AwardeesSlider = () => {
   const PrevArrow = (props) => {
     const { onClick } = props;
     return (
-      <button className='slick-prev custom-arrow' onClick={onClick}>
-        <img src='/images/icons/chevron-down (1).png' alt='left-arrow' />
+      <button className="slick-prev custom-arrow" onClick={onClick}>
+        <img src="/images/icons/chevron-down (1).png" alt="left-arrow" />
       </button>
     );
   };
@@ -14,8 +14,8 @@ const AwardeesSlider = ({ awardees }) => {
   const NextArrow = (props) => {
     const { onClick } = props;
     return (
-      <button className='slick-next custom-arrow' onClick={onClick}>
-        <img src='/images/icons/chevron-down.png' alt='right-arrow' />
+      <button className="slick-next custom-arrow" onClick={onClick}>
+        <img src="/images/icons/chevron-down.png" alt="right-arrow" />
       </button>
     );
   };
@@ -50,99 +50,116 @@ const AwardeesSlider = ({ awardees }) => {
       // },
     ],
   };
-  if (!awardees?.length) return null;
 
   return (
-    <div className='container'>
-      <div className='awardee-div'>
+    <div className="container">
+      <div className="awardee-div">
         <Slider {...settings}>
-          {awardees[0] && (
-            <div className='awardee-title'>
-              <div className='d-flex align-items-center'>
-                <div>
-                  <img
-                    src={awardees[0].image?.url}
-                    alt={awardees[0].image?.altText}
-                    className='w-100 schol-img-two'
-                  />
-                </div>
-                <div className='d-flex flex-column w-100 px-2'>
-                  <div className='d-flex flex-row justify-content-between '>
-                    <h4>{awardees[0].name}</h4>
-                    <h6>{awardees[0].year}</h6>
-                  </div>
-                  <h5>{awardees[0].institute}</h5>
-                </div>
+          <div className="awardee-title">
+            <div className="d-flex align-items-center">
+              <div>
+                <img
+                  src="/images/icons/Angel.png"
+                  className="w-100 schol-img-two"
+                />
               </div>
-              <div dangerouslySetInnerHTML={{ __html: awardees[0].review }} />
-            </div>
-          )}
 
-          {awardees[1] && (
-            <div className='awardee-title'>
-              <div className='d-flex align-items-center'>
-                <div>
-                  <img
-                    src={awardees[1].image?.url}
-                    alt={awardees[1].image?.altText}
-                    className='w-100 schol-img-two'
-                  />
+              <div className="d-flex flex-column w-100 px-2">
+                <div className="d-flex flex-row justify-content-between ">
+                  <h4>Angel</h4>
+                  <h6>2021-25</h6>
                 </div>
-                <div className='d-flex flex-column w-100 px-2'>
-                  <div className='d-flex flex-row justify-content-between '>
-                    <h4>{awardees[1].name}</h4>
-                    <h6>{awardees[1].year}</h6>
-                  </div>
-                  <h5>{awardees[1].institute}</h5>
-                </div>
-              </div>
-              <div dangerouslySetInnerHTML={{ __html: awardees[1].review }} />
-            </div>
-          )}
 
-          {awardees[2] && (
-            <div className='awardee-title'>
-              <div className='d-flex align-items-center'>
-                <div>
-                  <img
-                    src={awardees[2].image?.url}
-                    alt={awardees[2].image?.altText}
-                    className='w-100 schol-img-two'
-                  />
-                </div>
-                <div className='d-flex flex-column w-100 px-2'>
-                  <div className='d-flex flex-row justify-content-between '>
-                    <h4>{awardees[2].name}</h4>
-                    <h6>{awardees[2].year}</h6>
-                  </div>
-                  <h5>{awardees[2].institute}</h5>
-                </div>
+                <h5>Houston Community College</h5>
               </div>
-              <div dangerouslySetInnerHTML={{ __html: awardees[2].review }} />
             </div>
-          )}
+            <p>
+              This native Houstonian loves to travel and learn new languages.
+              Service is a large part of her passion which is why she stays
+              involved in her church and community. With her sights set on
+              becoming a nurse, Angel demonstrates her commitment to excellence
+              in her academic pursuits.
+            </p>
+          </div>
+          <div className="awardee-title">
+            <div className="d-flex align-items-center">
+              <div>
+                <img
+                  src="/images/icons/Curtis.png"
+                  className="w-100 schol-img-two"
+                />
+              </div>
 
-          {awardees[3] && (
-            <div className='awardee-title'>
-              <div className='d-flex align-items-center'>
-                <div>
-                  <img
-                    src={awardees[3].image?.url}
-                    alt={awardees[3].image?.altText}
-                    className='w-100 schol-img-two'
-                  />
+              <div className="d-flex flex-column w-100 px-2">
+                <div className="d-flex flex-row justify-content-between ">
+                  <h4>Curtis</h4>
+                  <h6>2021-25</h6>
                 </div>
-                <div className='d-flex flex-column w-100 px-2'>
-                  <div className='d-flex flex-row justify-content-between '>
-                    <h4>{awardees[3].name}</h4>
-                    <h6>{awardees[3].year}</h6>
-                  </div>
-                  <h5>{awardees[3].institute}</h5>
-                </div>
+
+                <h5>University of Mississippi</h5>
               </div>
-              <div dangerouslySetInnerHTML={{ __html: awardees[3].review }} />
             </div>
-          )}
+            <p>
+              An outgoing athlete, Curtis built a long history of community
+              service and volunteering. He plans to combine his passion for
+              science, math and medicine when he enters the PharmD program at
+              Ole Miss. Along with swimming and golf, this Star Wars aficionado
+              hopes to travel the world.
+            </p>
+          </div>
+          <div className="awardee-title">
+            <div className="d-flex align-items-center">
+              <div>
+                <img
+                  src="/images/icons/Breanna.png"
+                  className="w-100 schol-img-two"
+                />
+              </div>
+
+              <div className="d-flex flex-column w-100 px-2">
+                <div className="d-flex flex-row justify-content-between ">
+                  <h4>Breanna</h4>
+                  <h6>2021-25</h6>
+                </div>
+
+                <h5>University of Texas</h5>
+              </div>
+            </div>
+
+            <p>
+              Setting goals is nothing new for this biology student. Breanna has
+              achieved much in her young life and plans to continue doing so in
+              her chosen field of pediatrics. In her spare time, she enjoys
+              baking, puzzles and listening to music. Among her goals, visiting
+              at least 15 countries.
+            </p>
+          </div>
+          <div className="awardee-title">
+            <div className="d-flex align-items-center">
+              <div>
+                <img
+                  src="/images/icons/Mahima2.png"
+                  className="w-100 schol-img-two"
+                />
+              </div>
+
+              <div className="d-flex flex-column w-100 px-2">
+                <div className="d-flex flex-row justify-content-between ">
+                  <h4>Mahima</h4>
+                  <h6>2022-24</h6>
+                </div>
+
+                <h5>Indore Institute of Science and Technology</h5>
+              </div>
+            </div>
+
+            <p>
+              Our Manas Academy scholarship student from Jalampura, Dhar, MP,
+              India with a goal to be an engineer, scored 90.5%tile in JEE, now
+              studying Bachelor of Technology in Computer Science at Indore
+              Institute of Science and Technology.
+            </p>
+          </div>
         </Slider>
       </div>
     </div>
