@@ -23,6 +23,8 @@ const Institution = () => {
       const responses = await Promise.allSettled([
         getRequest("/institutions/our-model"),
         getRequest("/institutions/our-institutions"),
+        getRequest("/masterbanner"),
+        getRequest("/masterquote"),
       ]);
       console.log(responses, "responsesfefe");
 
@@ -33,6 +35,10 @@ const Institution = () => {
             : null,
         ourinstitutions:
           responses[1].status === "fulfilled" ? responses[1].value.data : null,
+        masterbanner:
+          responses[2].status === "fulfilled" ? responses[2].value.data : null,
+        masterquote:
+          responses[3].status === "fulfilled" ? responses[3].value.data[0] : null,
       };
 
       setOtherData(resultObj);
@@ -64,7 +70,9 @@ const Institution = () => {
             className='about-img'
           />
           <div className='about-banner-text'>
-            <h1 className='banner-title mt-5'>Institutions</h1>
+            <h1 className='banner-title mt-5'>
+              {OtherData?.masterbanner?.[1]?.title}
+            </h1>
           </div>
         </div>
       </section>
@@ -283,7 +291,7 @@ const Institution = () => {
         </div>
       </section>
 
-      <Difference />
+      <Difference masterquote={OtherData?.masterquote || []} />
     </Layout>
   );
 };

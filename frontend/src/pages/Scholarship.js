@@ -8,89 +8,94 @@ const Scholarship = () => {
   const [data, setData] = useState([]);
   const [OtherData, setOtherData] = useState([]);
 
-   const fetchData = async () => {
-      const res = await getRequest("/scholarships/overview");
-      if (res.success) {
-        setData(res.data[0]);
-      } else {
-      }
-    };
+  const fetchData = async () => {
+    const res = await getRequest("/scholarships/overview");
+    if (res.success) {
+      setData(res.data[0]);
+    } else {
+    }
+  };
   console.log(data, "uihuyg");
-  
+
   const fetchOtherData = async () => {
-      try {
-        const responses = await Promise.allSettled([
-          getRequest("/scholarships/application-process"),
-          getRequest("/scholarships/application-timeline"),
-          getRequest("/scholarships/application-content"),
-          getRequest("/scholarships/documents"),
-          getRequest("/scholarships/notification"),
-          getRequest("/scholarships/scholarship-awardees"),
-          getRequest("/scholarships/our-goal"),
-        ]);
-        console.log(responses, "responsesfefe");
-  
-        const resultObj = {
-          applicationprocess:
-            responses[0].status === "fulfilled"
-              ? responses[0].value.data[0]
-              : null,
-          applicationtimeline:
-            responses[1].status === "fulfilled"
-              ? responses[1].value.data
-              : null,
-          applicationcontent:
-            responses[2].status === "fulfilled"
-              ? responses[2].value.data[0]
-              : null,
-          documents:
-            responses[3].status === "fulfilled"
-              ? responses[3].value.data[0]
-              : null,
-          notification:
-            responses[4].status === "fulfilled"
-              ? responses[4].value.data[0]
-              : null,
-              scholarshipawardees:
-            responses[5].status === "fulfilled"
-              ? responses[5].value.data[0]
-              : null,
-              ourgoal:
-            responses[6].status === "fulfilled"
-              ? responses[6].value.data[0]
-              : null,
-        };
-  
-        setOtherData(resultObj);
-      } catch (error) {
-        console.error("Unexpected error:", error);
-      }
-    };
-  
-    console.log(OtherData, "gfhbh");
-  
-    useEffect(() => {
-      fetchData();
-      fetchOtherData();
-      // setData((prev) =>
-      //   prev.map((item) => ({
-      //     ...item,
-      //     checked: false,
-      //   }))
-      // );
-    }, []);
-  
+    try {
+      const responses = await Promise.allSettled([
+        getRequest("/scholarships/application-process"),
+        getRequest("/scholarships/application-timeline"),
+        getRequest("/scholarships/application-content"),
+        getRequest("/scholarships/documents"),
+        getRequest("/scholarships/notification"),
+        getRequest("/scholarships/scholarship-awardees"),
+        getRequest("/scholarships/our-goal"),
+        getRequest("/masterbanner"),
+      ]);
+      console.log(responses, "responsesfefe");
+
+      const resultObj = {
+        applicationprocess:
+          responses[0].status === "fulfilled"
+            ? responses[0].value.data[0]
+            : null,
+        applicationtimeline:
+          responses[1].status === "fulfilled" ? responses[1].value.data : null,
+        applicationcontent:
+          responses[2].status === "fulfilled"
+            ? responses[2].value.data[0]
+            : null,
+        documents:
+          responses[3].status === "fulfilled"
+            ? responses[3].value.data[0]
+            : null,
+        notification:
+          responses[4].status === "fulfilled"
+            ? responses[4].value.data[0]
+            : null,
+        scholarshipawardees:
+          responses[5].status === "fulfilled"
+            ? responses[5].value.data[0]
+            : null,
+        ourgoal:
+          responses[6].status === "fulfilled"
+            ? responses[6].value.data[0]
+            : null,
+        masterbanner:
+          responses[7].status === "fulfilled"
+            ? responses[7].value.data[2]
+            : null,
+      };
+
+      setOtherData(resultObj);
+    } catch (error) {
+      console.error("Unexpected error:", error);
+    }
+  };
+
+  console.log(OtherData, "gfhbh");
+
+  useEffect(() => {
+    fetchData();
+    fetchOtherData();
+    // setData((prev) =>
+    //   prev.map((item) => ({
+    //     ...item,
+    //     checked: false,
+    //   }))
+    // );
+  }, []);
+
   return (
     <Layout>
       <section className='about-banner'>
         <div className='container-fluid'>
           <img
-            src='/images/banner/A7402468_1.jpg'
-            alt='scope-banner'
+            src={OtherData?.masterbanner?.image?.url}
+            alt={OtherData?.masterbanner?.altText}
             className='about-img'
           />
           <div className='about-banner-text'>
-            <h1 className='banner-title mt-5'>Scholarships</h1>
+            <h1 className='banner-title mt-5'>
+              {OtherData?.masterbanner?.title}
+            </h1>
           </div>
         </div>
       </section>
@@ -98,8 +103,12 @@ const Scholarship = () => {
       <section className='assistance-section'>
         <div className='container'>
           <h4 className='small-title'>
-            Bringing new opportunities for youth through an education philosophy
-            that fosters integral growth
+            <div
+              className='small-title'
+              dangerouslySetInnerHTML={{
+                __html: data?.description,
+              }}
+            />
           </h4>
         </div>
       </section>

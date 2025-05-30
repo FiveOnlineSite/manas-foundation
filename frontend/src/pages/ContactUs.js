@@ -4,12 +4,14 @@ import { NavLink } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
 import { Modal } from "react-bootstrap";
-import { getRequest } from "../api/api";
+import { getRequest, postFormData } from "../api/api";
 
 const SITE_KEY = process.env.REACT_APP_CAPTCHA_SITE_KEY;
 
 const ContactUs = () => {
   const [data, setData] = useState([]);
+  const [OtherData, setOtherData] = useState([]);
+
   const fetchData = async () => {
     const res = await getRequest("/contact/page");
     if (res.success) {
@@ -19,8 +21,35 @@ const ContactUs = () => {
   };
   console.log("Contact Us Data:", data);
 
+  const fetchOtherData = async () => {
+    try {
+      const responses = await Promise.allSettled([
+        getRequest("/social"),
+        getRequest("/masterbanner"),
+      ]);
+      console.log(responses, "responsesfefe");
+
+      const resultObj = {
+        social:
+          responses[0].status === "fulfilled" ? responses[0].value.data : null,
+        masterbanner:
+          responses[1].status === "fulfilled"
+            ? responses[1].value.data[4]
+            : null,
+      };
+
+      setOtherData(resultObj);
+    } catch (error) {
+      console.error("Unexpected error:", error);
+    }
+  };
+
+  console.log(OtherData, "gfhbh");
+
   useEffect(() => {
     fetchData();
+    fetchOtherData();
+
     // setData((prev) =>
     //   prev.map((item) => ({
     //     ...item,
@@ -72,13 +101,10 @@ const ContactUs = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (phoneError) {
-      return;
-    }
-
+    if (phoneError) return;
     if (!captchaVerified) {
       setCaptchaError("Verify Captcha");
       return;
@@ -92,58 +118,66 @@ const ContactUs = () => {
       inquiry: formData.inquiry,
     };
 
-    emailjs
-      .send(
+    try {
+      // 1. Send the email
+      await emailjs.send(
         process.env.REACT_APP_CONTACT_SERVICE_ID,
         process.env.REACT_APP_CONTACT_TEMPLATE_ID,
         emailParams,
         process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        (response) => {
-          console.log(
-            "Email sent successfully!",
-            response.status,
-            response.text
-          );
-          setSuccessModal(true);
-          console.log("Success modal should be set to true");
-
-          // Clear success message after 5 seconds
-          setTimeout(() => {
-            setSuccessModal(false);
-          }, 5000);
-
-          setFormData({
-            name: "",
-            email: "",
-            phone: "",
-            inquiry: "",
-            message: "",
-          });
-          formRef.current.reset();
-          setCaptchaVerified(false); // ✅ Reset CAPTCHA state
-          setCaptchaError("");
-          captchaRef.current?.reset();
-        },
-        (err) => {
-          console.error("Failed to send email:", err);
-        }
       );
+
+      // 2. Submit to backend
+      const payload = new FormData();
+      payload.append("subtitle", "Contact Us Form");
+      payload.append("title", "Contact Inquiry");
+      payload.append("buttonText", "Leave Us A Message");
+      payload.append("fullName", formData.name);
+      payload.append("number", formData.phone);
+      payload.append("email", formData.email);
+      payload.append("inquiryType", formData.inquiry);
+      payload.append("message", formData.message);
+      payload.append("originPage", "contact");
+
+      await postFormData("/mastercontact", payload);
+
+      // 3. Show success modal
+      setSuccessModal(true);
+      setTimeout(() => setSuccessModal(false), 5000);
+
+      // 4. Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        inquiry: "",
+        message: "",
+      });
+      formRef.current.reset();
+      captchaRef.current?.reset();
+      setCaptchaVerified(false);
+      setCaptchaError("");
+    } catch (error) {
+      console.error("Form submission failed:", error);
+    }
   };
+  
 
   return (
     <Layout>
       <section className='about-banner'>
         <div className='container-fluid'>
-          <img src='/images/banner/A7402577 1.png' alt='Group 8126' />
+          <img
+            src={OtherData?.masterbanner?.image?.url}
+            alt={OtherData?.masterbanner?.image?.altText}
+          />
           <div className='banner-text about-banner-text contact-banner-text'>
             <h1
               className='banner-title black-text wow black-text'
               data-aos='fade-up' // Fade in as you scroll
               data-aos-duration='1500'
             >
-              Affordable education for life, today.
+              {OtherData?.masterbanner?.title}
             </h1>
 
             <p
@@ -151,13 +185,17 @@ const ContactUs = () => {
               data-aos='fade-up' // Fade in as you scroll
               data-aos-duration='1500'
             >
-              We promote equality and curiosity mindsets through direct and
-              indirect assistance in education, for children seeking quality
-              teaching and personal growth.
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: OtherData?.masterbanner?.description,
+                }}
+              />
             </p>
-            <NavLink to='/'>
+            <NavLink to={OtherData?.masterbanner?.buttonLink}>
               <button className='custom-btn white-btn border-btn wow'>
-                <li className='nav-link '>Explore</li>
+                <li className='nav-link '>
+                  {OtherData?.masterbanner?.buttonText}
+                </li>
               </button>
             </NavLink>
           </div>
@@ -178,37 +216,37 @@ const ContactUs = () => {
               <div className='col-lg-3 d-flex justify-content-lg-end justify-content-start mb-lg-0 mb-5'>
                 <ul className='contact-links'>
                   <li>
-                    <a
-                      href='https://www.facebook.com/share/19MZeCuWCt/?mibextid=wwXIfr'
+                    <NavLink
+                      to={OtherData?.social?.[0]?.link}
                       target='_blank'
                       rel='noreferrer'
                     >
-                      <img src='/images/icons/fb.png' alt='fb' />
-                    </a>
+                      <img src={OtherData?.social?.[0]?.icon?.url} />
+                    </NavLink>
                   </li>
                   <li>
-                    <a
-                      href='https://www.instagram.com/manas_academy?igsh=N3liaGVvYWxyMHBt'
+                    <NavLink
+                      to={OtherData?.social?.[1]?.link}
                       target='_blank'
                       rel='noreferrer'
                     >
-                      <img src='/images/icons/insta.png' alt='insta' />
-                    </a>
+                      <img src={OtherData?.social?.[1]?.icon?.url} />
+                    </NavLink>
                   </li>
                   <li>
-                    <a
-                      href='https://m.youtube.com/@manasacademy2020'
+                    <NavLink
+                      to={OtherData?.social?.[2]?.link}
                       target='_blank'
                       rel='noreferrer'
                       className='youtube-icon'
                     >
                       <img
-                        src='/images/icons/youtube (1).png'
+                        src={OtherData?.social?.[2]?.icon?.url}
                         height='15px'
                         width='20px'
                         alt='youtube'
                       />
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </div>
@@ -393,10 +431,7 @@ const ContactUs = () => {
                     </h6>{" "}
                     <span></span>
                     <h6>
-                      <a href='mailto:info@mymanas.org'>
-                        {" "}
-                        {data?.usa?.email}
-                      </a>
+                      <a href='mailto:info@mymanas.org'> {data?.usa?.email}</a>
                     </h6>
                     {/* <h6>(808) 998-34256</h6> */}
                     <p>

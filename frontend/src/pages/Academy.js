@@ -31,6 +31,7 @@ const Academy = () => {
         getRequest("/academy/facilities"),
         getRequest("/academy/contact-info"),
         getRequest("/testimonials"),
+        getRequest("/masterbanner"),
       ]);
       console.log(responses, "responsesfefe");
 
@@ -52,6 +53,10 @@ const Academy = () => {
         testimonials:
           responses[6].status === "fulfilled"
             ? responses[6].value.data[0]
+            : null,
+        masterbanner:
+          responses[7].status === "fulfilled"
+            ? responses[7].value.data[3]
             : null,
       };
 
@@ -192,16 +197,21 @@ const Academy = () => {
       <section className='about-banner'>
         <div className='container-fluid'>
           <img
-            src='/images/banner/MA-Campus.jpg'
-            alt='scope-banner'
+            src={OtherData?.masterbanner?.image?.url}
+            alt={OtherData?.masterbanner?.altText}
             className='about-img'
           />
           <div className='about-banner-text'>
-            <h1 className='banner-title mt-5'>Manas Academy</h1>
+            <h1 className='banner-title mt-5'>
+              {OtherData?.masterbanner?.title}
+            </h1>
             <p className='paragraph bridge-para p-0 pt-2 para-two'>
-              “Knowledge alone does not guarantee success; skills, values and
-              culture with a positive mindset are essential for a promising
-              future.”
+              <div
+                className='small-titles'
+                dangerouslySetInnerHTML={{
+                  __html: OtherData?.masterbanner?.description,
+                }}
+              />
             </p>
           </div>
         </div>

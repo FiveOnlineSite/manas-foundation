@@ -1,14 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
+import { getRequest } from "../api/api";
 
 const NewsDetail = () => {
   const [visibleCount, setVisibleCount] = useState(2);
+  const [data, setData] = useState([]);
+  const fetchData = async () => {
+    const res = await getRequest("/newsEvents");
+    if (res.success) {
+      setData(res.data[0]);
+    } else {
+    }
+  };
+  console.log(data, "uihuyg");
+
+  useEffect(() => {
+    fetchData();
+    // setData((prev) =>
+    //   prev.map((item) => ({
+    //     ...item,
+    //     checked: false,
+    //   }))
+    // );
+  }, []);
 
   const relatedNewsItems = [
     {
       image: "/images/smiling-students-looking-globe.png",
       date: "00.00.00",
-      title: "Lorem ipsum dolor sit amet",
+      title: (
+        <p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: data?.metaDescription,
+            }}
+          />
+        </p>
+      ),
     },
     {
       image: "/images/smiling-students-looking-globe.png",
@@ -62,31 +90,41 @@ const NewsDetail = () => {
 
   return (
     <Layout>
-      <section className="news-detail-banner">
-        <div className="container-fluid">
-          <div className="row align-items-center">
-            <div className="col-lg-5">
-              <div className="news-detail-img">
+      <section className='news-detail-banner'>
+        <div className='container-fluid'>
+          <div className='row align-items-center'>
+            <div className='col-lg-5'>
+              <div className='news-detail-img'>
                 <img
-                  src="/images/banner/ram-mandir-img.png"
-                  alt="new-details-banner"
-                  className="news-detail-banner-img"
+                  src={data?.image?.url}
+                  alt={data?.image?.altText}
+                  className='news-detail-banner-img'
                 />
               </div>
             </div>
 
-            <div className="col-lg-7 news-detail-banner-section">
-              <div className="news-detail-content">
-                <div className="news-detail-content-subsection d-flex align-items-baseline">
-                  <h4>NEWS</h4> <span></span> <h6>19.03.25</h6>
+            <div className='col-lg-7 news-detail-banner-section'>
+              <div className='news-detail-content'>
+                <div className='news-detail-content-subsection d-flex align-items-baseline'>
+                  <h4>{data?.type?.toUpperCase()}</h4> <span></span>{" "}
+                  <h6>
+                    {data?.uploadDate
+                      ? new Date(data.uploadDate)
+                          .toLocaleDateString("en-GB")
+                          .replace(/\//g, ".")
+                      : "-"}
+                  </h6>{" "}
                 </div>
-                <h1 className="section-title news-detail-title">Ram Mandir</h1>
+                <h1 className='section-title news-detail-title'>
+                  {data?.title}
+                </h1>
 
-                <p className="paragraph bridge-para text-justify">
-                  Lorem ipsum dolor sit amet. In assumenda molestiae sit
-                  molestiae exercitationem quo dolorum dolores. 33 dolores sunt
-                  33 consequatur rerum quo atque natus ut ratione ratione est
-                  minus mollitia 33 dicta voluptatem.
+                <p className='paragraph bridge-para text-justify'>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: data?.excerpt,
+                    }}
+                  />
                 </p>
               </div>
             </div>
@@ -94,12 +132,12 @@ const NewsDetail = () => {
         </div>
       </section>
 
-      <section className="news-video-section">
-        <div className="container">
+      <section className='news-video-section'>
+        <div className='container'>
           <video
-            src="/videos/05 - Ram Mandir.mp4"
+            src='/videos/05 - Ram Mandir.mp4'
             controls
-            className="w-100"
+            className='w-100'
           ></video>
         </div>
       </section>
@@ -169,21 +207,21 @@ const NewsDetail = () => {
         </div>
       </section> */}
 
-      <section className="related-news-sections">
-        <div className="container">
-          <div className="row align-items-center mb-5">
-            <div className="col-lg-6">
-              <h2 className="section-title">Related News</h2>
+      <section className='related-news-sections'>
+        <div className='container'>
+          <div className='row align-items-center mb-5'>
+            <div className='col-lg-6'>
+              <h2 className='section-title'>{data?.metaTitle}</h2>
             </div>
-            <div className="col-lg-6 d-flex justify-content-lg-end justify-content-start">
+            <div className='col-lg-6 d-flex justify-content-lg-end justify-content-start'>
               {/* <h5 className="see-all-btn"> */}
               {/* See all */}
               {visibleCount < relatedNewsItems.length ? (
-                <button onClick={showAll} className="see-all-btn">
+                <button onClick={showAll} className='see-all-btn'>
                   See all
                 </button>
               ) : (
-                <button onClick={showLess} className="see-all-btn">
+                <button onClick={showLess} className='see-all-btn'>
                   See less
                 </button>
               )}
@@ -191,20 +229,20 @@ const NewsDetail = () => {
             </div>
           </div>
 
-          <div className="row">
+          <div className='row'>
             {relatedNewsItems.slice(0, visibleCount).map((item, index) => (
-              <div className="col-lg-6 mb-5">
-                <div className="row related-news align-items-center">
-                  <div className="col-lg-7">
+              <div className='col-lg-6 mb-5'>
+                <div className='row related-news align-items-center'>
+                  <div className='col-lg-7'>
                     <img
                       src={item.image}
                       alt={`news-${index}`}
-                      className="w-100"
+                      className='w-100'
                     />
                   </div>
-                  <div className="col-lg-5">
-                    <div className="related-news-content mt-lg-0 mt-4">
-                      <div className="related-news-time">
+                  <div className='col-lg-5'>
+                    <div className='related-news-content mt-lg-0 mt-4'>
+                      <div className='related-news-time'>
                         <h5>NEWS</h5>
                         <span></span>
                         <h6>{item.date}</h6>

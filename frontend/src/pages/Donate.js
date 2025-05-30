@@ -27,6 +27,7 @@ const Donate = () => {
         getRequest("/donate/contribution"),
         getRequest("/donate/achievements"),
         getRequest("/testimonials"),
+        getRequest("/masterbanner"),
       ]);
       console.log(responses, "responsesfefe");
 
@@ -40,6 +41,10 @@ const Donate = () => {
         testimonials:
           responses[2].status === "fulfilled"
             ? responses[2].value.data[0]
+            : null,
+        masterbanner:
+          responses[3].status === "fulfilled"
+            ? responses[3].value.data[5]
             : null,
       };
 
@@ -66,12 +71,14 @@ const Donate = () => {
       <section className='about-banner'>
         <div className='container-fluid'>
           <img
-            src='/images/banner/A7402508.jpg'
-            alt='scope-banner'
+            src={OtherData?.masterbanner?.image?.url}
+            alt={OtherData?.masterbanner?.image?.altText}
             className='about-img'
           />
           <div className='about-banner-text'>
-            <h1 className='banner-title mt-5'>Support Us</h1>
+            <h1 className='banner-title mt-5'>
+              {OtherData?.masterbanner?.title}
+            </h1>
           </div>
         </div>
       </section>

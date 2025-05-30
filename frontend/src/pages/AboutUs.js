@@ -39,7 +39,7 @@ const AboutUs = () => {
             ? responses[2].value.data[0]
             : null,
         masterquote:
-          responses[2].status === "fulfilled"
+          responses[3].status === "fulfilled"
             ? responses[3].value.data[0]
             : null,
       };

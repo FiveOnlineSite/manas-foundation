@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { Modal } from "react-bootstrap";
 import ReCAPTCHA from "react-google-recaptcha";
+import { postFormData } from "../api/api";
 
 const SITE_KEY = process.env.REACT_APP_CAPTCHA_SITE_KEY;
 
@@ -52,13 +53,10 @@ const ReachOut = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (phoneError) {
-      return;
-    }
-
+    if (phoneError) return;
     if (!captchaVerified) {
       setCaptchaError("Verify Captcha");
       return;
@@ -72,45 +70,50 @@ const ReachOut = () => {
       inquiry: formData.inquiry,
     };
 
-    emailjs
-      .send(
+    try {
+      // 1. Send email
+      await emailjs.send(
         process.env.REACT_APP_CONTACT_SERVICE_ID,
         process.env.REACT_APP_CONTACT_TEMPLATE_ID,
         emailParams,
         process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        (response) => {
-          console.log(
-            "Email sent successfully!",
-            response.status,
-            response.text
-          );
-          setSuccessModal(true);
-          console.log("Success modal should be set to true");
-
-          // Clear success message after 5 seconds
-          setTimeout(() => {
-            setSuccessModal(false);
-          }, 5000);
-
-          setFormData({
-            name: "",
-            email: "",
-            phone: "",
-            inquiry: "",
-            message: "",
-          });
-          formRef.current.reset();
-          setCaptchaVerified(false); // ✅ Reset CAPTCHA state
-          setCaptchaError("");
-          captchaRef.current?.reset();
-        },
-        (err) => {
-          console.error("Failed to send email:", err);
-        }
       );
+
+      // 2. Save to backend
+      const payload = new FormData();
+      payload.append("subtitle", "Reach Out Form");
+      payload.append("title", "User Inquiry");
+      payload.append("buttonText", "LEAVE US A MESSAGE");
+      payload.append("fullName", formData.name);
+      payload.append("number", formData.phone);
+      payload.append("email", formData.email);
+      payload.append("inquiryType", formData.inquiry);
+      payload.append("message", formData.message);
+      payload.append("originPage", "home");
+
+      await postFormData("/mastercontact", payload);
+
+      // 3. Success modal
+      setSuccessModal(true);
+      setTimeout(() => setSuccessModal(false), 5000);
+
+      // 4. Reset
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        inquiry: "",
+        message: "",
+      });
+      formRef.current.reset();
+      captchaRef.current?.reset();
+      setCaptchaVerified(false);
+      setCaptchaError("");
+    } catch (error) {
+      console.error("Form submission failed:", error);
+    }
   };
+  
 
   return (
     <>

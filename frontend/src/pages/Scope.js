@@ -6,61 +6,64 @@ import ReachOut from "../components/ReachOut";
 import { getRequest } from "../api/api";
 
 const Scope = () => {
-   const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
   const [OtherData, setOtherData] = useState([]);
 
-   const fetchData = async () => {
-      const res = await getRequest("/ourscope/banner");
-      if (res.success) {
-        setData(res.data[0]);
-      } else {
-      }
-    };
+  const fetchData = async () => {
+    const res = await getRequest("/ourscope/banner");
+    if (res.success) {
+      setData(res.data[0]);
+    } else {
+    }
+  };
   console.log(data, "uihuyg");
-  
-   const fetchOtherData = async () => {
-      try {
-        const responses = await Promise.allSettled([
-          getRequest("/ourscope/overview"),
-          getRequest("/ourscope/scholarship"),
-          getRequest("/ourscope/institutions"),
-        ]);
-        console.log(responses, "responsesfefe");
-  
-        const resultObj = {
-          overview:
-            responses[0].status === "fulfilled"
-              ? responses[0].value.data[0]
-              : null,
-          scholarship:
-            responses[1].status === "fulfilled"
-              ? responses[1].value.data
-              : null,
-          institutions:
-            responses[2].status === "fulfilled"
-              ? responses[2].value.data[0]
-              : null,
-        };
-  
-        setOtherData(resultObj);
-      } catch (error) {
-        console.error("Unexpected error:", error);
-      }
-    };
-  
-    console.log(OtherData, "gfhbh");
-  
-    useEffect(() => {
-      fetchData();
-      fetchOtherData();
-      // setData((prev) =>
-      //   prev.map((item) => ({
-      //     ...item,
-      //     checked: false,
-      //   }))
-      // );
-    }, []);
-  
+
+  const fetchOtherData = async () => {
+    try {
+      const responses = await Promise.allSettled([
+        getRequest("/ourscope/overview"),
+        getRequest("/ourscope/scholarship"),
+        getRequest("/ourscope/institutions"),
+        getRequest("/masterquote"),
+      ]);
+      console.log(responses, "responsesfefe");
+
+      const resultObj = {
+        overview:
+          responses[0].status === "fulfilled"
+            ? responses[0].value.data[0]
+            : null,
+        scholarship:
+          responses[1].status === "fulfilled" ? responses[1].value.data : null,
+        institutions:
+          responses[2].status === "fulfilled"
+            ? responses[2].value.data[0]
+            : null,
+        masterquote:
+          responses[3].status === "fulfilled"
+            ? responses[3].value.data[0]
+            : null,
+      };
+
+      setOtherData(resultObj);
+    } catch (error) {
+      console.error("Unexpected error:", error);
+    }
+  };
+
+  console.log(OtherData, "gfhbh");
+
+  useEffect(() => {
+    fetchData();
+    fetchOtherData();
+    // setData((prev) =>
+    //   prev.map((item) => ({
+    //     ...item,
+    //     checked: false,
+    //   }))
+    // );
+  }, []);
+
   return (
     <Layout>
       <section className='about-banner'>
@@ -80,8 +83,12 @@ const Scope = () => {
       <section className='assistance-section'>
         <div className='container'>
           <h4 className='small-title'>
-            Assistance in higher education and personal growth to children with
-            limited opportunities.
+            <div
+              className='small-title'
+              dangerouslySetInnerHTML={{
+                __html: OtherData?.overview?.description,
+              }}
+            />
           </h4>
         </div>
       </section>
@@ -178,7 +185,7 @@ const Scope = () => {
         </div>
       </section>
 
-      <Difference />
+      <Difference masterquote={OtherData?.masterquote || []} />
 
       <ReachOut />
     </Layout>

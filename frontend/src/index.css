@@ -1707,6 +1707,15 @@ button.slick-next {
   padding: 0 10%;
 }
 
+.small-title .small-title h4 {
+  font-family: "Museo";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+  text-align: center;
+  padding: 0 10%;
+}
+
 .funding-img-div img {
   width: 443px;
   height: 606px;

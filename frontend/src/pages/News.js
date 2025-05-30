@@ -1,9 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import { NavLink } from "react-router-dom";
+import { getRequest } from "../api/api";
 
 const News = () => {
+  const [data, setData] = useState([]);
   const [visibleCount, setVisibleCount] = useState(6);
+
+  const fetchData = async () => {
+    const res = await getRequest("/newsEvents");
+    if (res.success) {
+      setData(res.data[0]);
+    } else {
+    }
+  };
+  console.log(data, "uihuyg");
+
+  useEffect(() => {
+    fetchData();
+    // setData((prev) =>
+    //   prev.map((item) => ({
+    //     ...item,
+    //     checked: false,
+    //   }))
+    // );
+  }, []);
 
   // All news items
   const newsItems = [
@@ -89,25 +110,25 @@ const News = () => {
 
   return (
     <Layout>
-      <section className="lastest-news">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-4">
-              <NavLink to="/news-detail">
+      <section className='lastest-news'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-4'>
+              <NavLink to='/news-detail'>
                 <img
-                  src="/images/banner/ram-mandir-img.png"
-                  alt="news"
-                  className="w-100"
+                  src='/images/banner/ram-mandir-img.png'
+                  alt='news'
+                  className='w-100'
                 />
               </NavLink>
             </div>
-            <div className="col-lg-6 ps-lg-5 ps-auto">
-              <div className="latest-news-content">
-                <div className="latest-news-time-div">
+            <div className='col-lg-6 ps-lg-5 ps-auto'>
+              <div className='latest-news-content'>
+                <div className='latest-news-time-div'>
                   <h6>News</h6> <span></span> <p> 15 minutes ago</p>
                 </div>
-                <NavLink to="/news-detail">
-                  <div className="latest-news-title">
+                <NavLink to='/news-detail'>
+                  <div className='latest-news-title'>
                     <h2>Ram Mandir</h2>
                   </div>
                 </NavLink>
